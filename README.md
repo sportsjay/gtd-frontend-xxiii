@@ -21,3 +21,29 @@ npm install
 ```shell
 npm start
 ```
+
+5. To proceed developing your page, Please do the following:
+
+- Create new branch and go into branch
+
+```shell
+git checkout -b Page_Name
+```
+
+- Save all changes
+
+```shell
+git add .
+```
+
+- Commit changes
+
+```shell
+git commit -m "[Page_Name] share update"
+```
+
+- Push to Github
+
+```shell
+git push origin Page_Name
+```
