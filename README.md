@@ -9,6 +9,11 @@
 # Start project in local environment:
 
 1. clone this repository from this github repo
+- Cloning
+```shell
+git clone https://github.com/sportsjay/gtd-frontend-xxiii.git
+cd gtd-frontend-xxiii
+```
 2. start console/terminal in root project folder
 3. get dependencies from the console/terminal using this command:
 
