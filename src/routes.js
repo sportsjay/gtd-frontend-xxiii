@@ -2,7 +2,7 @@
 import HomePage from "./pages/home";
 import AboutUsPage from "./pages/aboutus";
 import ArchivePage from "./pages/archive";
-import CommitteePage from "./pages/committee";
+import HandBookPage from "./pages/handbook";
 import EventsPage from "./pages/events";
 import FAQPage from "./pages/faq";
 
@@ -16,10 +16,10 @@ export const routes = [
     id: 1,
     body: AboutUsPage,
     path: "/about-us",
-  },
+  }, 
   {
     id: 2,
-    body: CommitteePage,
+    body: HandBookPage,
     path: "/committee",
   },
   {

@@ -3,25 +3,13 @@ import { makeStyles } from "@material-ui/core";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Import Components
-import Footer from "./components/footer";
-import TopAppBar from "./components/topappbar/topappbar";
+import Footer from "./components/common/footer";
+import TopAppBar from "./components/common/topappbar/";
 
 // Import Routes and Pages
 import { routes } from "./routes";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    [theme.breakpoints.up("md")]: {
-      height: "100%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: "100%",
-    },
-  },
-}));
-
-function App() {
+export default function App() {
   const classes = useStyles();
   return (
     <Router>
@@ -38,4 +26,14 @@ function App() {
   );
 }
 
-export default App;
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      height: "100%",
+    },
+    [theme.breakpoints.down("sm")]: {
+      height: "100%",
+    },
+  },
+}));

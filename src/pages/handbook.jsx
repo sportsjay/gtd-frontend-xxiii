@@ -1,12 +1,12 @@
 import React from "react";
 import { makeStyles, Typography } from "@material-ui/core";
 
-export default function FAQPage() {
+export default function HandBookPage() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <Typography>FAQ</Typography>
+      <Typography>Hand Book</Typography>
     </React.Fragment>
   );
 }
