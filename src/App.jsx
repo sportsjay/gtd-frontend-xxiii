@@ -1,6 +1,11 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
 // Import Components
 import Footer from "./components/common/footer";
@@ -16,9 +21,13 @@ export default function App() {
       <TopAppBar position="sticky" />
       <div className={classes.root}>
         <Switch>
+          <Route path="/" exact>
+            <Redirect to="/home" />
+          </Route>
           {routes.map((page) => (
             <Route key={page.id} path={page.path} component={page.body} exact />
           ))}
+          <Route />
         </Switch>
       </div>
       <Footer />
