@@ -3,9 +3,7 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Button,
   Drawer,
-  Typography,
   makeStyles,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -18,6 +16,7 @@ import { colorPalette } from "../color-palette/";
 
 // import components
 import DrawerList from "./drawer-list";
+import { Link } from "react-router-dom";
 const colors = new colorPalette();
 
 export default function TopAppBar(props) {
@@ -45,12 +44,23 @@ export default function TopAppBar(props) {
           >
             <MenuIcon style={{ color: "#212121", fontSize: 30 }} />
           </IconButton>
-          <Typography className={classes.title}>Get Together Day</Typography>
+          <Link className={classes.titleContainer} to="/home">
+            <img
+              className={classes.title}
+              src="gtd.png"
+              alt="Get Together Day"
+            />
+          </Link>
           <div className={classes.linkContainer}></div>
         </Toolbar>
       </AppBar>
       <div className={classes.backdrop} />
-      <Drawer anchor="left" open={drawer} onClose={toggleDrawer}>
+      <Drawer
+        className={classes.drawer}
+        anchor="left"
+        open={drawer}
+        onClose={toggleDrawer}
+      >
         <DrawerList {...props} routes={routes} />
       </Drawer>
     </React.Fragment>
@@ -67,9 +77,18 @@ const useStyles = makeStyles((theme) => ({
     // justifyContent: "space-between",
   },
   title: {
-    width: "50%",
     fontWeight: "700",
+    maxHeight: 50,
+    width: "auto",
     fontSize: 30,
+    [theme.breakpoints.down("sm")]: {
+      alignSelf: "center",
+      textAlign: "end",
+      fontSize: 24,
+    },
+  },
+  titleContainer: {
+    width: "50%",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       alignSelf: "center",
@@ -91,6 +110,12 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "flex-end",
     [theme.breakpoints.down("sm")]: {
       display: "none",
+    },
+  },
+  drawer: {
+    display: "none",
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
     },
   },
   backdrop: {
