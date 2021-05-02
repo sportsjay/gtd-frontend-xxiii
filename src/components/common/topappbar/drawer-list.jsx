@@ -68,10 +68,9 @@ export default function DrawerList(props) {
               key={route.name}
               style={{
                 width: "100%",
-                height: `${100 / routes.length}%`,
+                height: `${80 / routes.length}%`,
               }}
             >
-              {" "}
               <div className={classes.icon}>{iconSwitch(route.name)}</div>
               <Typography className={classes.linkText}>{route.name}</Typography>
               <div
@@ -100,6 +99,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "50vw",
     minWidth: 140,
+    maxWidth: 400,
     backgroundColor: colors.gray,
   },
   list: {
@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     alignContent: "space-evenly",
   },
   icon: {
-    marginLeft: 20,
+    marginLeft: 10,
   },
   link: {
     width: "100%",
@@ -117,9 +117,8 @@ const useStyles = makeStyles((theme) => ({
     color: "inherit",
   },
   linkText: {
-    marginRight: 10,
+    marginLeft: 30,
     width: "70%",
-    textAlign: "right",
     textTransform: "capitalize",
     fontWeight: "700",
   },
