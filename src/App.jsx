@@ -25,7 +25,9 @@ export default function App() {
             <Redirect to="/home" />
           </Route>
           {routes.map((page) => (
-            <Route key={page.id} path={page.path} component={page.body} exact />
+            <Route key={page.id} path={page.path} exact>
+              <div className={classes.body}>{page.body()}</div>
+            </Route>
           ))}
           <Route />
         </Switch>
@@ -36,13 +38,19 @@ export default function App() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  root: {},
+  "@keyframes slideInFromLeft": {
+    from: {
+      transform: "translateY(-100%)",
+    },
+    to: {
+      transform: "translateY(0)",
+    },
+  },
+  body: {
     display: "flex",
-    [theme.breakpoints.up("md")]: {
-      height: "100%",
-    },
-    [theme.breakpoints.down("sm")]: {
-      height: "100%",
-    },
+    animationName: "$slideInFromLeft",
+    animationDuration: "0.5s",
+    animationTimingFunction: "ease-out",
   },
 }));
