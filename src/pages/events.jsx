@@ -1,10 +1,6 @@
 import React from "react";
 import { makeStyles, Typography } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
-  root: {},
-}));
-
 export default function EventsPage() {
   const classes = useStyles();
 
@@ -14,3 +10,7 @@ export default function EventsPage() {
     </React.Fragment>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {},
+}));

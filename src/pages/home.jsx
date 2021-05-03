@@ -1,9 +1,5 @@
 import React from "react";
-import { makeStyles, Typography } from "@material-ui/core";
-
-const useStyles = makeStyles((theme) => ({
-  root: {},
-}));
+import { makeStyles, Typography, Button } from "@material-ui/core";
 
 export default function HomePage() {
   const classes = useStyles();
@@ -11,6 +7,11 @@ export default function HomePage() {
   return (
     <React.Fragment>
       <Typography>Home</Typography>
+      {/* <Button className={classes.button}>Test</Button> */}
     </React.Fragment>
   );
 }
+
+const useStyles = makeStyles((theme) => ({
+  root: {},
+}));
