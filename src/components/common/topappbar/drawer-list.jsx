@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Typography,
   makeStyles,
@@ -6,7 +6,7 @@ import {
   List,
   ListItem,
 } from "@material-ui/core";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import {
   HomeRounded,
@@ -15,7 +15,6 @@ import {
   EventRounded,
   HistoryRounded,
   QuestionAnswerRounded,
-  Home,
 } from "@material-ui/icons";
 
 // import colors
@@ -52,11 +51,10 @@ function iconSwitch(key) {
 export default function DrawerList(props) {
   const classes = useStyles();
   // initialize local state
-  const location = useLocation();
+  const activePage = props.activePage;
+  const setActivePage = props.setActivePage;
   const routes = props.routes;
-  const [activePage, setActivePage] = useState(
-    location.pathname.replace("/", "")
-  );
+
   return (
     <div className={classes.root}>
       <List className={classes.list}>
@@ -76,10 +74,11 @@ export default function DrawerList(props) {
               <div
                 style={{
                   position: "absolute",
-                  top: "25%",
-                  right: 0,
+                  top: "75%",
+                  left: 30,
                   width: route.name === activePage ? "75%" : 0,
-                  height: "50%",
+                  maxWidth: 200,
+                  height: "10%",
                   backgroundColor: colors.black,
                   opacity: 0.4,
                   transition: "width 0.2s ease-out",
@@ -99,7 +98,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100%",
     width: "50vw",
     minWidth: 140,
-    maxWidth: 400,
+    maxWidth: 300,
     backgroundColor: colors.gray,
   },
   list: {

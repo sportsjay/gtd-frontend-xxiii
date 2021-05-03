@@ -7,6 +7,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import { Link, useLocation } from "react-router-dom";
 
 // import routes
 import { routes } from "../../../routes";
@@ -16,14 +17,19 @@ import { colorPalette } from "../color-palette/";
 
 // import components
 import DrawerList from "./drawer-list";
-import { Link } from "react-router-dom";
+import LinkContainer from "./link-container";
 const colors = new colorPalette();
 
 export default function TopAppBar(props) {
+  const location = useLocation();
   // initialize local state
   const [drawer, setDrawer] = useState(false);
+  const [activePage, setActivePage] = useState(
+    location.pathname.replace("/", "")
+  );
   const classes = useStyles();
 
+  // toggle drawer function
   function toggleDrawer() {
     setDrawer(!drawer);
   }
@@ -44,14 +50,23 @@ export default function TopAppBar(props) {
           >
             <MenuIcon style={{ color: "#212121", fontSize: 30 }} />
           </IconButton>
-          <Link className={classes.titleContainer} to="/home">
+          <Link
+            className={classes.titleContainer}
+            to="/home"
+            onClick={() => setActivePage("home")}
+          >
             <img
               className={classes.title}
               src="gtd.png"
               alt="Get Together Day"
             />
           </Link>
-          <div className={classes.linkContainer}></div>
+          <LinkContainer
+            {...props}
+            routes={routes}
+            activePage={activePage}
+            setActivePage={setActivePage}
+          />
         </Toolbar>
       </AppBar>
       <div className={classes.backdrop} />
@@ -61,7 +76,12 @@ export default function TopAppBar(props) {
         open={drawer}
         onClose={toggleDrawer}
       >
-        <DrawerList {...props} routes={routes} />
+        <DrawerList
+          {...props}
+          routes={routes}
+          activePage={activePage}
+          setActivePage={setActivePage}
+        />
       </Drawer>
     </React.Fragment>
   );
@@ -89,6 +109,9 @@ const useStyles = makeStyles((theme) => ({
   },
   titleContainer: {
     width: "50%",
+    [theme.breakpoints.down("md")]: {
+      width: "30%",
+    },
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       alignSelf: "center",
@@ -102,16 +125,7 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
     },
   },
-  linkContainer: {
-    width: "40%",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "flex-end",
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
-    },
-  },
+
   drawer: {
     display: "none",
     [theme.breakpoints.down("sm")]: {
