@@ -40,7 +40,7 @@ export const routes = [
   {
     id: 5,
     body: FAQPage,
-    name: "faq",
-    path: "/faq",
+    name: "FAQ",
+    path: "/FAQ",
   },
 ];

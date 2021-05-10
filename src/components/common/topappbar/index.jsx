@@ -94,7 +94,6 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     flexDirection: "row",
-    // justifyContent: "space-between",
   },
   title: {
     fontWeight: "700",
@@ -108,15 +107,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   titleContainer: {
-    width: "50%",
-    [theme.breakpoints.down("md")]: {
-      width: "30%",
-    },
+    width: "30%",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       alignSelf: "center",
       textAlign: "end",
-      fontSize: 24,
     },
   },
   menuBar: {
