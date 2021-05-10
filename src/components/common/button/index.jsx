@@ -13,20 +13,47 @@ function ButtonLink(props) {
   return (
     <Button className={classes.buttonLink} {...props}>
       {text}
-      {children.map((child) => (
-        <React.Fragment>{child}</React.Fragment>
-      ))}
+      {Array.isArray(children) ? (
+        children.map((child) => <React.Fragment>{child}</React.Fragment>)
+      ) : (
+        <React.Fragment>{children}</React.Fragment>
+      )}
+    </Button>
+  );
+}
+
+function StyledButton(props) {
+  const classes = useStyles();
+  // initialize state
+  const text = props.text || "";
+  const children = props.children || [<React.Fragment></React.Fragment>];
+  return (
+    <Button
+      variant="contained"
+      disableRipple
+      className={classes.styledButton}
+      {...props}
+    >
+      {text}
+      {Array.isArray(children) ? (
+        children.map((child) => <React.Fragment>{child}</React.Fragment>)
+      ) : (
+        <React.Fragment>{children}</React.Fragment>
+      )}
     </Button>
   );
 }
 
 // export buttons
-export { ButtonLink };
+export { ButtonLink, StyledButton };
 
 const useStyles = makeStyles((theme) => ({
   buttonLink: {
     textTransform: "capitalize",
     minWidth: 100,
+    maxWidth: 200,
+    minHeight: 50,
+    maxHeight: 100,
     background: `linear-gradient(to left, ${colors.white} 50%, ${colors.red} 50%) right`,
     backgroundSize: "200%",
     transition: "all .2s ease-out",
@@ -40,5 +67,26 @@ const useStyles = makeStyles((theme) => ({
     borderStyle: "solid",
     borderWidth: 3,
     borderColor: colors.red,
+  },
+  styledButton: {
+    textTransform: "capitalize",
+    minWidth: 100,
+    maxWidth: 200,
+    minHeight: 50,
+    maxHeight: 100,
+    borderRadius: 0,
+    backgroundColor: colors.red,
+    fontWeight: 700,
+    color: colors.white,
+    "&:hover": {
+      color: colors.black,
+      backgroundColor: colors.gray,
+    },
+    "&:active": {
+      filter: "brightness(95%)",
+    },
+    [theme.breakpoints.down("xs")]: {
+      minWidth: 200,
+    },
   },
 }));
