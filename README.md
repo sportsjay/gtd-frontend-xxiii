@@ -4,6 +4,10 @@
 
 - Node (LTS Version)
 - npm (comes with Node)
+- yarn 
+```
+npm install -g yarn
+```
 - git
 
 # Start project in local environment:
