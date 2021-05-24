@@ -18,7 +18,7 @@ export const routes = [
     body: AboutUsPage,
     name: "about-us",
     path: "/about-us",
-  }, 
+  },
   {
     id: 2,
     body: HandBookPage,
