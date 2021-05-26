@@ -8,9 +8,34 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+
+
 export default function AboutUsPage() {
   const classes = useStyles();
-
+  
+  const infoCard = (nama, posisi, URLimg) =>{
+    return(
+      <Container className={classes.imagebox}>
+          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
+          </div>
+          <div className={classes.whitebox}>
+            <div className={classes.NameBox}>
+              name
+            </div>
+            <div className={classes.NameText}>
+              {nama}
+            </div>
+            <div className={classes.PosBox}>
+              position
+            </div>
+            <div className={classes.PosText}>
+              {posisi}
+            </div>
+          </div>
+          <img src={URLimg} className={classes.photoImage}/>
+        </Container>
+    );
+  }
   return (
     <div className={classes.root}>
       <Grid item xs={12}>
@@ -31,65 +56,17 @@ export default function AboutUsPage() {
       </Typography>
       </Grid>
       <Grid item xs={12}>
-      <Container className={classes.imagebox}>
-        <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-        </div>
-        <div className={classes.whitebox}>
-          <div className={classes.NameBox}>
-            Name 
-          </div>
-          <div className={classes.PosBox}>
-            Position 
-          </div>
-        </div>
-        <img src="gtd.png" className={classes.photoImage}/>
-      </Container>
+        {infoCard("edward", "IT", "gtd.png")}
       </Grid>
       <Grid container spacing={3} style={{marginTop:'50px'}}>
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
+        {infoCard()}
         </Grid>
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
-        </Grid>     
+        {infoCard()}
+        </Grid>
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
+        {infoCard()}
         </Grid>
       </Grid>
       <Typography component="div" className = {classes.TopManagementText}>
@@ -97,49 +74,13 @@ export default function AboutUsPage() {
       </Typography>
       <Grid container spacing={3} style={{marginTop:'50px'}}>
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
+        {infoCard()}
         </Grid>
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
+        {infoCard()}
         </Grid>     
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
+        {infoCard()}
         </Grid>
       </Grid>    
       <Typography component="div" className = {classes.TopManagementText}>
@@ -147,49 +88,13 @@ export default function AboutUsPage() {
       </Typography>
       <Grid container spacing={3} style={{marginTop:'50px'}}>
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
+        {infoCard()}
         </Grid>
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
+        {infoCard()}
         </Grid>     
         <Grid item md={4} xs={12}>
-        <Container className={classes.imagebox}>
-          <div style={{position: 'relative', top: '75px', left: '62px'}}>         
-          </div>
-          <div className={classes.whitebox}>
-            <div className={classes.NameBox}>
-              Name 
-            </div>
-            <div className={classes.PosBox}>
-              Position 
-            </div>
-          </div>
-          <img src="gtd.png" className={classes.photoImage}/>
-        </Container>
+        {infoCard()}
         </Grid>
       </Grid>    
     </div>
@@ -265,26 +170,40 @@ const useStyles = makeStyles((theme) => ({
   },
   NameBox:{
     position: 'absolute',
-    left: '120px',
+    width: '250px',
+    left: '26.5px',
     top: '80px',
     fontSize: '24px',
     fontFamily: 'Open Sans',
     fontStyle: 'normal',
     fontWeight: 'normal',
-    display: 'flex',
     alignItems: 'center',
     textAlign: 'center',
   },
   PosBox:{
     position: 'absolute',
-    left: '110px',
+    width: '250px',
+    left: '26.5px',
     top: '135px',
     fontSize: '24px',
     fontFamily: 'Open Sans',
     fontStyle: 'normal',
     fontWeight: 'normal',
-    display: 'flex',
     alignItems: 'center',
     textAlign: 'center',
-  }
+  },
+NameText: {
+  position: 'absolute',
+  width: '250px',
+  left: '26.5px',
+  textAlign: 'center',
+  top: '105px',
+},
+PosText:{
+  position: 'absolute',
+  width: '250px',
+  left: '26.5px',
+  textAlign: 'center',
+  top: '160px',
+},
 }));
