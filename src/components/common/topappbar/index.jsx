@@ -69,7 +69,6 @@ export default function TopAppBar(props) {
           />
         </Toolbar>
       </AppBar>
-      <div className={classes.backdrop} />
       <Drawer
         className={classes.drawer}
         anchor="left"
@@ -126,13 +125,5 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "block",
     },
-  },
-  backdrop: {
-    position: "absolute",
-    top: 0,
-    height: "100vh",
-    width: "100vw",
-    zIndex: -100,
-    backgroundColor: colors.black,
   },
 }));
