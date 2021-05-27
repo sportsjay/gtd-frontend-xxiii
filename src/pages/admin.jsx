@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container, Typography, makeStyles } from "@material-ui/core";
 
 // import component
-import { Login } from "../components/admin";
+import { AdminBody, Login } from "../components/admin";
 
 // import colors
 import { colorPalette } from "../components/common/color-palette";
@@ -13,7 +13,11 @@ export default function AdminPage(props) {
   const [isLogged, setIsLogged] = useState(false);
   return (
     <Container className={classes.root}>
-      {isLogged ? <></> : <Login />}
+      {isLogged ? (
+        <AdminBody setIsLogged={setIsLogged} />
+      ) : (
+        <Login setIsLogged={setIsLogged} />
+      )}
     </Container>
   );
 }

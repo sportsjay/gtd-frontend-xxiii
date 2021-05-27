@@ -7,15 +7,18 @@ import {
   TextField,
 } from "@material-ui/core";
 
+// import validations
+import { validator } from "./validation";
+
 // import colors
 import { colorPalette } from "../../common/color-palette";
 import { StyledButton } from "../../common/button";
-import { set } from "lodash";
 const colors = new colorPalette();
 
 export default function Login(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const setIsLogged = props.setIsLogged;
 
   // on change username
   function onUsername(event) {
@@ -29,7 +32,13 @@ export default function Login(props) {
 
   function onSubmit() {
     // pass API
+    const userInputError = validator.username(username).error;
+    const passwordInputError = validator.password(password).error;
 
+    if (userInputError) alert(userInputError);
+    if (passwordInputError) alert(passwordInputError);
+
+    if (username === "user" && password === "password") setIsLogged(true);
     setUsername("");
     setPassword("");
   }
@@ -68,7 +77,6 @@ export default function Login(props) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: colors.gray,
     width: "100%",
   },
   content: {
