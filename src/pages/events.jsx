@@ -8,26 +8,25 @@ import {
   Paper,
   Box,
 } from "@material-ui/core";
+import { ViewColumn } from "@material-ui/icons";
 
 export default function EventsPage() {
   const classes = useStyles();
 
   return (
     <React.Fragment className={classes.root}>
-      <Container
-        maxWidth="md"
-        style={{ display: "flex", flexDirection: "row" }}
-      >
-        <div className={classes.displayContent}>
+      <Grid container className={classes.displayContainer}>
+        <Grid item xs={6} className={classes.displayItemLeft}>
           <img
             className={classes.image}
             src="../images/gtd-dummy.jpg"
             alt="../images/gtd.jpg"
-            width="100vw"
+            width="100%"
             height="auto"
           />
-        </div>
-        <div className={classes.displayContent}>
+        </Grid>
+
+        <Grid item xs={6} className={classes.displayItemRight}>
           <Typography className={classes.title}>GTD XXIII</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -36,8 +35,81 @@ export default function EventsPage() {
             ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
             tellus.
           </Typography>
-        </div>
-      </Container>
+        </Grid>
+      </Grid>
+
+      {/* <Grid container>
+        <Typography>Halo guys!</Typography>
+      </Grid> */}
+
+      <Grid container className={classes.displayContainer}>
+        <Grid item xs={6} className={classes.displayItemLeft}>
+          <Typography className={classes.title}>NIGHT CYCLING</Typography>
+          <Typography className={classes.subtitle}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
+            suspendisse interdum consectetur libero id faucibus. Cursus risus at
+            ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
+            tellus.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={6} className={classes.displayItemRight}>
+          <img
+            className={classes.image}
+            src="../images/cycling-dummy.jpg"
+            alt="../images/cycling.jpg"
+            width="100%"
+            height="auto"
+          />
+        </Grid>
+      </Grid>
+
+      <Grid container className={classes.displayContainer}>
+        <Grid item xs={6} className={classes.displayItemLeft}>
+          <img
+            className={classes.image}
+            src="../images/cny-dummy.jpg"
+            alt="../images/cny.jpg"
+            width="100%"
+            height="auto"
+          />
+        </Grid>
+
+        <Grid item xs={6} className={classes.displayItemRight}>
+          <Typography className={classes.title}>CNY 2021</Typography>
+          <Typography className={classes.subtitle}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
+            suspendisse interdum consectetur libero id faucibus. Cursus risus at
+            ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
+            tellus.
+          </Typography>
+        </Grid>
+      </Grid>
+
+      <Grid container className={classes.displayContainer}>
+        <Grid item xs={6} className={classes.displayItemLeft}>
+          <Typography className={classes.title}>Escape Room</Typography>
+          <Typography className={classes.subtitle}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
+            suspendisse interdum consectetur libero id faucibus. Cursus risus at
+            ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
+            tellus.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={6} className={classes.displayItemRight}>
+          <img
+            className={classes.image}
+            src="../images/escape-dummy.jpg"
+            alt="../images/escape.jpg"
+            width="100%"
+            height="auto"
+          />
+        </Grid>
+      </Grid>
     </React.Fragment>
   );
 }
@@ -45,21 +117,63 @@ export default function EventsPage() {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    // flexDirection: "column",
+    // flexWrap: "wrap",
   },
 
-  displayContent: {
+  displayContainer: {
+    flexFlow: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    alignContent: "flex-start",
+    // flexDirection: "row",
+    // flexWrap: "wrap",
+  },
+
+  displayImageLeft: {
     display: "flex",
+    flex: "0 0 auto",
     justifyContent: "center",
     alignItems: "center",
-    maxWidth: "50%",
+    // width: "40%",
+    // flexDirection: "row",
+    margin: "50px 3% 50px 7%",
+  },
+
+  displayImageRight: {
+    display: "flex",
+    flex: "0 0 auto",
+    justifyContent: "center",
+    alignItems: "center",
+    // width: "40%",
+    // flexDirection: "row",
+    margin: "50px 7% 50px 3%",
+  },
+
+  displayTextLeft: {
+    display: "flex",
+    flex: "0 0 auto",
+    justifyContent: "center",
+    alignItems: "center",
+    // width: "40%",
     flexDirection: "column",
-    margin: "30px",
+    margin: "50px 3% 50px 7%",
+  },
+
+  displayTextRight: {
+    display: "flex",
+    flex: "0 0 auto",
+    justifyContent: "center",
+    alignItems: "center",
+    // width: "40%",
+    flexDirection: "column",
+    margin: "50px 7% 50px 3%",
   },
 
   image: {
     // position: "absolute",
-    width: "500px",
-    height: "430px",
+    width: "100%",
+    // height: "430px",
 
     background: "#F8F2E5",
     borderRadius: "20px",
@@ -74,6 +188,7 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "0em",
     textAlign: "center",
     color: "#FFFFFF",
+    padding: "20px",
   },
 
   subtitle: {
@@ -85,5 +200,6 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: "0em",
     textAlign: "center",
     color: "#FFFFFF",
+    width: "95%",
   },
 }));
