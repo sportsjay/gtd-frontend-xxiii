@@ -16,13 +16,13 @@ export const routes = [
   {
     id: 1,
     body: AboutUsPage,
-    name: "about-us",
+    name: "about us",
     path: "/about-us",
   }, 
   {
     id: 2,
     body: HandBookPage,
-    name: "hand-book",
+    name: "handbook",
     path: "/hand-book",
   },
   {
@@ -40,7 +40,7 @@ export const routes = [
   {
     id: 5,
     body: FAQPage,
-    name: "faq",
+    name: "FAQ",
     path: "/faq",
   },
 ];
