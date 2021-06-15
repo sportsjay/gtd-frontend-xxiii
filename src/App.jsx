@@ -13,7 +13,6 @@ import TopAppBar from "./components/common/topappbar/";
 
 // Import Routes and Pages
 import { routes } from "./routes";
-import AdminPage from "./pages/admin";
 
 export default function App() {
   const classes = useStyles();
@@ -24,9 +23,6 @@ export default function App() {
         <Switch>
           <Route path="/" exact>
             <Redirect to="/home" />
-          </Route>
-          <Route path="/admin-page" exact>
-            <AdminPage />
           </Route>
           {routes.map((page) => (
             <Route key={page.id} path={page.path} exact>

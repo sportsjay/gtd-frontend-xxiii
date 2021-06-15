@@ -1,5 +1,33 @@
 import React from "react";
-import { makeStyles, Typography } from "@material-ui/core";
+import { makeStyles, Typography, Grid } from "@material-ui/core";
+
+const sampleData = [
+  {
+    title: "GTD XXIII",
+    subtitle:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
+  },
+  {
+    title: "GTD XXIII",
+    subtitle:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
+  },
+  {
+    title: "GTD XXIII",
+    subtitle:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
+  },
+  {
+    title: "GTD XXIII",
+    subtitle:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
+  },
+  {
+    title: "GTD XXIII",
+    subtitle:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
+  },
+];
 
 export default function EventsPage() {
   const classes = useStyles();
@@ -14,7 +42,7 @@ export default function EventsPage() {
           backgroundColor: "#CCCCCC", // change to #FFFFFF
           margin: "auto",
         }}
-      ></div>
+      />
     );
   }
 
@@ -28,14 +56,35 @@ export default function EventsPage() {
           backgroundColor: "#CCCCCC", // change to #FFFFFF
           margin: "10px auto 10px auto",
         }}
-      ></div>
+      />
     );
   }
 
-  return (
-    <div className={classes.root}>
-      <div container spacing={3} className={classes.displayContainer}>
-        <div item xs={12} md={6} className={classes.displayImageLeft}>
+  function Transition() {
+    return (
+      <div className={classes.displayTransition}>
+        <Circ></Circ>
+        <Bar></Bar>
+        <Circ></Circ>
+        <Bar></Bar>
+        <Circ></Circ>
+      </div>
+    );
+  }
+
+  function Content(props) {
+    // image-text orientation, default = row, else = row-reverse
+    const orientation = props.index % 2 !== 0 ? "row-reverse" : "row";
+    const title = props.title || "No Title";
+    const subtitle = props.subtitle || "No subtitle";
+    return (
+      <Grid
+        container
+        spacing={3}
+        className={classes.displayContainer}
+        style={{ flexDirection: orientation }}
+      >
+        <Grid item xs={12} md={6} className={classes.displayImage}>
           <img
             className={classes.image}
             src="../images/gtd-dummy.jpg"
@@ -43,107 +92,39 @@ export default function EventsPage() {
             width="100%"
             height="auto"
           />
-        </div>
-        <div item xs={12} md={6} className={classes.displayTextRight}>
-          <Typography className={classes.title}>GTD XXIII</Typography>
-          <Typography className={classes.subtitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            suspendisse interdum consectetur libero id faucibus. Cursus risus at
-            ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
-            tellus.
-          </Typography>
-        </div>
-      </div>
+        </Grid>
+        <Grid item xs={12} md={6} className={classes.displayText}>
+          <Typography className={classes.title}>{title}</Typography>
+          <Typography className={classes.subtitle}>{subtitle}</Typography>
+        </Grid>
+      </Grid>
+    );
+  }
 
-      <div className={classes.displayTransition}>
-        <Circ></Circ>
-        <Bar></Bar>
-        <Circ></Circ>
-        <Bar></Bar>
-        <Circ></Circ>
-      </div>
-      <div container spacing={3} className={classes.displayContainer}>
-        <div item xs={12} md={6} className={classes.displayTextLeft}>
-          <Typography className={classes.title}>NIGHT CYCLING</Typography>
-          <Typography className={classes.subtitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            suspendisse interdum consectetur libero id faucibus. Cursus risus at
-            ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
-            tellus.
-          </Typography>
-        </div>
-        <div item xs={12} md={6} className={classes.displayImageRight}>
-          <img
-            className={classes.image}
-            src="../images/cycling-dummy.jpg"
-            alt="../images/cycling.jpg"
-            width="100%"
-            height="auto"
-          />
-        </div>
-      </div>
-
-      <div className={classes.displayTransition}>
-        <Circ></Circ>
-        <Bar></Bar>
-        <Circ></Circ>
-        <Bar></Bar>
-        <Circ></Circ>
-      </div>
-
-      <div container spacing={3} className={classes.displayContainer}>
-        <div item xs={12} md={6} className={classes.displayImageLeft}>
-          <img
-            className={classes.image}
-            src="../images/cny-dummy.jpg"
-            alt="../images/cny.jpg"
-            width="100%"
-            height="auto"
-          />
-        </div>
-        <div item xs={12} md={6} className={classes.displayTextRight}>
-          <Typography className={classes.title}>CNY 2021</Typography>
-          <Typography className={classes.subtitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            suspendisse interdum consectetur libero id faucibus. Cursus risus at
-            ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
-            tellus.
-          </Typography>
-        </div>
-      </div>
-
-      <div className={classes.displayTransition}>
-        <Circ></Circ>
-        <Bar></Bar>
-        <Circ></Circ>
-        <Bar></Bar>
-        <Circ></Circ>
-      </div>
-
-      <div container spacing={3} className={classes.displayContainer}>
-        <div item xs={12} md={6} className={classes.displayTextLeft}>
-          <Typography className={classes.title}>Escape Room</Typography>
-          <Typography className={classes.subtitle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            suspendisse interdum consectetur libero id faucibus. Cursus risus at
-            ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
-            tellus.
-          </Typography>
-        </div>
-        <div item xs={12} md={6} className={classes.displayImageRight}>
-          <img
-            className={classes.image}
-            src="../images/escape-dummy.jpg"
-            alt="../images/escape.jpg"
-            width="100%"
-            height="auto"
-          />
-        </div>
-      </div>
+  return (
+    <div className={classes.root}>
+      {sampleData.map((data, index) =>
+        index === sampleData.length - 1 ? (
+          <React.Fragment>
+            <Content
+              title={data.title}
+              subtitle={data.subtitle}
+              index={index}
+              key={index}
+            />
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Content
+              title={data.title}
+              subtitle={data.subtitle}
+              index={index}
+              key={index}
+            />
+            <Transition key={index} />
+          </React.Fragment>
+        )
+      )}
     </div>
   );
 }
@@ -179,29 +160,14 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: "border-box",
   },
 
-  displayImageLeft: {
+  displayImage: {
     padding: "20px",
     boxSizing: "border-box",
     width: "50%",
   },
 
-  displayImageRight: {
+  displayText: {
     padding: "20px",
-    boxSizing: "border-box",
-    width: "50%",
-    maxWidth: "50%",
-  },
-
-  displayTextLeft: {
-    padding: "20px",
-    boxSizing: "border-box",
-    width: "50%",
-    maxWidth: "50%",
-  },
-
-  displayTextRight: {
-    padding: "20px",
-    margin: "auto",
     boxSizing: "border-box",
     width: "50%",
   },
