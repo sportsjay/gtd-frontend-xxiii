@@ -18,8 +18,8 @@ export default function App() {
   const classes = useStyles();
   return (
     <Router>
-      <TopAppBar position="sticky" />
       <div className={classes.root}>
+        <TopAppBar position="sticky" />
         <Switch>
           <Route path="/" exact>
             <Redirect to="/home" />
@@ -39,7 +39,8 @@ export default function App() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "100vw",
+    // width: "100vw",
+    boxSizing: "border-box",
   },
   "@keyframes slideInFromLeft": {
     from: {

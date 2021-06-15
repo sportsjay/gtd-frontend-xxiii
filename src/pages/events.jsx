@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, Typography, Grid } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 
 export default function EventsPage() {
   const classes = useStyles();
@@ -34,8 +34,8 @@ export default function EventsPage() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3} className={classes.displayContainer}>
-        <Grid item xs={12} md={6} className={classes.displayImageLeft}>
+      <div container spacing={3} className={classes.displayContainer}>
+        <div item xs={12} md={6} className={classes.displayImageLeft}>
           <img
             className={classes.image}
             src="../images/gtd-dummy.jpg"
@@ -43,8 +43,8 @@ export default function EventsPage() {
             width="100%"
             height="auto"
           />
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.displayTextRight}>
+        </div>
+        <div item xs={12} md={6} className={classes.displayTextRight}>
           <Typography className={classes.title}>GTD XXIII</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -53,8 +53,8 @@ export default function EventsPage() {
             ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
             tellus.
           </Typography>
-        </Grid>
-      </Grid>
+        </div>
+      </div>
 
       <div className={classes.displayTransition}>
         <Circ></Circ>
@@ -63,9 +63,8 @@ export default function EventsPage() {
         <Bar></Bar>
         <Circ></Circ>
       </div>
-
-      <Grid container spacing={3} className={classes.displayContainer}>
-        <Grid item xs={12} md={6} className={classes.displayTextLeft}>
+      <div container spacing={3} className={classes.displayContainer}>
+        <div item xs={12} md={6} className={classes.displayTextLeft}>
           <Typography className={classes.title}>NIGHT CYCLING</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -74,8 +73,8 @@ export default function EventsPage() {
             ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
             tellus.
           </Typography>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.displayImageRight}>
+        </div>
+        <div item xs={12} md={6} className={classes.displayImageRight}>
           <img
             className={classes.image}
             src="../images/cycling-dummy.jpg"
@@ -83,8 +82,8 @@ export default function EventsPage() {
             width="100%"
             height="auto"
           />
-        </Grid>
-      </Grid>
+        </div>
+      </div>
 
       <div className={classes.displayTransition}>
         <Circ></Circ>
@@ -94,8 +93,8 @@ export default function EventsPage() {
         <Circ></Circ>
       </div>
 
-      <Grid container spacing={3} className={classes.displayContainer}>
-        <Grid item xs={12} md={6} className={classes.displayImageLeft}>
+      <div container spacing={3} className={classes.displayContainer}>
+        <div item xs={12} md={6} className={classes.displayImageLeft}>
           <img
             className={classes.image}
             src="../images/cny-dummy.jpg"
@@ -103,8 +102,8 @@ export default function EventsPage() {
             width="100%"
             height="auto"
           />
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.displayTextRight}>
+        </div>
+        <div item xs={12} md={6} className={classes.displayTextRight}>
           <Typography className={classes.title}>CNY 2021</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -113,8 +112,8 @@ export default function EventsPage() {
             ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
             tellus.
           </Typography>
-        </Grid>
-      </Grid>
+        </div>
+      </div>
 
       <div className={classes.displayTransition}>
         <Circ></Circ>
@@ -124,8 +123,8 @@ export default function EventsPage() {
         <Circ></Circ>
       </div>
 
-      <Grid container spacing={3} className={classes.displayContainer}>
-        <Grid item xs={12} md={6} className={classes.displayTextLeft}>
+      <div container spacing={3} className={classes.displayContainer}>
+        <div item xs={12} md={6} className={classes.displayTextLeft}>
           <Typography className={classes.title}>Escape Room</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -134,8 +133,8 @@ export default function EventsPage() {
             ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
             tellus.
           </Typography>
-        </Grid>
-        <Grid item xs={12} md={6} className={classes.displayImageRight}>
+        </div>
+        <div item xs={12} md={6} className={classes.displayImageRight}>
           <img
             className={classes.image}
             src="../images/escape-dummy.jpg"
@@ -143,8 +142,8 @@ export default function EventsPage() {
             width="100%"
             height="auto"
           />
-        </Grid>
-      </Grid>
+        </div>
+      </div>
     </div>
   );
 }
@@ -153,6 +152,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     align: "center",
+    boxSizing: "border-box",
   },
 
   paper: {
@@ -163,42 +163,47 @@ const useStyles = makeStyles((theme) => ({
 
   displayContainer: {
     align: "center",
-    padding: "3vw",
+    padding: theme.spacing(2),
     margin: "auto",
     display: "flex",
     alignItems: "center",
-    // backgroundColor: "dodgerBlue", // delete later
-    width: "100vw",
+    width: "100%",
+    boxSizing: "border-box",
   },
 
   displayTransition: {
     justifyContent: "center",
-    // backgroundColor: "pink", // delete later
     margin: "auto",
-    padding: "3vw",
+    padding: theme.spacing(2),
     display: "block",
+    boxSizing: "border-box",
   },
 
   displayImageLeft: {
     padding: "20px",
-    // backgroundColor: "yellow", // delete later
+    boxSizing: "border-box",
+    width: "50%",
   },
 
   displayImageRight: {
     padding: "20px",
-    // backgroundColor: "red", // delete later
+    boxSizing: "border-box",
+    width: "50%",
+    maxWidth: "50%",
   },
 
   displayTextLeft: {
     padding: "20px",
-    // backgroundColor: "green", // delete later
-    margin: "auto",
+    boxSizing: "border-box",
+    width: "50%",
+    maxWidth: "50%",
   },
 
   displayTextRight: {
     padding: "20px",
-    // backgroundColor: "blue", // delete later
     margin: "auto",
+    boxSizing: "border-box",
+    width: "50%",
   },
 
   image: {
@@ -209,7 +214,8 @@ const useStyles = makeStyles((theme) => ({
 
   title: {
     fontFamily: "'Open Sans', sans-serif",
-    fontSize: "9vmin",
+    fontSize: "34pt",
+    fontWeight: "700",
     fontStyle: "normal",
     lineHeight: "12vmin",
     letterSpacing: "0em",
@@ -218,11 +224,14 @@ const useStyles = makeStyles((theme) => ({
     color: "#CCCCCC", // change to #FFFFFF
     // padding: "20px",
     margin: "0 0 20px 0",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16pt",
+    },
   },
 
   subtitle: {
     fontFamily: "'Open Sans', sans-serif",
-    fontSize: "4.5vmin",
+    fontSize: "16pt",
     fontStyle: "normal",
     lineHeight: "6vmin",
     letterSpacing: "0em",
@@ -230,5 +239,8 @@ const useStyles = makeStyles((theme) => ({
     // color: "#FF0000", // delete later
     color: "#CCCCCC", // change to #FFFFFF
     // padding: "20px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "12pt",
+    },
   },
 }));
