@@ -1,22 +1,41 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import {
-  makeStyles,
-  Typography,
-  Container,
-  Grid,
-  Paper,
-  Box,
-} from "@material-ui/core";
-import { ViewColumn } from "@material-ui/icons";
+import { makeStyles, Typography, Grid } from "@material-ui/core";
 
 export default function EventsPage() {
   const classes = useStyles();
 
+  function Circ() {
+    return (
+      <div
+        style={{
+          height: 40,
+          width: "40px",
+          borderRadius: "50%",
+          backgroundColor: "#CCCCCC", // change to #FFFFFF
+          margin: "auto",
+        }}
+      ></div>
+    );
+  }
+
+  function Bar() {
+    return (
+      <div
+        style={{
+          height: 60,
+          width: 3,
+          borderRadius: "0%",
+          backgroundColor: "#CCCCCC", // change to #FFFFFF
+          margin: "10px auto 10px auto",
+        }}
+      ></div>
+    );
+  }
+
   return (
-    <React.Fragment className={classes.root}>
-      <Grid container className={classes.displayContainer}>
-        <Grid item xs={6} className={classes.displayItemLeft}>
+    <div className={classes.root}>
+      <Grid container spacing={3} className={classes.displayContainer}>
+        <Grid item xs={12} md={6} className={classes.displayImageLeft}>
           <img
             className={classes.image}
             src="../images/gtd-dummy.jpg"
@@ -25,8 +44,7 @@ export default function EventsPage() {
             height="auto"
           />
         </Grid>
-
-        <Grid item xs={6} className={classes.displayItemRight}>
+        <Grid item xs={12} md={6} className={classes.displayTextRight}>
           <Typography className={classes.title}>GTD XXIII</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,12 +56,16 @@ export default function EventsPage() {
         </Grid>
       </Grid>
 
-      {/* <Grid container>
-        <Typography>Halo guys!</Typography>
-      </Grid> */}
+      <div className={classes.displayTransition}>
+        <Circ></Circ>
+        <Bar></Bar>
+        <Circ></Circ>
+        <Bar></Bar>
+        <Circ></Circ>
+      </div>
 
-      <Grid container className={classes.displayContainer}>
-        <Grid item xs={6} className={classes.displayItemLeft}>
+      <Grid container spacing={3} className={classes.displayContainer}>
+        <Grid item xs={12} md={6} className={classes.displayTextLeft}>
           <Typography className={classes.title}>NIGHT CYCLING</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -53,8 +75,7 @@ export default function EventsPage() {
             tellus.
           </Typography>
         </Grid>
-
-        <Grid item xs={6} className={classes.displayItemRight}>
+        <Grid item xs={12} md={6} className={classes.displayImageRight}>
           <img
             className={classes.image}
             src="../images/cycling-dummy.jpg"
@@ -65,8 +86,16 @@ export default function EventsPage() {
         </Grid>
       </Grid>
 
-      <Grid container className={classes.displayContainer}>
-        <Grid item xs={6} className={classes.displayItemLeft}>
+      <div className={classes.displayTransition}>
+        <Circ></Circ>
+        <Bar></Bar>
+        <Circ></Circ>
+        <Bar></Bar>
+        <Circ></Circ>
+      </div>
+
+      <Grid container spacing={3} className={classes.displayContainer}>
+        <Grid item xs={12} md={6} className={classes.displayImageLeft}>
           <img
             className={classes.image}
             src="../images/cny-dummy.jpg"
@@ -75,8 +104,7 @@ export default function EventsPage() {
             height="auto"
           />
         </Grid>
-
-        <Grid item xs={6} className={classes.displayItemRight}>
+        <Grid item xs={12} md={6} className={classes.displayTextRight}>
           <Typography className={classes.title}>CNY 2021</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -88,8 +116,16 @@ export default function EventsPage() {
         </Grid>
       </Grid>
 
-      <Grid container className={classes.displayContainer}>
-        <Grid item xs={6} className={classes.displayItemLeft}>
+      <div className={classes.displayTransition}>
+        <Circ></Circ>
+        <Bar></Bar>
+        <Circ></Circ>
+        <Bar></Bar>
+        <Circ></Circ>
+      </div>
+
+      <Grid container spacing={3} className={classes.displayContainer}>
+        <Grid item xs={12} md={6} className={classes.displayTextLeft}>
           <Typography className={classes.title}>Escape Room</Typography>
           <Typography className={classes.subtitle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -99,8 +135,7 @@ export default function EventsPage() {
             tellus.
           </Typography>
         </Grid>
-
-        <Grid item xs={6} className={classes.displayItemRight}>
+        <Grid item xs={12} md={6} className={classes.displayImageRight}>
           <img
             className={classes.image}
             src="../images/escape-dummy.jpg"
@@ -110,96 +145,90 @@ export default function EventsPage() {
           />
         </Grid>
       </Grid>
-    </React.Fragment>
+    </div>
   );
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    // flexDirection: "column",
-    // flexWrap: "wrap",
+    align: "center",
+  },
+
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.secondary,
   },
 
   displayContainer: {
-    flexFlow: "row",
-    justifyContent: "space-between",
+    align: "center",
+    padding: "3vw",
+    margin: "auto",
+    display: "flex",
     alignItems: "center",
-    alignContent: "flex-start",
-    // flexDirection: "row",
-    // flexWrap: "wrap",
+    // backgroundColor: "dodgerBlue", // delete later
+    width: "100vw",
+  },
+
+  displayTransition: {
+    justifyContent: "center",
+    // backgroundColor: "pink", // delete later
+    margin: "auto",
+    padding: "3vw",
+    display: "block",
   },
 
   displayImageLeft: {
-    display: "flex",
-    flex: "0 0 auto",
-    justifyContent: "center",
-    alignItems: "center",
-    // width: "40%",
-    // flexDirection: "row",
-    margin: "50px 3% 50px 7%",
+    padding: "20px",
+    // backgroundColor: "yellow", // delete later
   },
 
   displayImageRight: {
-    display: "flex",
-    flex: "0 0 auto",
-    justifyContent: "center",
-    alignItems: "center",
-    // width: "40%",
-    // flexDirection: "row",
-    margin: "50px 7% 50px 3%",
+    padding: "20px",
+    // backgroundColor: "red", // delete later
   },
 
   displayTextLeft: {
-    display: "flex",
-    flex: "0 0 auto",
-    justifyContent: "center",
-    alignItems: "center",
-    // width: "40%",
-    flexDirection: "column",
-    margin: "50px 3% 50px 7%",
+    padding: "20px",
+    // backgroundColor: "green", // delete later
+    margin: "auto",
   },
 
   displayTextRight: {
-    display: "flex",
-    flex: "0 0 auto",
-    justifyContent: "center",
-    alignItems: "center",
-    // width: "40%",
-    flexDirection: "column",
-    margin: "50px 7% 50px 3%",
+    padding: "20px",
+    // backgroundColor: "blue", // delete later
+    margin: "auto",
   },
 
   image: {
-    // position: "absolute",
     width: "100%",
-    // height: "430px",
-
     background: "#F8F2E5",
     borderRadius: "20px",
   },
 
   title: {
-    fontFamily: "Roboto",
-    fontSize: "48px",
+    fontFamily: "'Open Sans', sans-serif",
+    fontSize: "9vmin",
     fontStyle: "normal",
-    fontWeight: "400",
-    lineHeight: "56px",
+    lineHeight: "12vmin",
     letterSpacing: "0em",
     textAlign: "center",
-    color: "#FFFFFF",
-    padding: "20px",
+    // color: "#00FF00", // delete later
+    color: "#CCCCCC", // change to #FFFFFF
+    // padding: "20px",
+    margin: "0 0 20px 0",
   },
 
   subtitle: {
-    fontFamily: "Roboto",
-    fontSize: "24px",
+    fontFamily: "'Open Sans', sans-serif",
+    fontSize: "4.5vmin",
     fontStyle: "normal",
-    fontWeight: "400",
-    lineHeight: "28px",
+    lineHeight: "6vmin",
     letterSpacing: "0em",
     textAlign: "center",
-    color: "#FFFFFF",
-    width: "95%",
+    // color: "#FF0000", // delete later
+    color: "#CCCCCC", // change to #FFFFFF
+    // padding: "20px",
   },
 }));
