@@ -69,7 +69,6 @@ export default function TopAppBar(props) {
           />
         </Toolbar>
       </AppBar>
-      <div className={classes.backdrop} />
       <Drawer
         className={classes.drawer}
         anchor="left"
@@ -94,7 +93,6 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     flexDirection: "row",
-    // justifyContent: "space-between",
   },
   title: {
     fontWeight: "700",
@@ -108,15 +106,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   titleContainer: {
-    width: "50%",
-    [theme.breakpoints.down("md")]: {
-      width: "30%",
-    },
+    width: "30%",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       alignSelf: "center",
       textAlign: "end",
-      fontSize: 24,
     },
   },
   menuBar: {
@@ -131,13 +125,5 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "block",
     },
-  },
-  backdrop: {
-    position: "absolute",
-    top: 0,
-    height: "100vh",
-    width: "100vw",
-    zIndex: -100,
-    backgroundColor: colors.black,
   },
 }));

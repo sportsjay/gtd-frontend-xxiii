@@ -39,7 +39,7 @@ function iconSwitch(key) {
     case "archive": {
       return <HistoryRounded />;
     }
-    case "faq": {
+    case "FAQ": {
       return <QuestionAnswerRounded />;
     }
     default: {
@@ -99,7 +99,8 @@ const useStyles = makeStyles((theme) => ({
     width: "50vw",
     minWidth: 140,
     maxWidth: 300,
-    backgroundColor: colors.gray,
+    minHeight: 700,
+    backgroundColor: colors.white,
   },
   list: {
     width: "100%",

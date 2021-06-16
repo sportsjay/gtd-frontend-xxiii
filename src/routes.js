@@ -2,9 +2,7 @@
 import HomePage from "./pages/home";
 import AboutUsPage from "./pages/aboutus";
 import ArchivePage from "./pages/archive";
-import HandBookPage from "./pages/handbook";
 import EventsPage from "./pages/events";
-import FAQPage from "./pages/faq";
 
 export const routes = [
   {
@@ -21,26 +19,14 @@ export const routes = [
   },
   {
     id: 2,
-    body: HandBookPage,
-    name: "hand-book",
-    path: "/hand-book",
-  },
-  {
-    id: 3,
     body: EventsPage,
     name: "events",
     path: "/events",
   },
   {
-    id: 4,
+    id: 3,
     body: ArchivePage,
     name: "archive",
     path: "/archive",
-  },
-  {
-    id: 5,
-    body: FAQPage,
-    name: "faq",
-    path: "/faq",
   },
 ];

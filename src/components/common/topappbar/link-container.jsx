@@ -21,7 +21,10 @@ export default function LinkContainer(props) {
     <div className={classes.root}>
       {routes.map((route) => (
         <Link to={route.path} className={classes.link}>
-          <ButtonLink onClick={() => setActivePage(route.name)}>
+          <ButtonLink
+            onClick={() => setActivePage(route.name)}
+            style={{ marginLeft: 4, marginRight: 4, padding: 0 }}
+          >
             <Typography className={classes.linkText}>{route.name}</Typography>
             <div
               style={{
@@ -45,14 +48,11 @@ export default function LinkContainer(props) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "50%",
+    width: "70%",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-evenly",
-    [theme.breakpoints.down("md")]: {
-      width: "70%",
-    },
+    justifyContent: "flex-end",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
