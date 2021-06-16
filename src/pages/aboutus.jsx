@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { makeStyles, Typography, Grid } from "@material-ui/core";
 import Container from '@material-ui/core/Container';
+import { colorPalette } from "../components/common/color-palette";
 
 const portList =['PPIT', 'POLOG', 'WELFARE'];
 const pageList = ['page1', 'page2'];
@@ -270,9 +271,9 @@ export default function AboutUsPage() {
       </Grid>
       <Grid item xs={12} className={classes.portfolioSelect}>
       <button onClick={handlePrevPortButton}>previous</button>
-      <div component="div" className = {classes.TopManagementText}>
+      <Typography component="div" className = {classes.TopManagementText}>
           {portList[currentPort]}
-      </div>
+      </Typography>
       <button onClick={handleNextPortButton}>next</button>
       </Grid>
       <Typography component="div" className = {classes.TopManagementText}>
@@ -328,6 +329,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: 36,
     },
+  },
+  TopManagementText : {
+    backgroundColor: '#212121', 
+    fontSize: '48px', 
+    fontWeight: "700",
+    textAlign : 'center', 
+    paddingTop: '50px',
+    color: 'white',
+    paddingBottom: '30px',
   },
   content: {
     backgroundColor: colors.black,
