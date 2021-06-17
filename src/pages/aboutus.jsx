@@ -1,22 +1,221 @@
-import React from "react";
+import React, {useState} from "react";
 import { makeStyles, Typography, Grid } from "@material-ui/core";
-import Container from "@material-ui/core/Container";
-import Avatar from "@material-ui/core/Avatar";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
+import Container from '@material-ui/core/Container';
 import { colorPalette } from "../components/common/color-palette";
+
+const portList =['PPIT', 'POLOG', 'WELFARE'];
+const pageList = ['page1', 'page2'];
+
+const MainCom={
+  PPIT:{
+    one: {  
+      nama: 'edward',
+      posisi: 'PPIT',
+      URLimg: 'gtd.png'
+    },
+    two: {
+      nama: 'PPIT2',
+      posisi: 'PPIT',
+      URLimg: 'gtd.png'
+    },
+    three: {
+      nama: 'PPIT3',
+      posisi: 'PPIT',
+      URLimg: 'gtd.png'
+    },
+  },
+  POLOG:{
+    one: {
+      nama: 'POLOG1',
+      posisi: 'POLOG',
+      URLimg: 'gtd.png',
+    },
+    two: {
+      nama: 'POLOG2',
+      posisi: 'POLOG',
+      URLimg: 'gtd.png',
+    },
+    three: {
+      nama: 'POLOG3',
+      posisi: 'POLOG',
+      URLimg: 'gtd.png'
+    },
+  },
+  WELFARE:{
+    one: {
+      nama: 'WELFARE1',
+      posisi: 'WELFARE',
+      URLimg: 'gtd.png',
+    },
+    two: {
+      nama: 'WELFARE2',
+      posisi: 'WELFARE',
+      URLimg: 'gtd.png',
+    },
+    three: {
+      nama: 'WELFARE3',
+      posisi: 'WELFARE',
+      URLimg: 'gtd.png'
+    },
+  }
+}
+
+const SubCom={
+  PPIT:{
+    page1:{
+      one:{
+        nama: 'PPIT1',
+        posisi: 'subcom',
+        URLimg: 'gtd.png'
+      },
+      two: {
+        nama: 'PPIT2',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      three: {
+        nama: 'PPIT3',
+        posisi: 'subcom',
+        URLimg: 'gtd.png'
+      },
+    },  
+    page2:{
+      one:{
+        nama: 'PPIT4',
+        posisi: 'subcom',
+        URLimg: 'gtd.png'
+      },
+      two: {
+        nama: 'PPIT5',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      three: {
+        nama: 'PPIT6',
+        posisi: 'subcom',
+        URLimg: 'gtd.png'
+      },
+    },  
+  },
+    POLOG:{
+    page1:{
+      one: {
+        nama: 'POLOG1',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      two: {
+        nama: 'POLOG2',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      three: {
+        nama: 'POLOG3',
+        posisi: 'subcom',
+        URLimg: 'gtd.png'
+      },
+    },
+    page2:{
+      one: {
+        nama: 'POLOG4',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      two: {
+        nama: 'POLOG5',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      three: {
+        nama: 'POLOG6',
+        posisi: 'subcom',
+        URLimg: 'gtd.png'
+      },
+    }
+    },
+    WELFARE: {
+    page1:{
+      one: {
+        nama: 'WELFARE1',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      two: {
+        nama: 'WELFARE2',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      three: {
+        nama: 'WELFARE3',
+        posisi: 'subcom',
+        URLimg: 'gtd.png'
+      },
+    },
+    page2:{
+      one: {
+        nama: 'WELFARE4',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      two: {
+        nama: 'WELFARE5',
+        posisi: 'subcom',
+        URLimg: 'gtd.png',
+      },
+      three: {
+        nama: 'WELFARE6',
+        posisi: 'subcom',
+        URLimg: 'gtd.png'
+      },
+    }
+  },
+}
 
 const colors = new colorPalette();
 
 export default function AboutUsPage() {
   const classes = useStyles();
+  const [currentPort, setCurrentPort] = useState(0);
+  const [currentPage, setCurrentPage] = useState(0);
 
-  const infoCard = (nama, posisi, URLimg) => {
-    return (
+  const handlePrevPortButton = () => {
+    if(currentPort <= 0){
+      setCurrentPort(currentPort + portList.length-1);
+    }
+    else{
+      setCurrentPort(currentPort -1);
+    }
+  }
+
+  const handleNextPortButton = () => {
+    if(currentPort >= portList.length-1){
+      setCurrentPort(currentPort - (portList.length-1));
+    }
+    else{
+      setCurrentPort(currentPort + 1);
+    }
+  }
+
+  const handlePrevPageButton = () => {
+    if(currentPage <= 0){
+      setCurrentPage(currentPage + pageList.length-1);
+    }
+    else{
+      setCurrentPage(currentPage -1);
+    }
+  }
+  
+  const handleNextPageButton = () => {
+    if(currentPage >= pageList.length-1){
+      setCurrentPage(currentPage - (pageList.length-1));
+    }
+    else{
+      setCurrentPage(currentPage + 1);
+    }
+  }
+
+  const infoCard = (nama, posisi, URLimg) =>{
+    return(
       <Container className={classes.imagebox}>
         <div style={{ position: "relative", top: "75px", left: "62px" }}></div>
         <div className={classes.whitebox}>
@@ -34,6 +233,7 @@ export default function AboutUsPage() {
       </Container>
     );
   };
+
   return (
     <div className={classes.root}>
       <Grid item xs={12}>
@@ -56,31 +256,38 @@ export default function AboutUsPage() {
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        {infoCard("edward", "IT", "gtd.png")}
+        {infoCard('PINTU TOPS', 'TOPS', 'gtd.png')}
       </Grid>
       <Grid container spacing={3} style={{ marginTop: "50px" }}>
         <Grid item md={4} xs={12}>
-          {infoCard()}
+        {infoCard('PINTU TOPS', 'TOPS', 'gtd.png')}
         </Grid>
         <Grid item md={4} xs={12}>
-          {infoCard()}
+        {infoCard('PINTU TOPS', 'TOPS', 'gtd.png')}
         </Grid>
         <Grid item md={4} xs={12}>
-          {infoCard()}
+        {infoCard('PINTU TOPS', 'TOPS', 'gtd.png')}
         </Grid>
       </Grid>
-      <Typography component="div" className={classes.headerTitle}>
-        Main Committee
+      <Grid item xs={12} className={classes.portfolioSelect}>
+      <button onClick={handlePrevPortButton}>previous</button>
+      <Typography component="div" className = {classes.TopManagementText}>
+          {portList[currentPort]}
+      </Typography>
+      <button onClick={handleNextPortButton}>next</button>
+      </Grid>
+      <Typography component="div" className = {classes.TopManagementText}>
+          Main Committee
       </Typography>
       <Grid container spacing={3} style={{ marginTop: "50px" }}>
         <Grid item md={4} xs={12}>
-          {infoCard()}
+        {infoCard(MainCom[portList[currentPort]].one.nama, MainCom[portList[currentPort]].one.posisi, MainCom[portList[currentPort]].one.URLimg )}
         </Grid>
         <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
+        {infoCard(MainCom[portList[currentPort]].two.nama, MainCom[portList[currentPort]].two.posisi, MainCom[portList[currentPort]].two.URLimg )}
+        </Grid>     
         <Grid item md={4} xs={12}>
-          {infoCard()}
+        {infoCard(MainCom[portList[currentPort]].three.nama, MainCom[portList[currentPort]].three.posisi, MainCom[portList[currentPort]].three.URLimg )}
         </Grid>
       </Grid>
       <Typography component="div" className={classes.headerTitle}>
@@ -88,15 +295,19 @@ export default function AboutUsPage() {
       </Typography>
       <Grid container spacing={3} style={{ marginTop: "50px" }}>
         <Grid item md={4} xs={12}>
-          {infoCard()}
+        {infoCard(SubCom[portList[currentPort]][pageList[currentPage]].one.nama, SubCom[portList[currentPort]][pageList[currentPage]].one.posisi, SubCom[portList[currentPort]][pageList[currentPage]].one.URLimg )}
         </Grid>
         <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
+        {infoCard(SubCom[portList[currentPort]][pageList[currentPage]].two.nama, SubCom[portList[currentPort]][pageList[currentPage]].two.posisi, SubCom[portList[currentPort]][pageList[currentPage]].two.URLimg )}
+        </Grid>     
         <Grid item md={4} xs={12}>
-          {infoCard()}
+        {infoCard(SubCom[portList[currentPort]][pageList[currentPage]].three.nama, SubCom[portList[currentPort]][pageList[currentPage]].three.posisi, SubCom[portList[currentPort]][pageList[currentPage]].three.URLimg )}
         </Grid>
-      </Grid>
+      </Grid> 
+      <div className={classes.pageButton}>
+        <button onClick={handlePrevPageButton}>previous</button>
+        <button onClick={handleNextPageButton}>next</button>
+      </div>   
     </div>
   );
 }
@@ -119,6 +330,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: 36,
     },
+  },
+  TopManagementText : {
+    backgroundColor: '#212121', 
+    fontSize: '48px', 
+    fontWeight: "700",
+    textAlign : 'center', 
+    paddingTop: '50px',
+    color: 'white',
+    paddingBottom: '30px',
   },
   content: {
     backgroundColor: colors.black,
@@ -217,4 +437,26 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     top: "160px",
   },
+  NameText: {
+    position: 'absolute',
+    width: '250px',
+    left: '26.5px',
+    textAlign: 'center',
+    top: '105px',
+  },
+  PosText:{
+    position: 'absolute',
+    width: '250px',
+    left: '26.5px',
+    textAlign: 'center',
+    top: '160px',
+  },
+  portfolioSelect:{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  pageButton:{
+    textAlign: 'center',
+  }
 }));
