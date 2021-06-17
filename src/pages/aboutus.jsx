@@ -1,29 +1,22 @@
 import React from "react";
-import { makeStyles, Typography, Grid } from "@material-ui/core";
+import { makeStyles, Typography, div } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
-import Avatar from "@material-ui/core/Avatar";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import { colorPalette } from "../components/common/color-palette";
 
 const colors = new colorPalette();
 
-export default function AboutUsPage() {
+function InfoCard(props) {
+  const { name, position, URLimg } = props;
   const classes = useStyles();
-
-  const infoCard = (nama, posisi, URLimg) => {
-    return (
+  return (
+    <div style={{ width: "25%", margin: 20, minWidth: "max-content" }}>
       <Container className={classes.imagebox}>
         <div style={{ position: "relative", top: "75px", left: "62px" }}></div>
         <div className={classes.whitebox}>
           <div className={classes.NameBox}>name</div>
-          <div className={classes.NameText}>{nama}</div>
+          <div className={classes.NameText}>{name}</div>
           <div className={classes.PosBox}>position</div>
-          <div className={classes.PosText}>{posisi}</div>
+          <div className={classes.PosText}>{position}</div>
         </div>
         <img
           src={URLimg}
@@ -32,11 +25,16 @@ export default function AboutUsPage() {
           alt="No Image Resources"
         />
       </Container>
-    );
-  };
+    </div>
+  );
+}
+
+export default function AboutUsPage() {
+  const classes = useStyles();
+
   return (
     <div className={classes.root}>
-      <Grid item xs={12}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <Container className={classes.container}>
           <Typography component="div" className={classes.GTD}>
             GTD XXIII
@@ -49,54 +47,59 @@ export default function AboutUsPage() {
             tellus.
           </Typography>
         </Container>
-      </Grid>
-      <Grid item xs={12}>
+      </div>
+      <div item xs={12}>
         <Typography component="div" className={classes.headerTitle}>
           Top Management
         </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        {infoCard("edward", "IT", "gtd.png")}
-      </Grid>
-      <Grid container spacing={3} style={{ marginTop: "50px" }}>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-      </Grid>
+      </div>
+      <div item xs={12} style={{ display: "flex", justifyContent: "center" }}>
+        <InfoCard name="Test" position="President" />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+      </div>
       <Typography component="div" className={classes.headerTitle}>
         Main Committee
       </Typography>
-      <Grid container spacing={3} style={{ marginTop: "50px" }}>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-      </Grid>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+      </div>
       <Typography component="div" className={classes.headerTitle}>
         Subcommittee
       </Typography>
-      <Grid container spacing={3} style={{ marginTop: "50px" }}>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-        <Grid item md={4} xs={12}>
-          {infoCard()}
-        </Grid>
-      </Grid>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+        <InfoCard name="Test" position="President" />
+      </div>
     </div>
   );
 }
@@ -106,6 +109,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     backgroundColor: colors.black,
+    boxSizing: "border-box",
   },
   headerTitle: {
     backgroundColor: colors.black,
@@ -143,6 +147,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    boxSizing: "border-box",
   },
   imagebox: {
     width: "250px",
@@ -151,6 +156,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "20px",
     overflow: "hidden",
     position: "relative",
+    boxSizing: "border-box",
   },
 
   whitebox: {
