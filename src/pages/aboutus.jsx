@@ -1,20 +1,20 @@
 import React from "react";
-import { makeStyles, Typography, div } from "@material-ui/core";
+import { makeStyles, Typography } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 import { colorPalette } from "../components/common/color-palette";
 
 const colors = new colorPalette();
 
 function InfoCard(props) {
-  const { name, position, URLimg } = props;
+  const { name, position, URLimg, major } = props;
   const classes = useStyles();
   return (
     <div style={{ width: "25%", margin: 20, minWidth: "max-content" }}>
       <Container className={classes.imagebox}>
         <div style={{ position: "relative", top: "75px", left: "62px" }}></div>
         <div className={classes.whitebox}>
-          <div className={classes.NameBox}>name</div>
-          <div className={classes.NameText}>{name}</div>
+          <div className={classes.NameBox}>{name}</div>
+          <div className={classes.NameText}>{major}</div>
           <div className={classes.PosBox}>position</div>
           <div className={classes.PosText}>{position}</div>
         </div>
@@ -28,6 +28,12 @@ function InfoCard(props) {
     </div>
   );
 }
+
+InfoCard.defaultProps = {
+  name: "Name",
+  major: "School/Year",
+  position: "Committee",
+};
 
 export default function AboutUsPage() {
   const classes = useStyles();
@@ -54,7 +60,7 @@ export default function AboutUsPage() {
         </Typography>
       </div>
       <div item xs={12} style={{ display: "flex", justifyContent: "center" }}>
-        <InfoCard name="Test" position="President" />
+        <InfoCard />
       </div>
       <div
         style={{
@@ -63,9 +69,9 @@ export default function AboutUsPage() {
           flexWrap: "wrap",
         }}
       >
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
       </div>
       <Typography component="div" className={classes.headerTitle}>
         Main Committee
@@ -77,12 +83,12 @@ export default function AboutUsPage() {
           flexWrap: "wrap",
         }}
       >
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
       </div>
       <Typography component="div" className={classes.headerTitle}>
         Subcommittee
@@ -94,11 +100,11 @@ export default function AboutUsPage() {
           flexWrap: "wrap",
         }}
       >
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
-        <InfoCard name="Test" position="President" />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
       </div>
     </div>
   );
