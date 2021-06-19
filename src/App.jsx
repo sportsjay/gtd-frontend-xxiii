@@ -38,7 +38,9 @@ export default function App() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  root: {},
+  root: {
+    width: "100vw"
+  },
   "@keyframes slideInFromLeft": {
     from: {
       transform: "translateY(-100%)",
