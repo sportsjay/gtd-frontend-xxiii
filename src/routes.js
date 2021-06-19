@@ -14,7 +14,7 @@ export const routes = [
   {
     id: 1,
     body: AboutUsPage,
-    name: "about-us",
+    name: "about us",
     path: "/about-us",
   },
   {
