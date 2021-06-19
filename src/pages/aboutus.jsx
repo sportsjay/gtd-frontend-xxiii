@@ -1,6 +1,10 @@
 import React from "react";
-import { makeStyles, Typography } from "@material-ui/core";
-import Container from "@material-ui/core/Container";
+import { makeStyles, Container } from "@material-ui/core";
+
+// import components
+import { Text } from "../components/common/typography";
+
+// import styles
 import { colorPalette } from "../components/common/color-palette";
 
 const colors = new colorPalette();
@@ -13,10 +17,10 @@ function InfoCard(props) {
       <Container className={classes.imagebox}>
         <div style={{ position: "relative", top: "75px", left: "62px" }}></div>
         <div className={classes.whitebox}>
-          <div className={classes.NameBox}>{name}</div>
-          <div className={classes.NameText}>{major}</div>
-          <div className={classes.PosBox}>position</div>
-          <div className={classes.PosText}>{position}</div>
+          <Text className={classes.NameBox}>{name}</Text>
+          <Text className={classes.MajorText}>{major}</Text>
+          <Text className={classes.PosBox}>Position</Text>
+          <Text className={classes.PosText}>{position}</Text>
         </div>
         <img
           src={URLimg}
@@ -42,22 +46,22 @@ export default function AboutUsPage() {
     <div className={classes.root}>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Container className={classes.container}>
-          <Typography component="div" className={classes.GTD}>
+          <Text component="div" className={classes.GTD}>
             GTD XXIII
-          </Typography>
-          <Typography component="div" className={classes.content}>
+          </Text>
+          <Text component="div" className={classes.content}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
             suspendisse interdum consectetur libero id faucibus. Cursus risus at
             ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
             tellus.
-          </Typography>
+          </Text>
         </Container>
       </div>
       <div item xs={12}>
-        <Typography component="div" className={classes.headerTitle}>
+        <Text component="div" className={classes.headerTitle}>
           Top Management
-        </Typography>
+        </Text>
       </div>
       <div item xs={12} style={{ display: "flex", justifyContent: "center" }}>
         <InfoCard />
@@ -73,9 +77,9 @@ export default function AboutUsPage() {
         <InfoCard />
         <InfoCard />
       </div>
-      <Typography component="div" className={classes.headerTitle}>
+      <Text component="div" className={classes.headerTitle}>
         Main Committee
-      </Typography>
+      </Text>
       <div
         style={{
           display: "flex",
@@ -90,9 +94,9 @@ export default function AboutUsPage() {
         <InfoCard />
         <InfoCard />
       </div>
-      <Typography component="div" className={classes.headerTitle}>
+      <Text component="div" className={classes.headerTitle}>
         Subcommittee
-      </Typography>
+      </Text>
       <div
         style={{
           display: "flex",
@@ -196,9 +200,7 @@ const useStyles = makeStyles((theme) => ({
     left: "26.5px",
     top: "80px",
     fontSize: "24px",
-    fontFamily: "Open Sans",
-    fontStyle: "normal",
-    fontWeight: "normal",
+    fontWeight: "600",
     alignItems: "center",
     textAlign: "center",
   },
@@ -207,19 +209,17 @@ const useStyles = makeStyles((theme) => ({
     width: "250px",
     left: "26.5px",
     top: "135px",
-    fontSize: "24px",
-    fontFamily: "Open Sans",
-    fontStyle: "normal",
-    fontWeight: "normal",
+    fontSize: "16px",
+    fontWeight: "600",
     alignItems: "center",
     textAlign: "center",
   },
-  NameText: {
+  MajorText: {
     position: "absolute",
     width: "250px",
     left: "26.5px",
     textAlign: "center",
-    top: "105px",
+    top: "110px",
   },
   PosText: {
     position: "absolute",

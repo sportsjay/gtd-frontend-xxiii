@@ -1,12 +1,15 @@
 import React from "react";
-import { makeStyles, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+
+// import components
+import { Text } from "../components/common/typography";
 
 export default function ArchivePage() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
-      <Typography>Archive</Typography>
+      <Text>Archive</Text>
     </React.Fragment>
   );
 }

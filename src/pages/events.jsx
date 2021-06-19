@@ -1,5 +1,12 @@
 import React from "react";
-import { makeStyles, Typography, Grid } from "@material-ui/core";
+import { makeStyles, Grid } from "@material-ui/core";
+
+// import components
+import { Text } from "../components/common/typography";
+
+// import stlyes
+import { colorPalette } from "../components/common/color-palette";
+const colors = new colorPalette();
 
 const sampleData = [
   {
@@ -63,11 +70,11 @@ export default function EventsPage() {
   function Transition() {
     return (
       <div className={classes.displayTransition}>
-        <Circ></Circ>
-        <Bar></Bar>
-        <Circ></Circ>
-        <Bar></Bar>
-        <Circ></Circ>
+        <Circ />
+        <Bar />
+        <Circ />
+        <Bar />
+        <Circ />
       </div>
     );
   }
@@ -94,8 +101,8 @@ export default function EventsPage() {
           />
         </Grid>
         <Grid item xs={12} md={6} className={classes.displayText}>
-          <Typography className={classes.title}>{title}</Typography>
-          <Typography className={classes.subtitle}>{subtitle}</Typography>
+          <Text className={classes.title}>{title}</Text>
+          <Text className={classes.subtitle}>{subtitle}</Text>
         </Grid>
       </Grid>
     );
@@ -136,12 +143,6 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: "border-box",
   },
 
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary,
-  },
-
   displayContainer: {
     align: "center",
     padding: theme.spacing(2),
@@ -179,33 +180,32 @@ const useStyles = makeStyles((theme) => ({
   },
 
   title: {
-    fontFamily: "'Open Sans', sans-serif",
-    fontSize: "34pt",
+    fontSize: "48pt",
     fontWeight: "700",
     fontStyle: "normal",
     lineHeight: "12vmin",
     letterSpacing: "0em",
     textAlign: "center",
-    // color: "#00FF00", // delete later
-    color: "#CCCCCC", // change to #FFFFFF
-    // padding: "20px",
+    color: colors.white,
     margin: "0 0 20px 0",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "16pt",
+      fontSize: "28pt",
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "22pt",
     },
   },
 
   subtitle: {
-    fontFamily: "'Open Sans', sans-serif",
-    fontSize: "16pt",
+    fontSize: "20pt",
     fontStyle: "normal",
     lineHeight: "6vmin",
     letterSpacing: "0em",
-    textAlign: "center",
-    // color: "#FF0000", // delete later
-    color: "#CCCCCC", // change to #FFFFFF
-    // padding: "20px",
+    color: colors.white,
     [theme.breakpoints.down("sm")]: {
+      fontSize: "16pt",
+    },
+    [theme.breakpoints.down("xs")]: {
       fontSize: "12pt",
     },
   },

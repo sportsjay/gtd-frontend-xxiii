@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Typography, makeStyles } from "@material-ui/core";
+import { Container, makeStyles } from "@material-ui/core";
 
 // import component
 import { AdminBody, Login } from "../components/admin";
