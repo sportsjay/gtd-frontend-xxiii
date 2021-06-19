@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {
   Card,
   CardContent,
-  Typography,
+  Text,
   makeStyles,
   TextField,
 } from "@material-ui/core";
@@ -47,9 +47,9 @@ export default function Login(props) {
   return (
     <Card variant="outlined" className={classes.root}>
       <CardContent className={classes.content}>
-        <Typography variant="h4" className={classes.title}>
+        <Text variant="h4" className={classes.title}>
           Login
-        </Typography>
+        </Text>
         <TextField
           className={classes.textField}
           variant="outlined"

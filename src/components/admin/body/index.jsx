@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, makeStyles, Typography } from "@material-ui/core";
+import { Card, CardContent, makeStyles, Text } from "@material-ui/core";
 
 // import colors
 import { colorPalette } from "../../common/color-palette";
@@ -17,7 +17,7 @@ export default function AdminBody(props) {
   return (
     <Card variant="outlined" className={classes.root}>
       <CardContent className={classes.content}>
-        <Typography>Body</Typography>
+        <Text>Body</Text>
       </CardContent>
       <StyledButton onClick={logoutSubmit} text="Logout" />
     </Card>

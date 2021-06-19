@@ -1,228 +1,56 @@
-import React, {useState} from "react";
-import { makeStyles, Typography, Grid } from "@material-ui/core";
-import Container from '@material-ui/core/Container';
+import React, { useState } from "react";
+import { makeStyles, Container } from "@material-ui/core";
+
+// import components
+import { Text } from "../components/common/typography";
+import { StyledButton } from "../components/common/button";
+
+// import styles
 import { colorPalette } from "../components/common/color-palette";
 
-const portList =['PPIT', 'POLOG', 'WELFARE'];
-const pageList = ['page1', 'page2'];
-
-const MainCom={
-  PPIT:{
-    one: {  
-      nama: 'edward',
-      posisi: 'PPIT',
-      URLimg: 'gtd.png'
-    },
-    two: {
-      nama: 'PPIT2',
-      posisi: 'PPIT',
-      URLimg: 'gtd.png'
-    },
-    three: {
-      nama: 'PPIT3',
-      posisi: 'PPIT',
-      URLimg: 'gtd.png'
-    },
+const portfolios = [
+  {
+    portfolio: "PPIT",
+    maincommittee: [],
+    subcommittee: [],
   },
-  POLOG:{
-    one: {
-      nama: 'POLOG1',
-      posisi: 'POLOG',
-      URLimg: 'gtd.png',
-    },
-    two: {
-      nama: 'POLOG2',
-      posisi: 'POLOG',
-      URLimg: 'gtd.png',
-    },
-    three: {
-      nama: 'POLOG3',
-      posisi: 'POLOG',
-      URLimg: 'gtd.png'
-    },
+  {
+    portfolio: "Project Officer",
+    maincommittee: [],
+    subcommittee: [],
   },
-  WELFARE:{
-    one: {
-      nama: 'WELFARE1',
-      posisi: 'WELFARE',
-      URLimg: 'gtd.png',
-    },
-    two: {
-      nama: 'WELFARE2',
-      posisi: 'WELFARE',
-      URLimg: 'gtd.png',
-    },
-    three: {
-      nama: 'WELFARE3',
-      posisi: 'WELFARE',
-      URLimg: 'gtd.png'
-    },
-  }
-}
-
-const SubCom={
-  PPIT:{
-    page1:{
-      one:{
-        nama: 'PPIT1',
-        posisi: 'subcom',
-        URLimg: 'gtd.png'
-      },
-      two: {
-        nama: 'PPIT2',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      three: {
-        nama: 'PPIT3',
-        posisi: 'subcom',
-        URLimg: 'gtd.png'
-      },
-    },  
-    page2:{
-      one:{
-        nama: 'PPIT4',
-        posisi: 'subcom',
-        URLimg: 'gtd.png'
-      },
-      two: {
-        nama: 'PPIT5',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      three: {
-        nama: 'PPIT6',
-        posisi: 'subcom',
-        URLimg: 'gtd.png'
-      },
-    },  
+  {
+    portfolio: "Logistics",
+    maincommittee: [],
+    subcommittee: [],
   },
-    POLOG:{
-    page1:{
-      one: {
-        nama: 'POLOG1',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      two: {
-        nama: 'POLOG2',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      three: {
-        nama: 'POLOG3',
-        posisi: 'subcom',
-        URLimg: 'gtd.png'
-      },
-    },
-    page2:{
-      one: {
-        nama: 'POLOG4',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      two: {
-        nama: 'POLOG5',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      three: {
-        nama: 'POLOG6',
-        posisi: 'subcom',
-        URLimg: 'gtd.png'
-      },
-    }
-    },
-    WELFARE: {
-    page1:{
-      one: {
-        nama: 'WELFARE1',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      two: {
-        nama: 'WELFARE2',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      three: {
-        nama: 'WELFARE3',
-        posisi: 'subcom',
-        URLimg: 'gtd.png'
-      },
-    },
-    page2:{
-      one: {
-        nama: 'WELFARE4',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      two: {
-        nama: 'WELFARE5',
-        posisi: 'subcom',
-        URLimg: 'gtd.png',
-      },
-      three: {
-        nama: 'WELFARE6',
-        posisi: 'subcom',
-        URLimg: 'gtd.png'
-      },
-    }
+  {
+    portfolio: "Welfare",
+    maincommittee: [],
+    subcommittee: [],
   },
-}
+  {
+    portfolio: "Group Leader",
+    maincommittee: [],
+    subcommittee: [],
+  },
+];
 
 const colors = new colorPalette();
 
-export default function AboutUsPage() {
+function InfoCard(props) {
+  const { name, position, URLimg, major } = props;
   const classes = useStyles();
-  const [currentPort, setCurrentPort] = useState(0);
-  const [currentPage, setCurrentPage] = useState(0);
 
-  const handlePrevPortButton = () => {
-    if(currentPort <= 0){
-      setCurrentPort(currentPort + portList.length-1);
-    }
-    else{
-      setCurrentPort(currentPort -1);
-    }
-  }
-
-  const handleNextPortButton = () => {
-    if(currentPort >= portList.length-1){
-      setCurrentPort(currentPort - (portList.length-1));
-    }
-    else{
-      setCurrentPort(currentPort + 1);
-    }
-  }
-
-  const handlePrevPageButton = () => {
-    if(currentPage <= 0){
-      setCurrentPage(currentPage + pageList.length-1);
-    }
-    else{
-      setCurrentPage(currentPage -1);
-    }
-  }
-  
-  const handleNextPageButton = () => {
-    if(currentPage >= pageList.length-1){
-      setCurrentPage(currentPage - (pageList.length-1));
-    }
-    else{
-      setCurrentPage(currentPage + 1);
-    }
-  }
-
-  const infoCard = (nama, posisi, URLimg) =>{
-    return(
+  return (
+    <div style={{ width: "25%", margin: 20, minWidth: "max-content" }}>
       <Container className={classes.imagebox}>
         <div style={{ position: "relative", top: "75px", left: "62px" }}></div>
         <div className={classes.whitebox}>
-          <div className={classes.NameBox}>name</div>
-          <div className={classes.NameText}>{nama}</div>
-          <div className={classes.PosBox}>position</div>
-          <div className={classes.PosText}>{posisi}</div>
+          <Text className={classes.NameBox}>{name}</Text>
+          <Text className={classes.MajorText}>{major}</Text>
+          <Text className={classes.PosBox}>Position</Text>
+          <Text className={classes.PosText}>{position}</Text>
         </div>
         <img
           src={URLimg}
@@ -231,83 +59,114 @@ export default function AboutUsPage() {
           alt="No Image Resources"
         />
       </Container>
-    );
-  };
+    </div>
+  );
+}
+
+InfoCard.defaultProps = {
+  name: "Name",
+  major: "School/Year",
+  position: "Committee",
+};
+
+export default function AboutUsPage() {
+  const classes = useStyles();
+  const [page, setPage] = useState(0);
+
+  function handlePrevPage() {
+    if (page === 0) setPage(portfolios.length - 1);
+    else setPage(page - 1);
+  }
+  function handleNextPage() {
+    if (page === portfolios.length - 1) setPage(0);
+    else setPage(page + 1);
+  }
 
   return (
     <div className={classes.root}>
-      <Grid item xs={12}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <Container className={classes.container}>
-          <Typography component="div" className={classes.GTD}>
+          <Text component="div" className={classes.GTD}>
             GTD XXIII
-          </Typography>
-          <Typography component="div" className={classes.content}>
+          </Text>
+          <Text component="div" className={classes.content}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
             suspendisse interdum consectetur libero id faucibus. Cursus risus at
             ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
             tellus.
-          </Typography>
+          </Text>
         </Container>
-      </Grid>
-      <Grid item xs={12}>
-        <Typography component="div" className={classes.headerTitle}>
+      </div>
+      <div item xs={12}>
+        <Text component="div" className={classes.headerTitle}>
           Top Management
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        {infoCard('PINTU TOPS', 'TOPS', 'gtd.png')}
-      </Grid>
-      <Grid container spacing={3} style={{ marginTop: "50px" }}>
-        <Grid item md={4} xs={12}>
-        {infoCard('PINTU TOPS', 'TOPS', 'gtd.png')}
-        </Grid>
-        <Grid item md={4} xs={12}>
-        {infoCard('PINTU TOPS', 'TOPS', 'gtd.png')}
-        </Grid>
-        <Grid item md={4} xs={12}>
-        {infoCard('PINTU TOPS', 'TOPS', 'gtd.png')}
-        </Grid>
-      </Grid>
-      <Grid item xs={12} className={classes.portfolioSelect}>
-      <button onClick={handlePrevPortButton}>previous</button>
-      <Typography component="div" className = {classes.TopManagementText}>
-          {portList[currentPort]}
-      </Typography>
-      <button onClick={handleNextPortButton}>next</button>
-      </Grid>
-      <Typography component="div" className = {classes.TopManagementText}>
-          Main Committee
-      </Typography>
-      <Grid container spacing={3} style={{ marginTop: "50px" }}>
-        <Grid item md={4} xs={12}>
-        {infoCard(MainCom[portList[currentPort]].one.nama, MainCom[portList[currentPort]].one.posisi, MainCom[portList[currentPort]].one.URLimg )}
-        </Grid>
-        <Grid item md={4} xs={12}>
-        {infoCard(MainCom[portList[currentPort]].two.nama, MainCom[portList[currentPort]].two.posisi, MainCom[portList[currentPort]].two.URLimg )}
-        </Grid>     
-        <Grid item md={4} xs={12}>
-        {infoCard(MainCom[portList[currentPort]].three.nama, MainCom[portList[currentPort]].three.posisi, MainCom[portList[currentPort]].three.URLimg )}
-        </Grid>
-      </Grid>
-      <Typography component="div" className={classes.headerTitle}>
+        </Text>
+      </div>
+      <div item xs={12} style={{ display: "flex", justifyContent: "center" }}>
+        <InfoCard />
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <InfoCard />
+        <InfoCard />
+        <InfoCard />
+      </div>
+      <div className={classes.portfolioSelect}>
+        <StyledButton className={classes.switchButton} onClick={handlePrevPage}>
+          previous
+        </StyledButton>
+        <Text component="div" className={classes.porfolioText}>
+          {portfolios[page].portfolio}
+        </Text>
+        <StyledButton className={classes.switchButton} onClick={handleNextPage}>
+          next
+        </StyledButton>
+      </div>
+      <Text component="div" className={classes.headerTitle}>
+        Main Committee
+      </Text>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        {portfolios[page].maincommittee.map((committee, idx) => (
+          <InfoCard key={idx} />
+        ))}
+      </div>
+      <Text component="div" className={classes.headerTitle}>
         Subcommittee
-      </Typography>
-      <Grid container spacing={3} style={{ marginTop: "50px" }}>
-        <Grid item md={4} xs={12}>
-        {infoCard(SubCom[portList[currentPort]][pageList[currentPage]].one.nama, SubCom[portList[currentPort]][pageList[currentPage]].one.posisi, SubCom[portList[currentPort]][pageList[currentPage]].one.URLimg )}
-        </Grid>
-        <Grid item md={4} xs={12}>
-        {infoCard(SubCom[portList[currentPort]][pageList[currentPage]].two.nama, SubCom[portList[currentPort]][pageList[currentPage]].two.posisi, SubCom[portList[currentPort]][pageList[currentPage]].two.URLimg )}
-        </Grid>     
-        <Grid item md={4} xs={12}>
-        {infoCard(SubCom[portList[currentPort]][pageList[currentPage]].three.nama, SubCom[portList[currentPort]][pageList[currentPage]].three.posisi, SubCom[portList[currentPort]][pageList[currentPage]].three.URLimg )}
-        </Grid>
-      </Grid> 
-      <div className={classes.pageButton}>
-        <button onClick={handlePrevPageButton}>previous</button>
-        <button onClick={handleNextPageButton}>next</button>
-      </div>   
+      </Text>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        {portfolios[page].subcommittee.map((committee, idx) => (
+          <InfoCard key={idx} />
+        ))}
+      </div>
+      <div className={classes.portfolioSelect}>
+        <StyledButton className={classes.switchButton} onClick={handlePrevPage}>
+          previous
+        </StyledButton>
+        <Text component="div" className={classes.porfolioText}>
+          {portfolios[page].portfolio}
+        </Text>
+        <StyledButton className={classes.switchButton} onClick={handleNextPage}>
+          next
+        </StyledButton>
+      </div>
     </div>
   );
 }
@@ -331,14 +190,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 36,
     },
   },
-  TopManagementText : {
-    backgroundColor: '#212121', 
-    fontSize: '48px', 
+  porfolioText: {
+    fontSize: "48px",
     fontWeight: "700",
-    textAlign : 'center', 
-    paddingTop: '50px',
-    color: 'white',
-    paddingBottom: '30px',
+    textAlign: "center",
+    color: "white",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "24pt",
+    },
   },
   content: {
     backgroundColor: colors.black,
@@ -364,6 +223,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    boxSizing: "border-box",
   },
   imagebox: {
     width: "250px",
@@ -372,6 +232,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "20px",
     overflow: "hidden",
     position: "relative",
+    boxSizing: "border-box",
   },
 
   whitebox: {
@@ -405,9 +266,7 @@ const useStyles = makeStyles((theme) => ({
     left: "26.5px",
     top: "80px",
     fontSize: "24px",
-    fontFamily: "Open Sans",
-    fontStyle: "normal",
-    fontWeight: "normal",
+    fontWeight: "600",
     alignItems: "center",
     textAlign: "center",
   },
@@ -416,19 +275,17 @@ const useStyles = makeStyles((theme) => ({
     width: "250px",
     left: "26.5px",
     top: "135px",
-    fontSize: "24px",
-    fontFamily: "Open Sans",
-    fontStyle: "normal",
-    fontWeight: "normal",
+    fontSize: "16px",
+    fontWeight: "600",
     alignItems: "center",
     textAlign: "center",
   },
-  NameText: {
+  MajorText: {
     position: "absolute",
     width: "250px",
     left: "26.5px",
     textAlign: "center",
-    top: "105px",
+    top: "110px",
   },
   PosText: {
     position: "absolute",
@@ -438,25 +295,27 @@ const useStyles = makeStyles((theme) => ({
     top: "160px",
   },
   NameText: {
-    position: 'absolute',
-    width: '250px',
-    left: '26.5px',
-    textAlign: 'center',
-    top: '105px',
+    position: "absolute",
+    width: "250px",
+    left: "26.5px",
+    textAlign: "center",
+    top: "105px",
   },
-  PosText:{
-    position: 'absolute',
-    width: '250px',
-    left: '26.5px',
-    textAlign: 'center',
-    top: '160px',
+  portfolioSelect: {
+    display: "flex",
+    alignItems: "center",
+    paddingLeft: "10%",
+    paddingRight: "10%",
+    boxSizing: "border-box",
+    justifyContent: "space-between",
+    width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      padding: 0,
+    },
   },
-  portfolioSelect:{
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+  switchButton: {
+    [theme.breakpoints.down("sm")]: {
+      width: 100,
+    },
   },
-  pageButton:{
-    textAlign: 'center',
-  }
 }));

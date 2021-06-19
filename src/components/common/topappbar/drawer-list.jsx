@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Typography,
-  makeStyles,
-  Divider,
-  List,
-  ListItem,
-} from "@material-ui/core";
+import { makeStyles, Divider, List, ListItem } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 import {
@@ -16,6 +10,9 @@ import {
   HistoryRounded,
   QuestionAnswerRounded,
 } from "@material-ui/icons";
+
+// import components
+import { Text } from "../typography";
 
 // import colors
 import { colorPalette } from "../color-palette";
@@ -70,7 +67,7 @@ export default function DrawerList(props) {
               }}
             >
               <div className={classes.icon}>{iconSwitch(route.name)}</div>
-              <Typography className={classes.linkText}>{route.name}</Typography>
+              <Text className={classes.linkText}>{route.name}</Text>
               <div
                 style={{
                   position: "absolute",

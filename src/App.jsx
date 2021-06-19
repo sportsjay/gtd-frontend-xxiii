@@ -13,7 +13,6 @@ import TopAppBar from "./components/common/topappbar/";
 
 // Import Routes and Pages
 import { routes } from "./routes";
-import AdminPage from "./pages/admin";
 
 
 
@@ -22,14 +21,11 @@ export default function App() {
   const classes = useStyles();
   return (
     <Router>
-      <TopAppBar position="sticky" />
       <div className={classes.root}>
+        <TopAppBar position="sticky" />
         <Switch>
           <Route path="/" exact>
             <Redirect to="/home" />
-          </Route>
-          <Route path="/admin-page" exact>
-            <AdminPage />
           </Route>
           {routes.map((page) => (
             <Route key={page.id} path={page.path} exact>
@@ -46,7 +42,8 @@ export default function App() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: "100vw",
+    // width: "100vw",
+    boxSizing: "border-box",
   },
   "@keyframes slideInFromLeft": {
     from: {

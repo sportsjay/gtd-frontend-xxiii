@@ -1,11 +1,12 @@
 import React from "react";
-import { makeStyles, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 // import color
 import { colorPalette } from "../color-palette";
 
 // import components
+import { Text } from "../typography";
 import { ButtonLink } from "../button";
 
 const colors = new colorPalette();
@@ -25,7 +26,7 @@ export default function LinkContainer(props) {
             onClick={() => setActivePage(route.name)}
             style={{ marginLeft: 4, marginRight: 4, padding: 0 }}
           >
-            <Typography className={classes.linkText}>{route.name}</Typography>
+            <Text className={classes.linkText}>{route.name}</Text>
             <div
               style={{
                 position: "absolute",
