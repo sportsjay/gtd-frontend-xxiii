@@ -83,7 +83,7 @@ function InfoCard(props) {
           <Text className={classes.PosText}>{position}</Text>
         </div>
         <img
-          src={URLimg}
+          src={URLimg ? URLimg : "gtd.png"}
           className={classes.photoImage}
           aria-hidden
           alt="No Image Resources"
