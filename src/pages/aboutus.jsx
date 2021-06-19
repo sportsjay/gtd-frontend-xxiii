@@ -10,11 +10,6 @@ import { colorPalette } from "../components/common/color-palette";
 
 const portfolios = [
   {
-    portfolio: "PPIT",
-    maincommittee: [],
-    subcommittee: [],
-  },
-  {
     portfolio: "Project Officer",
     maincommittee: [],
     subcommittee: [],
@@ -25,12 +20,47 @@ const portfolios = [
     subcommittee: [],
   },
   {
+    portfolio: "PPIT",
+    maincommittee: [
+      {
+        name: "Christopher Denny",
+        position: "Publication & Publicity",
+        URLimg: "",
+        major: "EEE/Year 4",
+      },
+      {
+        name: "Hans Aldi",
+        position: "Publication & Publicity",
+        URLimg: "",
+        major: "EEE/Year 3",
+      },
+      {
+        name: "Valencia Sendytio",
+        position: "Publication & Publicity",
+        URLimg: "",
+        major: "WKW/Year 4",
+      },
+      {
+        name: "Jason Nathaniel",
+        position: "Information Technology",
+        URLimg: "",
+        major: "EEE/Year 4",
+      },
+    ],
+    subcommittee: [],
+  },
+  {
     portfolio: "Welfare",
     maincommittee: [],
     subcommittee: [],
   },
   {
     portfolio: "Group Leader",
+    maincommittee: [],
+    subcommittee: [],
+  },
+  {
+    portfolio: "BFM",
     maincommittee: [],
     subcommittee: [],
   },
@@ -71,6 +101,7 @@ InfoCard.defaultProps = {
 
 export default function AboutUsPage() {
   const classes = useStyles();
+  const buttonClasses = buttonStyles();
   const [page, setPage] = useState(0);
 
   function handlePrevPage() {
@@ -104,7 +135,7 @@ export default function AboutUsPage() {
         </Text>
       </div>
       <div item xs={12} style={{ display: "flex", justifyContent: "center" }}>
-        <InfoCard />
+        <InfoCard name="Kelvin Leo" position="President" major="MSE/Year 4" />
       </div>
       <div
         style={{
@@ -113,18 +144,26 @@ export default function AboutUsPage() {
           flexWrap: "wrap",
         }}
       >
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
+        <InfoCard
+          name="Nicholas Eric Geraldo"
+          position="VP PO-LOG"
+          major="EEE/Year 4"
+        />
+        <InfoCard
+          name="Matthew Stanley"
+          position="VP PPIT-Welfare"
+          major="EEE/Year 4"
+        />
+        <InfoCard name="Edward Siman" position="VP GL-BFM" />
       </div>
       <div className={classes.portfolioSelect}>
-        <StyledButton className={classes.switchButton} onClick={handlePrevPage}>
+        <StyledButton className={buttonClasses.header} onClick={handlePrevPage}>
           previous
         </StyledButton>
         <Text component="div" className={classes.porfolioText}>
           {portfolios[page].portfolio}
         </Text>
-        <StyledButton className={classes.switchButton} onClick={handleNextPage}>
+        <StyledButton className={buttonClasses.header} onClick={handleNextPage}>
           next
         </StyledButton>
       </div>
@@ -139,7 +178,7 @@ export default function AboutUsPage() {
         }}
       >
         {portfolios[page].maincommittee.map((committee, idx) => (
-          <InfoCard key={idx} />
+          <InfoCard key={idx} {...committee} />
         ))}
       </div>
       <Text component="div" className={classes.headerTitle}>
@@ -157,13 +196,10 @@ export default function AboutUsPage() {
         ))}
       </div>
       <div className={classes.portfolioSelect}>
-        <StyledButton className={classes.switchButton} onClick={handlePrevPage}>
+        <StyledButton className={buttonClasses.bottom} onClick={handlePrevPage}>
           previous
         </StyledButton>
-        <Text component="div" className={classes.porfolioText}>
-          {portfolios[page].portfolio}
-        </Text>
-        <StyledButton className={classes.switchButton} onClick={handleNextPage}>
+        <StyledButton className={buttonClasses.bottom} onClick={handleNextPage}>
           next
         </StyledButton>
       </div>
@@ -311,11 +347,22 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     [theme.breakpoints.down("sm")]: {
       padding: 0,
+      justifyContent: "center",
+      gap: theme.spacing(4),
     },
   },
-  switchButton: {
+}));
+
+const buttonStyles = makeStyles((theme) => ({
+  header: {
     [theme.breakpoints.down("sm")]: {
-      width: 100,
+      display: "none",
+    },
+  },
+  bottom: {
+    [theme.breakpoints.down("sm")]: {
+      width: "40%",
+      maxWidth: "40%",
     },
   },
 }));

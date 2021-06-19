@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, makeStyles } from "@material-ui/core";
+import clsx from "clsx";
 
 // import color palette
 import { colorPalette } from "../color-palette";
@@ -11,7 +12,7 @@ function ButtonLink(props) {
   const text = props.text || "";
   const children = props.children || [<React.Fragment></React.Fragment>];
   return (
-    <Button className={classes.buttonLink} {...props}>
+    <Button {...props} className={clsx(classes.buttonLink, props.className)}>
       {text}
       {Array.isArray(children) ? (
         children.map((child) => <React.Fragment>{child}</React.Fragment>)
@@ -31,8 +32,8 @@ function StyledButton(props) {
     <Button
       variant="contained"
       disableRipple
-      className={classes.styledButton}
       {...props}
+      className={clsx(classes.styledButton, props.className)}
     >
       {text}
       {Array.isArray(children) ? (
@@ -84,9 +85,6 @@ const useStyles = makeStyles((theme) => ({
     },
     "&:active": {
       filter: "brightness(95%)",
-    },
-    [theme.breakpoints.down("xs")]: {
-      minWidth: 200,
     },
   },
 }));
