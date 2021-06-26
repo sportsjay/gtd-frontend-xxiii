@@ -40,31 +40,13 @@ export default function EventsPage() {
   const classes = useStyles();
 
   function Circ() {
-    return (
-      <div
-        style={{
-          height: 40,
-          width: "40px",
-          borderRadius: "50%",
-          backgroundColor: "#CCCCCC", // change to #FFFFFF
-          margin: "auto",
-        }}
-      />
-    );
+    const classes = transitionStyles();
+    return <div className={classes.circle} />;
   }
 
   function Bar() {
-    return (
-      <div
-        style={{
-          height: 60,
-          width: 3,
-          borderRadius: "0%",
-          backgroundColor: "#CCCCCC", // change to #FFFFFF
-          margin: "10px auto 10px auto",
-        }}
-      />
-    );
+    const classes = transitionStyles();
+    return <div className={classes.rectangle} />;
   }
 
   function Transition() {
@@ -204,9 +186,35 @@ const useStyles = makeStyles((theme) => ({
     color: colors.white,
     [theme.breakpoints.down("sm")]: {
       fontSize: "16pt",
+      textAlign: "center",
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: "12pt",
+    },
+  },
+}));
+
+const transitionStyles = makeStyles((theme) => ({
+  circle: {
+    height: 30,
+    width: 30,
+    borderRadius: "50%",
+    backgroundColor: colors.white,
+    margin: "auto",
+    [theme.breakpoints.down("sm")]: {
+      height: 20,
+      width: 20,
+    },
+  },
+  rectangle: {
+    height: 60,
+    width: 5,
+    borderRadius: "0%",
+    backgroundColor: colors.white,
+    margin: "10px auto 10px auto",
+    [theme.breakpoints.down("sm")]: {
+      height: 40,
+      width: 3,
     },
   },
 }));
