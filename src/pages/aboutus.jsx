@@ -1,17 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles, Container } from "@material-ui/core";
 
 // import components
 import { Text } from "../components/common/typography";
+import { StyledButton } from "../components/common/button";
 
 // import styles
 import { colorPalette } from "../components/common/color-palette";
+
+const portfolios = [
+  {
+    portfolio: "Project Officer",
+    maincommittee: [],
+    subcommittee: [],
+  },
+  {
+    portfolio: "Logistics",
+    maincommittee: [],
+    subcommittee: [],
+  },
+  {
+    portfolio: "PPIT",
+    maincommittee: [
+      {
+        name: "Christopher Denny",
+        position: "Publication & Publicity",
+        URLimg: "",
+        major: "EEE/Year 4",
+      },
+      {
+        name: "Hans Aldi",
+        position: "Publication & Publicity",
+        URLimg: "",
+        major: "EEE/Year 3",
+      },
+      {
+        name: "Valencia Sendytio",
+        position: "Publication & Publicity",
+        URLimg: "",
+        major: "WKW/Year 4",
+      },
+      {
+        name: "Jason Nathaniel",
+        position: "Information Technology",
+        URLimg: "",
+        major: "EEE/Year 4",
+      },
+    ],
+    subcommittee: [],
+  },
+  {
+    portfolio: "Welfare",
+    maincommittee: [],
+    subcommittee: [],
+  },
+  {
+    portfolio: "Group Leader",
+    maincommittee: [],
+    subcommittee: [],
+  },
+  {
+    portfolio: "BFM",
+    maincommittee: [],
+    subcommittee: [],
+  },
+];
 
 const colors = new colorPalette();
 
 function InfoCard(props) {
   const { name, position, URLimg, major } = props;
   const classes = useStyles();
+
   return (
     <div style={{ width: "25%", margin: 20, minWidth: "max-content" }}>
       <Container className={classes.imagebox}>
@@ -23,7 +83,7 @@ function InfoCard(props) {
           <Text className={classes.PosText}>{position}</Text>
         </div>
         <img
-          src={URLimg}
+          src={URLimg ? URLimg : "gtd.png"}
           className={classes.photoImage}
           aria-hidden
           alt="No Image Resources"
@@ -41,6 +101,17 @@ InfoCard.defaultProps = {
 
 export default function AboutUsPage() {
   const classes = useStyles();
+  const buttonClasses = buttonStyles();
+  const [page, setPage] = useState(0);
+
+  function handlePrevPage() {
+    if (page === 0) setPage(portfolios.length - 1);
+    else setPage(page - 1);
+  }
+  function handleNextPage() {
+    if (page === portfolios.length - 1) setPage(0);
+    else setPage(page + 1);
+  }
 
   return (
     <div className={classes.root}>
@@ -64,7 +135,7 @@ export default function AboutUsPage() {
         </Text>
       </div>
       <div item xs={12} style={{ display: "flex", justifyContent: "center" }}>
-        <InfoCard />
+        <InfoCard name="Kelvin Leo" position="President" major="MSE/Year 4" />
       </div>
       <div
         style={{
@@ -73,9 +144,28 @@ export default function AboutUsPage() {
           flexWrap: "wrap",
         }}
       >
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
+        <InfoCard
+          name="Nicholas Eric Geraldo"
+          position="VP PO-LOG"
+          major="EEE/Year 4"
+        />
+        <InfoCard
+          name="Matthew Stanley"
+          position="VP PPIT-Welfare"
+          major="EEE/Year 4"
+        />
+        <InfoCard name="Edward Siman" position="VP GL-BFM" />
+      </div>
+      <div className={classes.portfolioSelect}>
+        <StyledButton className={buttonClasses.header} onClick={handlePrevPage}>
+          previous
+        </StyledButton>
+        <Text component="div" className={classes.porfolioText}>
+          {portfolios[page].portfolio}
+        </Text>
+        <StyledButton className={buttonClasses.header} onClick={handleNextPage}>
+          next
+        </StyledButton>
       </div>
       <Text component="div" className={classes.headerTitle}>
         Main Committee
@@ -87,12 +177,9 @@ export default function AboutUsPage() {
           flexWrap: "wrap",
         }}
       >
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
+        {portfolios[page].maincommittee.map((committee, idx) => (
+          <InfoCard key={idx} {...committee} />
+        ))}
       </div>
       <Text component="div" className={classes.headerTitle}>
         Subcommittee
@@ -104,11 +191,17 @@ export default function AboutUsPage() {
           flexWrap: "wrap",
         }}
       >
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
+        {portfolios[page].subcommittee.map((committee, idx) => (
+          <InfoCard key={idx} />
+        ))}
+      </div>
+      <div className={classes.portfolioSelect}>
+        <StyledButton className={buttonClasses.bottom} onClick={handlePrevPage}>
+          previous
+        </StyledButton>
+        <StyledButton className={buttonClasses.bottom} onClick={handleNextPage}>
+          next
+        </StyledButton>
       </div>
     </div>
   );
@@ -131,6 +224,15 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "30px",
     [theme.breakpoints.down("sm")]: {
       fontSize: 36,
+    },
+  },
+  porfolioText: {
+    fontSize: "48px",
+    fontWeight: "700",
+    textAlign: "center",
+    color: "white",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "24pt",
     },
   },
   content: {
@@ -227,5 +329,40 @@ const useStyles = makeStyles((theme) => ({
     left: "26.5px",
     textAlign: "center",
     top: "160px",
+  },
+  NameText: {
+    position: "absolute",
+    width: "250px",
+    left: "26.5px",
+    textAlign: "center",
+    top: "105px",
+  },
+  portfolioSelect: {
+    display: "flex",
+    alignItems: "center",
+    paddingLeft: "10%",
+    paddingRight: "10%",
+    boxSizing: "border-box",
+    justifyContent: "space-between",
+    width: "100%",
+    [theme.breakpoints.down("sm")]: {
+      padding: 0,
+      justifyContent: "center",
+      gap: theme.spacing(4),
+    },
+  },
+}));
+
+const buttonStyles = makeStyles((theme) => ({
+  header: {
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  bottom: {
+    [theme.breakpoints.down("sm")]: {
+      width: "40%",
+      maxWidth: "40%",
+    },
   },
 }));
