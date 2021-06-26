@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { makeStyles, Box, Modal } from "@material-ui/core";
+import { makeStyles, Box, Modal, IconButton, Fade } from "@material-ui/core";
+import CloseIcon from "@material-ui/icons/Close";
 
 // import components
 import { Text } from "../components/common/typography";
 
 // import styles
 import { colorPalette } from "../components/common/color-palette";
-import { StyledButton } from "../components/common/button";
 
 const colors = new colorPalette();
 
@@ -14,6 +14,8 @@ function StyledBox(props) {
   const classes = useStyles();
   const modalClasses = modalStyles();
   const [openModal, setOpenModal] = useState(false);
+  const title = props.title;
+  const description = props.description;
 
   function handleOpenModal() {
     setOpenModal(true);
@@ -30,8 +32,14 @@ function StyledBox(props) {
         {...props}
         onClick={handleOpenModal}
       >
+        <div className={classes.houseLeaderBody}>
+          <Text variant="h4" style={{ fontWeight: "700", color: colors.white }}>
+            {title}
+          </Text>
+          <Text style={{ color: colors.gray }}>{description}</Text>
+        </div>
         <div className={classes.houseLeaderBackdrop} />
-        {props.children}
+        <div className={classes.houseLeaderFooterBackdrop} />
       </Box>
       <Modal
         open={openModal}
@@ -40,19 +48,43 @@ function StyledBox(props) {
         aria-labelledby="house-leader-modal-title"
         aria-describedby="house-leader-modal-description"
       >
-        <div className={modalClasses.root}>
-          <StyledButton
-            className={modalClasses.exitButton}
-            onClick={handleCloseModal}
-          >
-            close
-          </StyledButton>
-          {props.modalContent}
-        </div>
+        <Fade in={openModal}>
+          <div className={modalClasses.root}>
+            <IconButton
+              size="medium"
+              className={modalClasses.exitButton}
+              onClick={handleCloseModal}
+              closeAfterTransition
+            >
+              <CloseIcon style={{ color: colors.gray }} />
+            </IconButton>
+            {props.modalContent}
+          </div>
+        </Fade>
       </Modal>
     </React.Fragment>
   );
 }
+StyledBox.defaultProps = {
+  title: "No title",
+  description: "No description",
+};
+
+function ModalContent(props) {
+  const modalClasses = modalStyles();
+  const title = props.title;
+  const description = props.description;
+  return (
+    <div className={modalClasses.content}>
+      <Text style={{ color: colors.white }}>{title}</Text>
+      <Text style={{ color: colors.gray }}>{description}</Text>
+    </div>
+  );
+}
+ModalContent.defaultProps = {
+  title: "No Title",
+  description: "No description",
+};
 
 export default function HomePage() {
   const classes = useStyles();
@@ -68,13 +100,56 @@ export default function HomePage() {
         </Box>
       </div>
       <div className={classes.houseLeaderContainer}>
-        <StyledBox modalContent={<>test</>}></StyledBox>
+        <StyledBox
+          modalContent={
+            <ModalContent title="Title" description="lorem ipsum" />
+          }
+          style={{
+            background:
+              'url("https://imagecolorpicker.com/_next/image?url=%2Fimagecolorpicker-preview_b.jpg&w=1920&q=75")',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></StyledBox>
         <StyledBox></StyledBox>
         <StyledBox></StyledBox>
         <StyledBox></StyledBox>
       </div>
       <div className={classes.themeSongContainer}>
-        <Box className={classes.themeSongContent}></Box>
+        <Box className={classes.themeSongContent}>
+          <Text variant="h4" style={{ fontWeight: "600", margin: 20 }}>
+            Verse
+          </Text>
+          <Text>
+            From different places, different times <br />
+            With a common goal in our minds <br />
+            We want to enjoy this moment while it lasts <br />
+            Have you ever stopped and wonder why <br />
+            That now we can share a common sky <br />
+            So many of us with different childhoods <br />
+            Different dreams, different lives <br />
+          </Text>
+          <Text variant="h4" style={{ fontWeight: "600", margin: 20 }}>
+            Chorus
+          </Text>
+          <Text>
+            I know now what the answer is <br />
+            I'm sure I'm gonna miss <br />
+            This special day when we get together <br />
+            As clouds drift and seasons flee <br />
+            We will porbably not meet <br />
+            And different lives we'll lives <br />
+            No once we'll forget this great day we have <br />
+          </Text>
+          <iframe
+            allowtransparency="true"
+            scrolling="no"
+            frameborder="no"
+            src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fundefined&color=orange_white&size=32"
+            style={{ width: 32, height: 32 }}
+          ></iframe>
+        </Box>
       </div>
     </div>
   );
@@ -94,22 +169,25 @@ const useStyles = makeStyles((theme) => ({
   header: {
     height: "100vh",
     width: "100%",
-    marginBottom: "40px",
     boxSizing: "border-box",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
   },
   headerLink: {
-    width: 300,
-    height: 300,
-    borderRadius: 150,
+    width: "30vw",
+    minWidth: 160,
+    height: "30vw",
+    minHeight: 160,
+    borderRadius: "50%",
     background: "#F8F2E5",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
     textAlign: "center",
-    [theme.breakpoints.down("sm")]: {
-      width: 120,
-      height: 120,
+    overflow: "hidden",
+    transition: "ease-out 0.2s",
+    cursor: "pointer",
+    "&:hover": {
+      transform: "scale(1.01)",
     },
   },
   middle: {
@@ -145,17 +223,36 @@ const useStyles = makeStyles((theme) => ({
       width: "100%",
     },
   },
+  houseLeaderBody: {
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    position: "absolute",
+    zIndex: 2,
+    boxSizing: "border-box",
+    padding: theme.spacing(2),
+  },
   houseLeaderBackdrop: {
     position: "absolute",
     top: -300,
     left: -300,
-    zIndex: -1,
     height: 0,
     width: 0,
-    borderRadius: 60000,
+    borderRadius: 6000,
+    zIndex: 1,
     backgroundColor: colors.gray,
-    opacity: 0.3,
-    transition: "ease-out 0.4s",
+    opacity: 0.4,
+    transition: "ease-out 0.7s",
+  },
+  houseLeaderFooterBackdrop: {
+    height: "60%",
+    width: "100%",
+    background: "linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))",
+    position: "absolute",
+    zIndex: 1,
+    bottom: 0,
   },
   themeSongContainer: {
     width: "100%",
@@ -169,6 +266,10 @@ const useStyles = makeStyles((theme) => ({
     width: "80%",
     minHeight: 600,
     textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center",
     backgroundColor: colors.cream,
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
     borderRadius: 10,
@@ -190,6 +291,8 @@ const modalStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     transition: "ease-out 0.2s",
     boxSizing: "border-box",
+    display: "flex",
+    flexDirection: "column-reverse",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
       width: "80%",
@@ -200,19 +303,15 @@ const modalStyles = makeStyles((theme) => ({
     },
   },
   exitButton: {
-    color: colors.black,
-    backgroundColor: colors.gray,
     alignSelf: "center",
     width: "max-content",
-    minHeight: 30,
-    height: 30,
     position: "absolute",
-    bottom: 0,
+    top: 0,
     right: 0,
     borderRadius: 0,
-    "&:hover": {
-      color: colors.gray,
-      backgroundColor: colors.black,
-    },
+  },
+  content: {
+    height: "20%",
+    width: "100%",
   },
 }));
