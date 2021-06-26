@@ -7,6 +7,7 @@ import { StyledButton } from "../components/common/button";
 
 // import styles
 import { colorPalette } from "../components/common/color-palette";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 const portfolios = [
   {
@@ -103,6 +104,7 @@ export default function AboutUsPage() {
   const classes = useStyles();
   const buttonClasses = buttonStyles();
   const [page, setPage] = useState(0);
+  const [newPage, setNewPage] = useState(false);
 
   function handlePrevPage() {
     if (page === 0) setPage(portfolios.length - 1);
