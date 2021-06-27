@@ -104,7 +104,6 @@ export default function AboutUsPage() {
   const classes = useStyles();
   const buttonClasses = buttonStyles();
   const [page, setPage] = useState(0);
-  const [newPage, setNewPage] = useState(false);
 
   function handlePrevPage() {
     if (page === 0) setPage(portfolios.length - 1);
@@ -194,7 +193,7 @@ export default function AboutUsPage() {
         }}
       >
         {portfolios[page].subcommittee.map((committee, idx) => (
-          <InfoCard key={idx} />
+          <InfoCard key={idx} {...committee} />
         ))}
       </div>
       <div className={classes.portfolioSelect}>

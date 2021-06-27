@@ -118,10 +118,14 @@ export default function HomePage() {
       </div>
       <div className={classes.themeSongContainer}>
         <Box className={classes.themeSongContent}>
-          <Text variant="h4" style={{ fontWeight: "600", margin: 20 }}>
+          <Text
+            variant="h4"
+            style={{ fontWeight: "600", margin: 20 }}
+            className={classes.themeSongHeader}
+          >
             Verse
           </Text>
-          <Text>
+          <Text className={classes.themeSongVerse}>
             From different places, different times <br />
             With a common goal in our minds <br />
             We want to enjoy this moment while it lasts <br />
@@ -130,10 +134,14 @@ export default function HomePage() {
             So many of us with different childhoods <br />
             Different dreams, different lives <br />
           </Text>
-          <Text variant="h4" style={{ fontWeight: "600", margin: 20 }}>
+          <Text
+            variant="h4"
+            style={{ fontWeight: "600", margin: 20 }}
+            className={classes.themeSongHeader}
+          >
             Chorus
           </Text>
-          <Text>
+          <Text className={classes.themeSongVerse}>
             I know now what the answer is <br />
             I'm sure I'm gonna miss <br />
             This special day when we get together <br />
@@ -273,6 +281,16 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: colors.cream,
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
     borderRadius: 10,
+  },
+  themeSongHeader: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16pt",
+    },
+  },
+  themeSongVerse: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "10pt",
+    },
   },
 }));
 

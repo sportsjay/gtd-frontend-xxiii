@@ -22,7 +22,9 @@ export default function Footer() {
 
   return (
     <div className={classes.root}>
-      <Text style={{ fontWeight: "600", fontSize: fontSize }}>
+      <Text
+        style={{ fontWeight: "600", fontSize: fontSize, textAlign: "center" }}
+      >
         Copyright © 2021 PINTU & GTD. All Rights Reserved.
       </Text>
       <div className={classes.socialMedia}>
