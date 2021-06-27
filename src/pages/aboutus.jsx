@@ -7,6 +7,7 @@ import { StyledButton } from "../components/common/button";
 
 // import styles
 import { colorPalette } from "../components/common/color-palette";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
 
 const portfolios = [
   {
@@ -192,7 +193,7 @@ export default function AboutUsPage() {
         }}
       >
         {portfolios[page].subcommittee.map((committee, idx) => (
-          <InfoCard key={idx} />
+          <InfoCard key={idx} {...committee} />
         ))}
       </div>
       <div className={classes.portfolioSelect}>
