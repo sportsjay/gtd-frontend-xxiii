@@ -13,12 +13,218 @@ const portfolios = [
   {
     portfolio: "Project Officer",
     maincommittee: [],
-    subcommittee: [],
+    subcommittee: [
+      {
+        name: "Aaron Valencio",
+        position: "PO",
+        major: "PAS/2",
+        URL: "",
+      },
+      {
+        name: "Bryan Mardono",
+        position: "PO",
+        major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Jonathan Kelvin",
+        position: "PO",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Jonathan Nicholas Yap",
+        position: "PO",
+        major: "CEE/2",
+        URL: "",
+      },
+      {
+        name: "Kenrick Owen",
+        position: "PO",
+        major: "MSE/2",
+        URL: "",
+      },
+      {
+        name: "Matthew Anderson Yasuo",
+        position: "PO",
+        major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Muhammad Rifqi Aulia",
+        position: "PO",
+        major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Niko Kristanto",
+        position: "PO",
+        major: "IEM/2",
+        URL: "",
+      },
+      {
+        name: "Renardi Muliawan",
+        position: "PO",
+        major: "CEE/2",
+        URL: "",
+      },
+      {
+        name: "Jason Nicholas",
+        position: "PO",
+        major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Vanessa Christy",
+        position: "PO",
+        major: "IEM/2",
+        URL: "",
+      },
+      {
+        name: "Wesley",
+        position: "PO",
+        major: "IEM/2",
+        URL: "",
+      },
+      {
+        name: "Kevin Pranoto",
+        position: "PO",
+        major: "MSE/3",
+        URL: "",
+      },
+      {
+        name: "Leonardo Sutanto",
+        position: "PO",
+        major: "MSE/3",
+        URL: "",
+      },
+      {
+        name: "Michelle Andrea",
+        position: "PO",
+        major: "EEE/3",
+        URL: "",
+      },
+      {
+        name: "Timothy Ellison Janong",
+        position: "PO",
+        major: "CBE/3",
+        URL: "",
+      },
+      {
+        name: "Marcella Mia Marcia",
+        position: "PO",
+        major: "CBE/4",
+        URL: "",
+      },
+      {
+        name: "Vincentius Dennis Herrell",
+        position: "PO",
+        major: "EEE/4",
+        URL: "",
+      },
+    ],
   },
   {
     portfolio: "Logistics",
     maincommittee: [],
-    subcommittee: [],
+    subcommittee: [
+      {
+        name: "Anastasia Audrey Widjaja",
+        position: "LOGS",
+        major: "BIE/2",
+        URL: "",
+      },
+      {
+        name: "Andrew Tatang",
+        position: "LOGS",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Bryan Christopher",
+        position: "LOGS",
+        major: "MAS/2",
+        URL: "",
+      },
+      {
+        name: "Daniel Rahmatcipta",
+        position: "LOGS",
+        major: "CEE/2",
+        URL: "",
+      },
+      {
+        name: "Enrian Wicaksana",
+        position: "LOGS",
+        major: "CEE/2",
+        URL: "",
+      },
+      {
+        name: "Hartawan Surya Santoso",
+        position: "LOGS",
+        major: "CEE/2",
+        URL: "",
+      },
+      {
+        name: "Rajendra Muhammad Alfarrel",
+        position: "LOGS",
+        major: "CEE/2",
+        URL: "",
+      },
+      {
+        name: "Vania Calista",
+        position: "LOGS",
+        major: "MSE/2",
+        URL: "",
+      },
+      {
+        name: "Abraham Osmond Edmundo",
+        position: "LOGS",
+        major: "MAS/3",
+        URL: "",
+      },
+      {
+        name: "Alexander Giovanni",
+        position: "LOGS",
+        major: "BIE/3",
+        URL: "",
+      },
+      {
+        name: "Mikael Ndaru Ajiwidodo",
+        position: "LOGS",
+        major: "EEE/3",
+        URL: "",
+      },
+      {
+        name: "Ryan Gabriel",
+        position: "LOGS",
+        major: "CEE/3",
+        URL: "",
+      },
+      {
+        name: "Andhika Satrya Bhayangkara",
+        position: "LOGS",
+        major: "ME/4",
+        URL: "",
+      },
+      {
+        name: "Eliora Violain Buyamin",
+        position: "LOGS",
+        major: "BIE/4",
+        URL: "",
+      },
+      {
+        name: "Francisco Bryant",
+        position: "LOGS",
+        major: "EEE/4",
+        URL: "",
+      },
+      {
+        name: "Kezia Janet",
+        position: "LOGS",
+        major: "MSE/4",
+        URL: "",
+      },
+    ],
   },
   {
     portfolio: "PPIT",
@@ -26,51 +232,403 @@ const portfolios = [
       {
         name: "Christopher Denny",
         position: "Publication & Publicity",
-        URLimg: "",
+        URL: "",
         major: "EEE/Year 4",
       },
       {
         name: "Hans Aldi",
         position: "Publication & Publicity",
-        URLimg: "",
+        URL: "",
         major: "EEE/Year 3",
       },
       {
         name: "Valencia Sendytio",
         position: "Publication & Publicity",
-        URLimg: "",
+        URL: "",
         major: "WKW/Year 4",
       },
       {
         name: "Jason Nathaniel",
         position: "Information Technology",
-        URLimg: "",
+        URL: "",
         major: "EEE/Year 4",
       },
     ],
-    subcommittee: [],
+    subcommittee: [
+      {
+        name: "Daren Nathaniel Janto",
+        position: "PPIT",
+        major: "CS/2",
+        URL: "",
+      },
+      {
+        name: "Edward Steven Wongso",
+        position: "PPIT",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Hansen Lienardi",
+        position: "PPIT",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Juan Samuel Sugianto",
+        position: "PPIT",
+        major: "CS/2",
+        URL: "",
+      },
+      {
+        name: "Justin Ferdinand Pradinatay",
+        position: "PPIT",
+        major: "ME/3",
+        URL: "",
+      },
+      {
+        name: "Rivaldo Billy Sebastian",
+        position: "PPIT",
+        major: "MAS/2",
+        URL: "",
+      },
+      {
+        name: "Theo Felix Kurniawan",
+        position: "PPIT",
+        major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Sylvia Deborah",
+        position: "PPIT",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Victor Lim",
+        position: "PPIT",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Abhirama Radhitya",
+        position: "PPIT",
+        major: "CEE/3",
+        URL: "",
+      },
+      {
+        name: "Alvon Gunawan",
+        position: "PPIT",
+        major: "EEE/3",
+        URL: "",
+      },
+      {
+        name: "Ferlita Halim",
+        position: "PPIT",
+        major: "CS/3",
+        URL: "",
+      },
+      {
+        name: "Jessika Nadia Hartanto",
+        position: "PPIT",
+        major: "ADM/3",
+        URL: "",
+      },
+      {
+        name: "Wilhelmus Adi Prawira",
+        position: "PPIT",
+        major: "MSE/3",
+        URL: "",
+      },
+      {
+        name: "Gabrian Christopher",
+        position: "PPIT",
+        major: "EEE/4",
+        URL: "",
+      },
+      {
+        name: "Jessica Widjaja",
+        position: "PPIT",
+        major: "CBE/4",
+        URL: "",
+      },
+      {
+        name: "Justin Trisno",
+        position: "PPIT",
+        major: "EEE/4",
+        URL: "",
+      },
+      {
+        name: "Noah Winston",
+        position: "PPIT",
+        major: "EEE/4",
+        URL: "",
+      },
+    ],
   },
   {
     portfolio: "Welfare",
     maincommittee: [],
-    subcommittee: [],
+    subcommittee: [
+      {
+        name: "Immanuel Yehuda",
+        position: "Welfare",
+        major: "NBS/3",
+        URL: "",
+      },
+      {
+        name: "Fernando",
+        position: "Welfare",
+        major: "EESS/2",
+        URL: "",
+      },
+      {
+        name: "Kathy Sophia Kristianty",
+        position: "Welfare",
+        major: "BIE/2",
+        URL: "",
+      },
+      {
+        name: "Jessica Chandra",
+        position: "Welfare",
+        major: "CEE/2",
+        URL: "",
+      },
+      {
+        name: "Jimmy Rivallo",
+        position: "Welfare",
+        major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Richardson",
+        position: "Welfare",
+        major: "IEM/4",
+        URL: "",
+      },
+      {
+        name: "Hugo Sebastian",
+        position: "Welfare",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Naufal Ragitya Daniswara",
+        position: "Welfare",
+        major: "MSE/2",
+        URL: "",
+      },
+      {
+        name: "Matthew Anderson Yasuo",
+        position: "Welfare",
+        major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Dihan Jannatan Mutaalim",
+        position: "Welfare",
+        major: "ME/2",
+        URL: "",
+      },
+      {
+        name: "Andrew Imanuel",
+        position: "Welfare",
+        major: "NBS/3",
+        URL: "",
+      },
+      {
+        name: "Hagata Raguel Jehoshua",
+        position: "Welfare",
+        major: "MSE/3",
+        URL: "",
+      },
+      {
+        name: "Melina Novalia Jontera Lius",
+        position: "Welfare",
+        major: "MSE/3",
+        URL: "",
+      },
+      {
+        name: "Jason Jovi Brata",
+        position: "Welfare",
+        major: "MSE/4",
+        URL: "",
+      },
+      {
+        name: "David Alexander Yosal",
+        position: "Welfare",
+        major: "NBS/2",
+        URL: "",
+      },
+      {
+        name: "Sharon Gautama",
+        position: "Welfare",
+        major: "CBE/4",
+        URL: "",
+      },
+    ],
   },
   {
     portfolio: "Group Leader",
     maincommittee: [],
-    subcommittee: [],
+    subcommittee: [
+      {
+        name: "Irfan Enkisra",
+        position: "GL",
+        major: "CEE/3",
+        URL: "",
+      },
+      {
+        name: "Kennard Hans Widjaja",
+        position: "GL",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Felicia Angelina Halim",
+        position: "GL",
+        major: "NBS/2",
+        URL: "",
+      },
+      {
+        name: "Gabriella Angelina Lim",
+        position: "GL",
+        major: "NBS/2",
+        URL: "",
+      },
+      {
+        name: "John Nicholas Suharjono",
+        position: "GL",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Kenzhi Iskandar Wong",
+        position: "GL",
+        major: "MAE/2",
+        URL: "",
+      },
+      {
+        name: "Jocelyn Valencia Yoswara",
+        position: "GL",
+        major: "IEM/2",
+        URL: "",
+      },
+      {
+        name: "Valencia Lie",
+        position: "GL",
+        major: "DSAI/2",
+        URL: "",
+      },
+      {
+        name: "Arvin Jaya",
+        position: "GL",
+        major: "CEE/2",
+        URL: "",
+      },
+      {
+        name: "Alvin Putera Budiman",
+        position: "GL",
+        major: "EEE/2",
+        URL: "",
+      },
+      {
+        name: "Vivian Widjaja",
+        position: "GL",
+        major: "IEM/3",
+        URL: "",
+      },
+      {
+        name: "Christopher Arif Setiadharma",
+        position: "GL",
+        major: "CE/3",
+        URL: "",
+      },
+    ],
   },
   {
     portfolio: "BFM",
     maincommittee: [],
-    subcommittee: [],
+    subcommittee: [
+      {
+        name: "Kevin Lius",
+        position: "BFM",
+        major: "CEE/3",
+        URL: "",
+      },
+      {
+        name: "Leonard Darmawan",
+        position: "BFM",
+        major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Karen Prasetio",
+        position: "BFM",
+        major: "CBC/4",
+        URL: "",
+      },
+      {
+        name: "Devin Edward",
+        position: "BFM",
+        major: "CBC/4",
+        URL: "",
+      },
+      {
+        name: "Julius Daniel Sarwono",
+        position: "BFM",
+        major: "NBS/3",
+        URL: "",
+      },
+      {
+        name: "Agnes Melia",
+        position: "BFM",
+        major: "MAS/4",
+        URL: "",
+      },
+      {
+        name: "Darrens Sanders Tanuwidjaja",
+        position: "BFM",
+        major: "ME/2",
+        URL: "",
+      },
+      {
+        name: "Hans Farrell Soegeng",
+        position: "BFM",
+        major: "MAS/2",
+        URL: "",
+      },
+      {
+        name: "Marvin Winson",
+        position: "BFM",
+        major: "CE/4",
+        URL: "",
+      },
+      {
+        name: "Rachel Emmanuelle Raphael",
+        position: "BFM",
+        major: "MSE/2",
+        URL: "",
+      },
+      {
+        name: "Ruby Clarissa Sutopo",
+        position: "BFM",
+        major: "BS/2",
+        URL: "",
+      },
+      {
+        name: "Vincent",
+        position: "BFM",
+        major: "MSE/3",
+        URL: "",
+      },
+    ],
   },
 ];
 
 const colors = new colorPalette();
 
 function InfoCard(props) {
-  const { name, position, URLimg, major } = props;
+  const { name, position, URL, major } = props;
   const classes = useStyles();
 
   return (
@@ -84,7 +642,7 @@ function InfoCard(props) {
           <Text className={classes.PosText}>{position}</Text>
         </div>
         <img
-          src={URLimg ? URLimg : "gtd.png"}
+          src={URL ? URL : "gtd.png"}
           className={classes.photoImage}
           aria-hidden
           alt="No Image Resources"
@@ -122,11 +680,8 @@ export default function AboutUsPage() {
             GTD XXIII
           </Text>
           <Text component="div" className={classes.content}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Laoreet
-            suspendisse interdum consectetur libero id faucibus. Cursus risus at
-            ultrices mi tempus imperdiet. Ut sem viverra aliquet eget sit amet
-            tellus.
+            Hello! Welcome to GTD XXIII. Here we bring you to all our personnels
+            coming from each respective porfolios.
           </Text>
         </Container>
       </div>
@@ -155,7 +710,7 @@ export default function AboutUsPage() {
           position="VP PPIT-Welfare"
           major="EEE/Year 4"
         />
-        <InfoCard name="Edward Siman" position="VP GL-BFM" />
+        <InfoCard name="Edward Siman" position="VP GL-BFM" major="CBE/Year 4" />
       </div>
       <div className={classes.portfolioSelect}>
         <StyledButton className={buttonClasses.header} onClick={handlePrevPage}>
@@ -300,12 +855,14 @@ const useStyles = makeStyles((theme) => ({
   NameBox: {
     position: "absolute",
     width: "250px",
+    maxHeight: 40,
     left: "26.5px",
     top: "80px",
     fontSize: "24px",
     fontWeight: "600",
     alignItems: "center",
     textAlign: "center",
+    overflow: "hidden",
   },
   PosBox: {
     position: "absolute",

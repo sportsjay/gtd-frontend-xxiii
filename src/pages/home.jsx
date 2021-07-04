@@ -92,12 +92,7 @@ export default function HomePage() {
   return (
     <div className={classes.root}>
       <div className={classes.header}>
-        <Box className={classes.headerLink}>
-          <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          </Text>
-        </Box>
+        <Box className={classes.headerLink} />
       </div>
       <div className={classes.houseLeaderContainer}>
         <StyledBox
@@ -105,16 +100,53 @@ export default function HomePage() {
             <ModalContent title="Title" description="lorem ipsum" />
           }
           style={{
-            background:
-              'url("https://imagecolorpicker.com/_next/image?url=%2Fimagecolorpicker-preview_b.jpg&w=1920&q=75")',
+            background: 'url("/house_leaders/ely.png")',
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
+          title="Artemis"
+          description="Goddess of forest, hunt and of chastity and childbirth"
         ></StyledBox>
-        <StyledBox></StyledBox>
-        <StyledBox></StyledBox>
-        <StyledBox></StyledBox>
+        <StyledBox
+          style={{
+            background: 'url("/house_leaders/hagan.png")',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          modalContent={
+            <ModalContent title="Title" description="lorem ipsum" />
+          }
+          title="Poseidon"
+          description="Father of the seas, god of oceans"
+        ></StyledBox>
+        <StyledBox
+          style={{
+            background: 'url("/house_leaders/vio.png")',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          modalContent={
+            <ModalContent title="Title" description="lorem ipsum" />
+          }
+          title="Persephone"
+          description="Queen of the underworld, Hades' beloved wife"
+        ></StyledBox>
+        <StyledBox
+          style={{
+            background: 'url("/house_leaders/nico.png")',
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          modalContent={
+            <ModalContent title="Title" description="lorem ipsum" />
+          }
+          title="Zeus"
+          description="God of thunder, father of all gods and humans"
+        ></StyledBox>
       </div>
       <div className={classes.themeSongContainer}>
         <Box className={classes.themeSongContent}>
@@ -141,7 +173,7 @@ export default function HomePage() {
           >
             Chorus
           </Text>
-          <Text className={classes.themeSongVerse}>
+          <Text className={classes.themeSongVerse} style={{ marginBottom: 20 }}>
             I know now what the answer is <br />
             I'm sure I'm gonna miss <br />
             This special day when we get together <br />
@@ -151,12 +183,45 @@ export default function HomePage() {
             No once we'll forget this great day we have <br />
           </Text>
           <iframe
-            allowtransparency="true"
+            width="100%"
+            height="166"
             scrolling="no"
             frameborder="no"
-            src="https://w.soundcloud.com/icon/?url=http%3A%2F%2Fsoundcloud.com%2Fundefined&color=orange_white&size=32"
-            style={{ width: 32, height: 32 }}
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/455672094&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
           ></iframe>
+          <div
+            style={{
+              fontSize: 10,
+              color: "#cccccc",
+              lineBreak: "anywhere",
+              wordBreak: "normal",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+              textOverflow: "ellipsis",
+              fontFamily:
+                "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+              fontWeight: 100,
+            }}
+          >
+            <a
+              href="https://soundcloud.com/steveprat"
+              title="StevePrat"
+              target="_blank"
+              style={{ color: "#cccccc", textDecoration: "none" }}
+            >
+              credits by StevePrat
+            </a>{" "}
+            ·{" "}
+            <a
+              href="https://soundcloud.com/steveprat/get-together-day-anthem"
+              title="Get Together Day Anthem"
+              target="_blank"
+              style={{ color: "#cccccc", textDecoration: "none" }}
+            >
+              Get Together Day Anthem
+            </a>
+          </div>
         </Box>
       </div>
     </div>
@@ -181,17 +246,25 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    background:
+      'url("https://www.enjpg.com/img/2020/desktop-backgrounds-15.jpg")',
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
   },
   headerLink: {
     width: "30vw",
+    maxWidth: 400,
     minWidth: 160,
     height: "30vw",
+    maxHeight: 400,
     minHeight: 160,
     borderRadius: "50%",
-    background: "#F8F2E5",
+    background: 'url("logo.png")',
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
-    textAlign: "center",
-    overflow: "hidden",
     transition: "ease-out 0.2s",
     cursor: "pointer",
     "&:hover": {
@@ -214,7 +287,7 @@ const useStyles = makeStyles((theme) => ({
   },
   houseLeaderContent: {
     position: "relative",
-    height: 500,
+    height: 560,
     minWidth: "50%",
     boxSizing: "border-box",
     background: "#C4C4C41A",
@@ -271,7 +344,8 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(10),
   },
   themeSongContent: {
-    width: "80%",
+    width: "60%",
+    minWidth: 300,
     minHeight: 600,
     textAlign: "center",
     display: "flex",

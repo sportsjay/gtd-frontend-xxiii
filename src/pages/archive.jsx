@@ -153,6 +153,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "20px",
     boxSizing: "border-box",
     width: "50%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   image: {
@@ -170,6 +174,9 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     color: colors.white,
     margin: "0 0 20px 0",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "32pt",
+    },
     [theme.breakpoints.down("sm")]: {
       fontSize: "28pt",
     },
@@ -184,12 +191,16 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "6vmin",
     letterSpacing: "0em",
     color: colors.white,
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14pt",
+    },
     [theme.breakpoints.down("sm")]: {
-      fontSize: "16pt",
       textAlign: "center",
+      maxWidth: 500,
     },
     [theme.breakpoints.down("xs")]: {
       fontSize: "12pt",
+      maxWidth: 300,
     },
   },
 }));
