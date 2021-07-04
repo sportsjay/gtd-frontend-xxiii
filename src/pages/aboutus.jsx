@@ -540,7 +540,7 @@ const portfolios = [
       {
         name: "Christopher Arif Setiadharma",
         position: "GL",
-        major: "CE/3",
+        major: "CE/2",
         URL: "",
       },
     ],
