@@ -3,6 +3,7 @@ import HomePage from "./pages/home";
 import AboutUsPage from "./pages/aboutus";
 import ArchivePage from "./pages/archive";
 import EventsPage from "./pages/events";
+import FAQPage from "./pages/faq";
 
 export const routes = [
   {
@@ -14,7 +15,7 @@ export const routes = [
   {
     id: 1,
     body: AboutUsPage,
-    name: "about us",
+    name: "about-us",
     path: "/about-us",
   },
   {
@@ -28,5 +29,11 @@ export const routes = [
     body: ArchivePage,
     name: "archive",
     path: "/archive",
+  },
+  {
+    id: 4,
+    body: FAQPage,
+    name: "FAQ",
+    path: "/faq",
   },
 ];

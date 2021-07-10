@@ -1,11 +1,11 @@
-import React from "react";
-import { makeStyles, Grid } from "@material-ui/core";
-
+import React, { useState } from "react";
+import { makeStyles, Grid, Fab } from "@material-ui/core";
 // import components
 import { Text } from "../components/common/typography";
 
 // import stlyes
 import { colorPalette } from "../components/common/color-palette";
+import { ChevronRight, ChevronLeft, KeyboardArrowUp } from "@material-ui/icons";
 const colors = new colorPalette();
 
 const sampleData = [
@@ -36,6 +36,126 @@ const sampleData = [
   },
 ];
 
+function Carousel(props) {
+  const carouselClasses = carouselStyles();
+  const content = props.content || [];
+  const [contentIdx, setContentIdx] = useState(0);
+
+  function handleNextContent() {
+    if (contentIdx > content.length - 2) setContentIdx(0);
+    else setContentIdx(contentIdx + 1);
+  }
+
+  function handlePrevContent() {
+    if (contentIdx <= 0) setContentIdx(content.length - 1);
+    else setContentIdx(contentIdx - 1);
+  }
+
+  return (
+    <div className={carouselClasses.root}>
+      <div className={carouselClasses.body}>
+        <div className={carouselClasses.leftButton} onClick={handlePrevContent}>
+          <ChevronLeft style={{ color: colors.cream }} />
+        </div>
+        <section className={carouselClasses.content}>
+          <div
+            style={{
+              opacity: 0,
+              position: "relative",
+              height: "100%",
+              width: "100%",
+              zIndex: -1,
+            }}
+          >
+            {content[0]}
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              height: "100%",
+              width: "100%",
+              top: 0,
+            }}
+          >
+            {content[contentIdx]}
+          </div>
+        </section>
+        <div
+          className={carouselClasses.rightButton}
+          onClick={handleNextContent}
+        >
+          <ChevronRight style={{ color: colors.cream }} />
+        </div>
+      </div>
+      <div className={carouselClasses.navigation}>
+        {content.map((_, idx) => (
+          <div
+            key={idx}
+            className={carouselClasses.navButton}
+            style={{ opacity: idx !== contentIdx ? 0.4 : 1 }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const carouselStyles = makeStyles((theme) => ({
+  root: {
+    height: "100%",
+    width: "100%",
+    position: "relative",
+  },
+  body: {
+    position: "relative",
+    height: "100%",
+    widht: "100%",
+  },
+  content: {
+    height: "100%",
+    width: "100%",
+  },
+  leftButton: {
+    position: "absolute",
+    left: 0,
+    top: 0,
+    display: "flex",
+    alignItems: "center",
+    height: "100%",
+    zIndex: 1,
+    width: "40%",
+  },
+  rightButton: {
+    position: "absolute",
+    right: 0,
+    top: 0,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "flex-end",
+    height: "100%",
+    zIndex: 1,
+    width: "40%",
+  },
+  navigation: {
+    height: 20,
+    boxSizing: "border-box",
+    paddingBottom: theme.spacing(2),
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 5,
+  },
+  navButton: {
+    backgroundColor: colors.cream,
+    width: 20,
+    height: 2,
+    borderRadius: 2,
+  },
+}));
+
 export default function EventsPage() {
   const classes = useStyles();
 
@@ -55,8 +175,6 @@ export default function EventsPage() {
         <Circ />
         <Bar />
         <Circ />
-        <Bar />
-        <Circ />
       </div>
     );
   }
@@ -64,6 +182,29 @@ export default function EventsPage() {
   function Content(props) {
     // image-text orientation, default = row, else = row-reverse
     const orientation = props.index % 2 !== 0 ? "row-reverse" : "row";
+    const pictures = props.pictures || [
+      <img
+        className={classes.image}
+        src="../images/gtd-dummy.jpg"
+        alt="../images/gtd.jpg"
+        width="100%"
+        height="auto"
+      />,
+      <img
+        className={classes.image}
+        src="../images/gtd-dummy.jpg"
+        alt="../images/gtd.jpg"
+        width="100%"
+        height="auto"
+      />,
+      <img
+        className={classes.image}
+        src="../images/gtd-dummy.jpg"
+        alt="../images/gtd.jpg"
+        width="100%"
+        height="auto"
+      />,
+    ];
     const title = props.title || "No Title";
     const subtitle = props.subtitle || "No subtitle";
     return (
@@ -74,13 +215,7 @@ export default function EventsPage() {
         style={{ flexDirection: orientation }}
       >
         <Grid item xs={12} md={6} className={classes.displayImage}>
-          <img
-            className={classes.image}
-            src="../images/gtd-dummy.jpg"
-            alt="../images/gtd.jpg"
-            width="100%"
-            height="auto"
-          />
+          <Carousel content={pictures} />
         </Grid>
         <Grid item xs={12} md={6} className={classes.displayText}>
           <Text className={classes.title}>{title}</Text>
@@ -90,8 +225,24 @@ export default function EventsPage() {
     );
   }
 
+  function jumpToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <div className={classes.root}>
+      <Fab
+        onClick={jumpToTop}
+        style={{
+          position: "fixed",
+          zIndex: 10000,
+          bottom: 40,
+          right: 40,
+          backgroundColor: colors.gray,
+        }}
+      >
+        <KeyboardArrowUp />
+      </Fab>
       {sampleData.map((data, index) =>
         index === sampleData.length - 1 ? (
           <React.Fragment>

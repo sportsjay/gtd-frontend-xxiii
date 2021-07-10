@@ -67,18 +67,21 @@ export default function DrawerList(props) {
               }}
             >
               <div className={classes.icon}>{iconSwitch(route.name)}</div>
-              <Text className={classes.linkText}>{route.name}</Text>
+              <Text className={classes.linkText}>
+                {route.name.split("-").join(" ")}
+              </Text>
               <div
                 style={{
                   position: "absolute",
                   top: "75%",
                   left: 30,
-                  width: route.name === activePage ? "75%" : 0,
+                  width: route.name === activePage ? "100%" : 0,
                   maxWidth: 200,
-                  height: "10%",
+                  height: 4,
+                  borderRadius: 2,
                   backgroundColor: colors.black,
                   opacity: 0.4,
-                  transition: "width 0.2s ease-out",
+                  transition: "width 0.5s ease-out",
                 }}
               />
             </ListItem>

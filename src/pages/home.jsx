@@ -15,6 +15,7 @@ function StyledBox(props) {
   const modalClasses = modalStyles();
   const [openModal, setOpenModal] = useState(false);
   const title = props.title;
+  const right = props.right || false;
   const description = props.description;
 
   function handleOpenModal() {
@@ -32,7 +33,10 @@ function StyledBox(props) {
         {...props}
         onClick={handleOpenModal}
       >
-        <div className={classes.houseLeaderBody}>
+        <div
+          className={classes.houseLeaderBody}
+          style={{ alignItems: right ? "flex-end" : "flex-start" }}
+        >
           <Text variant="h4" style={{ fontWeight: "700", color: colors.white }}>
             {title}
           </Text>
@@ -66,8 +70,8 @@ function StyledBox(props) {
   );
 }
 StyledBox.defaultProps = {
-  title: "No title",
-  description: "No description",
+  title: "Coming Soon",
+  description: "No Description Present",
 };
 
 function ModalContent(props) {
@@ -76,14 +80,18 @@ function ModalContent(props) {
   const description = props.description;
   return (
     <div className={modalClasses.content}>
-      <Text style={{ color: colors.white }}>{title}</Text>
+      <Text
+        style={{ color: colors.white, fontSize: "32pt", fontWeight: "600" }}
+      >
+        {title}
+      </Text>
       <Text style={{ color: colors.gray }}>{description}</Text>
     </div>
   );
 }
 ModalContent.defaultProps = {
-  title: "No Title",
-  description: "No description",
+  title: "Coming Soon",
+  description: "No Description Present",
 };
 
 export default function HomePage() {
@@ -96,9 +104,7 @@ export default function HomePage() {
       </div>
       <div className={classes.houseLeaderContainer}>
         <StyledBox
-          modalContent={
-            <ModalContent title="Title" description="lorem ipsum" />
-          }
+          modalContent={<ModalContent />}
           style={{
             background: 'url("/house_leaders/ely.png")',
             backgroundRepeat: "no-repeat",
@@ -106,18 +112,17 @@ export default function HomePage() {
             backgroundPosition: "center",
           }}
           title="Artemis"
-          description="Goddess of forest, hunt and of chastity and childbirth"
+          description="Goddess of forest, hunt and nature"
         ></StyledBox>
         <StyledBox
+          right={true}
           style={{
             background: 'url("/house_leaders/hagan.png")',
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          modalContent={
-            <ModalContent title="Title" description="lorem ipsum" />
-          }
+          modalContent={<ModalContent />}
           title="Poseidon"
           description="Father of the seas, god of oceans"
         ></StyledBox>
@@ -128,22 +133,19 @@ export default function HomePage() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          modalContent={
-            <ModalContent title="Title" description="lorem ipsum" />
-          }
+          modalContent={<ModalContent />}
           title="Persephone"
-          description="Queen of the underworld, Hades' beloved wife"
+          description="Queen of the underworld, Dishwasher"
         ></StyledBox>
         <StyledBox
+          right={true}
           style={{
             background: 'url("/house_leaders/nico.png")',
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          modalContent={
-            <ModalContent title="Title" description="lorem ipsum" />
-          }
+          modalContent={<ModalContent />}
           title="Zeus"
           description="God of thunder, father of all gods and humans"
         ></StyledBox>
@@ -246,10 +248,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background:
-      'url("https://www.enjpg.com/img/2020/desktop-backgrounds-15.jpg")',
+    background: 'url("images/background.png")',
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundSize: "100% 350%",
     backgroundPosition: "center",
   },
   headerLink: {
@@ -264,7 +265,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
+    boxShadow: `${colors.white} 0px 13px 27px -5px, ${colors.cream} 0px 8px 16px -8px`,
     transition: "ease-out 0.2s",
     cursor: "pointer",
     "&:hover": {
@@ -287,7 +288,7 @@ const useStyles = makeStyles((theme) => ({
   },
   houseLeaderContent: {
     position: "relative",
-    height: 560,
+    height: "100vh",
     minWidth: "50%",
     boxSizing: "border-box",
     background: "#C4C4C41A",
@@ -296,8 +297,8 @@ const useStyles = makeStyles((theme) => ({
     cursor: "pointer",
     "&:hover": {
       "& $houseLeaderBackdrop": {
-        height: 1500,
-        width: 1500,
+        height: "100%",
+        width: "100%",
       },
     },
     [theme.breakpoints.down("sm")]: {
@@ -317,15 +318,14 @@ const useStyles = makeStyles((theme) => ({
   },
   houseLeaderBackdrop: {
     position: "absolute",
-    top: -300,
-    left: -300,
+    top: 0,
+    left: 0,
     height: 0,
-    width: 0,
-    borderRadius: 6000,
+    width: "100%",
     zIndex: 1,
     backgroundColor: colors.gray,
     opacity: 0.4,
-    transition: "ease-out 0.7s",
+    transition: "ease-out 0.5s",
   },
   houseLeaderFooterBackdrop: {
     height: "60%",

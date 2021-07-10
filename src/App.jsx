@@ -12,6 +12,7 @@ import Footer from "./components/common/footer";
 import TopAppBar from "./components/common/topappbar/";
 
 // Import Routes and Pages
+import ComingSoonPage from "./pages/comingsoon";
 import { routes } from "./routes";
 
 export default function App() {
@@ -23,6 +24,15 @@ export default function App() {
         <Switch>
           <Route path="/" exact>
             <Redirect to="/home" />
+          </Route>
+          <Route path="/events">
+            <Redirect to="coming-soon" />
+          </Route>
+          <Route path="/archive">
+            <Redirect to="coming-soon" />
+          </Route>
+          <Route path="/coming-soon">
+            <ComingSoonPage />
           </Route>
           {routes.map((page) => (
             <Route key={page.id} path={page.path} exact>

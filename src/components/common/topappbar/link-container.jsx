@@ -26,7 +26,9 @@ export default function LinkContainer(props) {
             onClick={() => setActivePage(route.name)}
             style={{ marginLeft: 4, marginRight: 4, padding: 0 }}
           >
-            <Text className={classes.linkText}>{route.name}</Text>
+            <Text className={classes.linkText}>
+              {route.name.split("-").join(" ")}
+            </Text>
             <div
               style={{
                 position: "absolute",

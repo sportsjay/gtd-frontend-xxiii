@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { makeStyles, Container } from "@material-ui/core";
+import { makeStyles, Container, Divider } from "@material-ui/core";
 
 // import components
 import { Text } from "../components/common/typography";
@@ -12,10 +12,47 @@ import { CSSTransition, SwitchTransition } from "react-transition-group";
 const portfolios = [
   {
     portfolio: "Project Officer",
-    maincommittee: [],
+    maincommittee: [
+      {
+        name: "Elysia",
+        position: "PO",
+        URL: "portfolio/MC/Elysia-min.jpg",
+        major: "MSE/Year 3",
+      },
+      {
+        name: "Hendrick Sebastian",
+        position: "PO",
+        URL: "portfolio/MC/Hendrick Sebastian-min.jpg",
+        major: "EEE/Year 3",
+      },
+      {
+        name: "Violin Yapputri",
+        position: "PO",
+        URL: "portfolio/MC/Violin Yapputri-min.jpg",
+        major: "IEM/Year 3",
+      },
+      {
+        name: "Nicolas Erlando Edisanto",
+        position: "PO",
+        URL: "portfolio/MC/Nicolas Erlando Edisanto-min.jpg",
+        major: "EEE/Year 3",
+      },
+      {
+        name: "Andrew Wiraatmaja",
+        position: "PO",
+        URL: "portfolio/MC/Andrew Wiraatmaja-min.jpg",
+        major: "DSAI/Year 3",
+      },
+      {
+        name: "Adeline Yee",
+        position: "PO",
+        URL: "portfolio/MC/Adeline Yee-min.jpg",
+        major: "CS-MAS/Year 3",
+      },
+    ],
     subcommittee: [
       {
-        name: "Aaron Valencio",
+        name: "Aaron Valencio Kristanto",
         position: "PO",
         major: "PAS/2",
         URL: "",
@@ -27,7 +64,7 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Jonathan Kelvin",
+        name: "Jonathan Kelvin Santoso",
         position: "PO",
         major: "EEE/2",
         URL: "",
@@ -45,7 +82,7 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Matthew Anderson Yasuo",
+        name: "Matthew Yasuo",
         position: "PO",
         major: "CBE/2",
         URL: "",
@@ -75,13 +112,13 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Vanessa Christy",
+        name: "Vanessa Christy Chandra",
         position: "PO",
         major: "IEM/2",
         URL: "",
       },
       {
-        name: "Wesley",
+        name: "Wesley Susanto",
         position: "PO",
         major: "IEM/2",
         URL: "",
@@ -99,7 +136,7 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Michelle Andrea",
+        name: "Michelle Andrea Budiarto",
         position: "PO",
         major: "EEE/3",
         URL: "",
@@ -117,7 +154,7 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Vincentius Dennis Herrell",
+        name: "Vincentius Dennis Herell",
         position: "PO",
         major: "EEE/4",
         URL: "",
@@ -126,7 +163,26 @@ const portfolios = [
   },
   {
     portfolio: "Logistics",
-    maincommittee: [],
+    maincommittee: [
+      {
+        name: "Danendra Lohanata",
+        position: "Logistics",
+        URL: "portfolio/MC/Danendra Lohanata-min.jpg",
+        major: "MAS/Year 3",
+      },
+      {
+        name: "Ahmad Aufar Thoriq",
+        position: "Logistics",
+        URL: "portfolio/MC/Ahmad Aufar Thoriq-min.jpg",
+        major: "EEE/Year 3",
+      },
+      {
+        name: "Bhara Sina Murtadla",
+        position: "Logistics",
+        URL: "portfolio/MC/Bhara Sina Murtadla-min.jpg",
+        major: "EEE/Year 3",
+      },
+    ],
     subcommittee: [
       {
         name: "Anastasia Audrey Widjaja",
@@ -201,9 +257,9 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Andhika Satrya Bhayangkara",
+        name: "Andhika Satriya Bhayangkara",
         position: "LOGS",
-        major: "ME/4",
+        major: "MAE/4",
         URL: "",
       },
       {
@@ -232,25 +288,25 @@ const portfolios = [
       {
         name: "Christopher Denny",
         position: "Publication & Publicity",
-        URL: "",
+        URL: "portfolio/MC/Christopher Denny Prihadi-min.jpg",
         major: "EEE/Year 4",
       },
       {
-        name: "Hans Aldi",
+        name: "Hans Aldi Christian",
         position: "Publication & Publicity",
-        URL: "",
+        URL: "portfolio/MC/Hans Aldi Christian-min.jpg",
         major: "EEE/Year 3",
       },
       {
         name: "Valencia Sendytio",
         position: "Publication & Publicity",
-        URL: "",
+        URL: "portfolio/MC/Valencia Sendytio-min.jpg",
         major: "WKW/Year 4",
       },
       {
         name: "Jason Nathaniel",
         position: "Information Technology",
-        URL: "",
+        URL: "portfolio/MC/Jason Nathaniel-min.jpg",
         major: "EEE/Year 4",
       },
     ],
@@ -282,7 +338,7 @@ const portfolios = [
       {
         name: "Justin Ferdinand Pradinatay",
         position: "PPIT",
-        major: "ME/3",
+        major: "MAE/3",
         URL: "",
       },
       {
@@ -310,7 +366,7 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Abhirama Radhitya",
+        name: "Abhirama Radhitya Santoso",
         position: "PPIT",
         major: "CEE/3",
         URL: "",
@@ -334,7 +390,7 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Wilhelmus Adi Prawira",
+        name: "Wilhelmus Adi Prawira Pangestu",
         position: "PPIT",
         major: "MSE/3",
         URL: "",
@@ -367,7 +423,26 @@ const portfolios = [
   },
   {
     portfolio: "Welfare",
-    maincommittee: [],
+    maincommittee: [
+      {
+        name: "Michael Hans",
+        position: "Welfare",
+        URL: "portfolio/MC/Michael Hans-min.jpg",
+        major: "EEE/Year 3",
+      },
+      {
+        name: "Dzakiy Farid Fadhila",
+        position: "Welfare",
+        URL: "portfolio/MC/Dzakiy Farid Fadhila-min.jpg",
+        major: "MAE/Year 3",
+      },
+      {
+        name: "Janet Widianto",
+        position: "Welfare",
+        URL: "portfolio/MC/Janet Widianto-min.jpg",
+        major: "MSE/Year 3",
+      },
+    ],
     subcommittee: [
       {
         name: "Immanuel Yehuda",
@@ -379,6 +454,12 @@ const portfolios = [
         name: "Fernando",
         position: "Welfare",
         major: "EESS/2",
+        URL: "",
+      },
+      {
+        name: "Hou Lixuan",
+        position: "Welfare",
+        major: "ACC/3",
         URL: "",
       },
       {
@@ -406,7 +487,7 @@ const portfolios = [
         URL: "",
       },
       {
-        name: "Hugo Sebastian",
+        name: "Hugo Sebastian Gouw",
         position: "Welfare",
         major: "EEE/2",
         URL: "",
@@ -426,7 +507,7 @@ const portfolios = [
       {
         name: "Dihan Jannatan Mutaalim",
         position: "Welfare",
-        major: "ME/2",
+        major: "MAE/2",
         URL: "",
       },
       {
@@ -469,7 +550,20 @@ const portfolios = [
   },
   {
     portfolio: "Group Leader",
-    maincommittee: [],
+    maincommittee: [
+      {
+        name: "Theodora Lynn",
+        position: "CGL",
+        URL: "portfolio/MC/Theodora Lynn-min.jpg",
+        major: "MSE/Year 3",
+      },
+      {
+        name: "Kenny Lo",
+        position: "CGL",
+        URL: "portfolio/MC/Kenny Lo-min.jpg",
+        major: "MSE/Year 3",
+      },
+    ],
     subcommittee: [
       {
         name: "Irfan Enkisra",
@@ -547,7 +641,32 @@ const portfolios = [
   },
   {
     portfolio: "BFM",
-    maincommittee: [],
+    maincommittee: [
+      {
+        name: "Shellia Oktavina",
+        position: "BFM",
+        URL: "portfolio/MC/Shellia Oktavina-min.jpg",
+        major: "/Year 3",
+      },
+      {
+        name: "Hagan Hototo Barus",
+        position: "BFM",
+        URL: "portfolio/MC/Hagan Hototo Barus-min.jpg",
+        major: "NBS/Year 2",
+      },
+      {
+        name: "Winnie Faustinelie",
+        position: "BFM",
+        URL: "portfolio/MC/Winnie Faustinelie-min.jpg",
+        major: "CBE/Year 4",
+      },
+      {
+        name: "Timothy William Delin",
+        position: "BFM",
+        URL: "portfolio/MC/Timothy William Delin-min.jpg",
+        major: "MSE/Year 3",
+      },
+    ],
     subcommittee: [
       {
         name: "Kevin Lius",
@@ -555,6 +674,7 @@ const portfolios = [
         major: "CEE/3",
         URL: "",
       },
+      { name: "Ryan Kent Tanadi", position: "BFM", major: "CS/2", URL: "" },
       {
         name: "Leonard Darmawan",
         position: "BFM",
@@ -588,7 +708,7 @@ const portfolios = [
       {
         name: "Darrens Sanders Tanuwidjaja",
         position: "BFM",
-        major: "ME/2",
+        major: "MAE/2",
         URL: "",
       },
       {
@@ -618,7 +738,7 @@ const portfolios = [
       {
         name: "Vincent",
         position: "BFM",
-        major: "MSE/3",
+        major: "MSE/4",
         URL: "",
       },
     ],
@@ -630,11 +750,12 @@ const colors = new colorPalette();
 function InfoCard(props) {
   const { name, position, URL, major } = props;
   const classes = useStyles();
-
+  const url = URL ? URL : `portfolio/${position}/${name}-min.jpg`;
   return (
-    <div style={{ width: "25%", margin: 20, minWidth: "max-content" }}>
-      <Container className={classes.imagebox}>
-        <div style={{ position: "relative", top: "75px", left: "62px" }}></div>
+    <div
+      style={{ width: 250, height: 300, margin: 20, minWidth: "max-content" }}
+    >
+      <section className={classes.imagebox}>
         <div className={classes.whitebox}>
           <Text className={classes.NameBox}>{name}</Text>
           <Text className={classes.MajorText}>{major}</Text>
@@ -642,12 +763,12 @@ function InfoCard(props) {
           <Text className={classes.PosText}>{position}</Text>
         </div>
         <img
-          src={URL ? URL : "gtd.png"}
+          src={url}
           className={classes.photoImage}
           aria-hidden
           alt="No Image Resources"
         />
-      </Container>
+      </section>
     </div>
   );
 }
@@ -666,10 +787,17 @@ export default function AboutUsPage() {
   function handlePrevPage() {
     if (page === 0) setPage(portfolios.length - 1);
     else setPage(page - 1);
+    document.getElementById("portfolio").scrollIntoView({ behavior: "smooth" });
   }
   function handleNextPage() {
     if (page === portfolios.length - 1) setPage(0);
     else setPage(page + 1);
+    document.getElementById("portfolio").scrollIntoView({ behavior: "smooth" });
+  }
+
+  function handleSelectPage(idx) {
+    setPage(idx);
+    document.getElementById("portfolio").scrollIntoView({ behavior: "smooth" });
   }
 
   return (
@@ -680,8 +808,8 @@ export default function AboutUsPage() {
             GTD XXIII
           </Text>
           <Text component="div" className={classes.content}>
-            Hello! Welcome to GTD XXIII. Here we bring you to all our personnels
-            coming from each respective porfolios.
+            Welcome to GTD XXIII. Here we bring you to all our personnels coming
+            from each respective porfolios.
           </Text>
         </Container>
       </div>
@@ -691,7 +819,12 @@ export default function AboutUsPage() {
         </Text>
       </div>
       <div item xs={12} style={{ display: "flex", justifyContent: "center" }}>
-        <InfoCard name="Kelvin Leo" position="President" major="MSE/Year 4" />
+        <InfoCard
+          name="Kelvin Leo"
+          position="President"
+          major="MSE/Year 4"
+          URL="portfolio/MC/Kelvin Leo-min.jpg"
+        />
       </div>
       <div
         style={{
@@ -704,48 +837,73 @@ export default function AboutUsPage() {
           name="Nicholas Eric Geraldo"
           position="VP PO-LOG"
           major="EEE/Year 4"
+          URL="portfolio/MC/Nicholas Eric Geraldo-min.jpg"
         />
         <InfoCard
           name="Matthew Stanley"
           position="VP PPIT-Welfare"
           major="EEE/Year 4"
+          URL="portfolio/MC/Stanley Qiu-min.jpg"
         />
-        <InfoCard name="Edward Siman" position="VP GL-BFM" major="CBE/Year 4" />
+        <InfoCard
+          name="Edward Siman"
+          position="VP GL-BFM"
+          major="CBE/Year 4"
+          URL="portfolio/MC/Edward Siman-min.jpg"
+        />
       </div>
-      <div className={classes.portfolioSelect}>
-        <StyledButton className={buttonClasses.header} onClick={handlePrevPage}>
-          previous
-        </StyledButton>
-        <Text component="div" className={classes.porfolioText}>
+      {/* portfolio section */}
+      <div id="portfolio" />
+      <div className={classes.portfolioSelect} style={{ marginTop: 90 }}>
+        <Text className={classes.porfolioText}>
           {portfolios[page].portfolio}
         </Text>
-        <StyledButton className={buttonClasses.header} onClick={handleNextPage}>
-          next
-        </StyledButton>
       </div>
-      <Text component="div" className={classes.headerTitle}>
-        Main Committee
-      </Text>
+      <header className={classes.headerWrapper}>
+        <div
+          style={{ backgroundColor: colors.cream, width: "32%", height: 2 }}
+        />
+        <Text
+          component="div"
+          className={classes.headerTitle}
+          style={{ minWidth: "max-content" }}
+        >
+          Main Committee
+        </Text>
+        <div
+          style={{ backgroundColor: colors.cream, width: "32%", height: 2 }}
+        />
+      </header>
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
         }}
+        className={classes.subcommitteeWrapper}
       >
         {portfolios[page].maincommittee.map((committee, idx) => (
           <InfoCard key={idx} {...committee} />
         ))}
       </div>
-      <Text component="div" className={classes.headerTitle}>
-        Subcommittee
-      </Text>
+      <header className={classes.headerWrapper}>
+        <div
+          style={{ backgroundColor: colors.cream, width: "34%", height: 2 }}
+        />
+        <Text component="div" className={classes.headerTitle}>
+          Subcommittee
+        </Text>
+        <div
+          style={{ backgroundColor: colors.cream, width: "34%", height: 2 }}
+        />
+      </header>
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",
         }}
+        className={classes.subcommitteeWrapper}
       >
         {portfolios[page].subcommittee.map((committee, idx) => (
           <InfoCard key={idx} {...committee} />
@@ -755,6 +913,24 @@ export default function AboutUsPage() {
         <StyledButton className={buttonClasses.bottom} onClick={handlePrevPage}>
           previous
         </StyledButton>
+        <section
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 10,
+          }}
+        >
+          {portfolios.map((_, idx) => (
+            <div
+              key={idx}
+              className={classes.tab}
+              style={{
+                filter: idx === page ? "brightness(1)" : "",
+              }}
+              onClick={() => handleSelectPage(idx)}
+            />
+          ))}
+        </section>
         <StyledButton className={buttonClasses.bottom} onClick={handleNextPage}>
           next
         </StyledButton>
@@ -770,38 +946,52 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: colors.black,
     boxSizing: "border-box",
   },
+  headerWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: theme.spacing(2),
+    width: "100%",
+    boxSizing: "border-box",
+    paddingLeft: 60,
+    paddingRight: 60,
+  },
   headerTitle: {
     backgroundColor: colors.black,
     fontSize: 48,
     fontWeight: "700",
     textAlign: "center",
-    paddingTop: "50px",
+    paddingTop: 30,
     color: colors.white,
-    paddingBottom: "30px",
+    paddingBottom: 30,
     [theme.breakpoints.down("sm")]: {
       fontSize: 36,
     },
   },
   porfolioText: {
-    fontSize: "48px",
+    fontSize: 60,
     fontWeight: "700",
     textAlign: "center",
     color: "white",
     [theme.breakpoints.down("sm")]: {
-      fontSize: "24pt",
+      fontSize: "36pt",
     },
   },
   content: {
     backgroundColor: colors.black,
+    fontSize: "20pt",
+    color: colors.gray,
     paddingTop: "10px",
     paddingLeft: "40px",
     paddingRight: "40px",
     textAlign: "center",
-    color: colors.white,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "16pt",
+    },
   },
   GTD: {
     backgroundColor: colors.black,
-    fontSize: 48,
+    fontSize: 72,
     fontWeight: "700",
     textAlign: "center",
     marginTop: "10px",
@@ -817,34 +1007,41 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     boxSizing: "border-box",
   },
+  subcommitteeWrapper: {
+    paddingLeft: "20%",
+    paddingRight: "20%",
+    boxSizing: "border-box",
+  },
   imagebox: {
-    width: "250px",
-    height: "300px",
-    background: "#831515",
-    borderRadius: "20px",
+    width: 250,
+    height: 300,
+    background: colors.red,
+    borderRadius: 20,
     overflow: "hidden",
     position: "relative",
     boxSizing: "border-box",
   },
 
   whitebox: {
-    position: "relative",
-    backgroundColor: "#F8F2E5",
-    top: "100px",
-    left: "-50px",
-    width: "300px",
-    height: "300px",
+    position: "absolute",
+    backgroundColor: colors.cream,
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    boxSizing: "border-box",
+    bottom: 0,
+    width: 250,
+    height: 200,
   },
   large: {
     width: theme.spacing(10),
     height: theme.spacing(10),
   },
   photoImage: {
-    position: "relative",
+    position: "absolute",
     backgroundColor: colors.white,
+    left: "calc(50% - 75px)",
+    top: 20,
     borderRadius: 70,
-    top: "-270px",
-    left: "27px",
     minWidth: 140,
     minHeight: 140,
     maxWidth: 140,
@@ -853,11 +1050,8 @@ const useStyles = makeStyles((theme) => ({
     objectFit: "cover",
   },
   NameBox: {
-    position: "absolute",
-    width: "250px",
+    marginTop: 70,
     maxHeight: 40,
-    left: "26.5px",
-    top: "80px",
     fontSize: "24px",
     fontWeight: "600",
     alignItems: "center",
@@ -865,35 +1059,18 @@ const useStyles = makeStyles((theme) => ({
     overflow: "hidden",
   },
   PosBox: {
-    position: "absolute",
-    width: "250px",
-    left: "26.5px",
-    top: "135px",
     fontSize: "16px",
     fontWeight: "600",
     alignItems: "center",
     textAlign: "center",
   },
   MajorText: {
-    position: "absolute",
-    width: "250px",
-    left: "26.5px",
     textAlign: "center",
     top: "110px",
   },
   PosText: {
-    position: "absolute",
-    width: "250px",
-    left: "26.5px",
     textAlign: "center",
     top: "160px",
-  },
-  NameText: {
-    position: "absolute",
-    width: "250px",
-    left: "26.5px",
-    textAlign: "center",
-    top: "105px",
   },
   portfolioSelect: {
     display: "flex",
@@ -901,13 +1078,21 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: "10%",
     paddingRight: "10%",
     boxSizing: "border-box",
-    justifyContent: "space-between",
+    justifyContent: "center",
     width: "100%",
+    gap: theme.spacing(10),
     [theme.breakpoints.down("sm")]: {
       padding: 0,
       justifyContent: "center",
       gap: theme.spacing(4),
     },
+  },
+  tab: {
+    height: 10,
+    width: 10,
+    backgroundColor: colors.gray,
+    borderRadius: 5,
+    filter: "brightness(0.6)",
   },
 }));
 
@@ -919,8 +1104,8 @@ const buttonStyles = makeStyles((theme) => ({
   },
   bottom: {
     [theme.breakpoints.down("sm")]: {
-      width: "40%",
-      maxWidth: "40%",
+      width: "20%",
+      maxWidth: 200,
     },
   },
 }));
