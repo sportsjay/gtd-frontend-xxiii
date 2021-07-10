@@ -7,6 +7,7 @@ import { Text } from "../components/common/typography";
 
 // import styles
 import { colorPalette } from "../components/common/color-palette";
+import { Link } from "@material-ui/icons";
 
 const colors = new colorPalette();
 
@@ -100,7 +101,13 @@ export default function HomePage() {
   return (
     <div className={classes.root}>
       <div className={classes.header}>
-        <Box className={classes.headerLink} />
+        <a
+          href="https://tinyurl.com/DaftarGTDYuk"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Box className={classes.headerLink} />
+        </a>
       </div>
       <div className={classes.houseLeaderContainer}>
         <StyledBox

@@ -505,6 +505,12 @@ const portfolios = [
         URL: "",
       },
       {
+        name: "Celine Prawiro",
+        position: "Welfare",
+        major: "MSE/4",
+        URL: "",
+      },
+      {
         name: "Dihan Jannatan Mutaalim",
         position: "Welfare",
         major: "MAE/2",
@@ -646,7 +652,7 @@ const portfolios = [
         name: "Shellia Oktavina",
         position: "BFM",
         URL: "portfolio/MC/Shellia Oktavina-min.jpg",
-        major: "/Year 3",
+        major: "SBS/Year 3",
       },
       {
         name: "Hagan Hototo Barus",
@@ -679,6 +685,12 @@ const portfolios = [
         name: "Leonard Darmawan",
         position: "BFM",
         major: "CBE/2",
+        URL: "",
+      },
+      {
+        name: "Juan Steven",
+        position: "BFM",
+        major: "CEE/2",
         URL: "",
       },
       {

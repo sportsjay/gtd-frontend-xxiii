@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-import {
-  makeStyles,
-  Container,
-  TextField,
-  IconButton,
-} from "@material-ui/core";
+import { makeStyles, Container, IconButton } from "@material-ui/core";
 
 // import components
 import { Text } from "../components/common/typography";
-import { StyledButton } from "../components/common/button";
 
 // import colors
 import { colorPalette } from "../components/common/color-palette";
@@ -30,13 +24,20 @@ const faqs = [
   {
     question: "GTD bakal ngapain aja tuh, kak?",
     answer:
-      "Selama 2 hari tersebut, kita akan berkenalan lebih dekat dengan senior-senior dan bermain berbagai games yang sudah persiapkan oleh komite GTD XXIII.",
+      "Selama 2 hari tersebut, kita akan berkenalan lebih dekat dengan senior-senior dan bermain berbagai games yang sudah dipersiapkan oleh komite GTD XXIII.",
   },
   {
     question:
       "Katanya orientasi mahasiswa baru di NTU harus bayar hingga puluhan dollar ya kak? Gimana cara daftarnya ya, kak?",
-    answer: `Betul tapi, kalian tenang saja! GTD XXIII tidak memungut biaya sepeser-pun alias GRATIS!!! Yang diperlukan hanyalah semangat kalian selama acara berlangsung.\n Cara daftarnya cukup click
-      <a href="https://tinyurl.com/DaftarGTDYuk">tinyurl.com/DaftarGTDYuk</a>. Periode pendaftaran dibuka dari tanggal 10 hingga 15 Juli 2021.`,
+    answer: (
+      <Text>
+        Betul! Tapi, kalian tenang saja! GTD XXIII tidak memungut biaya
+        sepeser-pun alias GRATIS!!! Yang diperlukan hanyalah semangat kalian
+        selama acara berlangsung.{`\n`} Cara daftarnya cukup click{" "}
+        <a href="https://tinyurl.com/DaftarGTDYuk">tinyurl.com/DaftarGTDYuk</a>.
+        Periode pendaftaran dibuka dari tanggal 10 hingga 15 Juli 2021.
+      </Text>
+    ),
   },
   {
     question: "Kalo aku ada pertanyaan lain, harus tanya siapa ya, kak?",
@@ -56,8 +57,8 @@ function FAQContainer(props) {
   }
 
   return (
-    <div className={classes.root} onClick={toggleDropDown}>
-      <div className={classes.question}>
+    <div className={classes.root}>
+      <div className={classes.question} onClick={toggleDropDown}>
         <Text style={{ textOverflow: "ellipsis" }}>
           <b>Question:</b> <br />
           {question}
@@ -85,55 +86,28 @@ FAQContainer.defaultProps = {
 
 export default function FAQPage() {
   const classes = rootPageStyles();
-  const [field, setField] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    message: "",
-  });
+
   return (
     <div className={classes.root}>
       <Container className={classes.body}>
-        <section className={classes.formWrapper}>
-          <Text style={{ fontWeight: "600" }}>Contact Us</Text>
-          <div className={classes.nameFieldWrapper}>
-            <TextField
-              variant="outlined"
-              label="first name"
-              value={field.firstName}
-              onChange={(e) =>
-                setField({ ...field, firstName: e.target.value })
-              }
-            />
-            <TextField
-              variant="outlined"
-              label="last name"
-              value={field.lastName}
-              onChange={(e) => setField({ ...field, lastName: e.target.value })}
-            />
-          </div>
-          <TextField
-            variant="outlined"
-            label="E-mail"
-            value={field.email}
-            onChange={(e) => setField({ ...field, email: e.target.value })}
-          />
-          <TextField
-            variant="outlined"
-            multiline
-            rows={4}
-            rowsMax={6}
-            label="Message"
-            value={field.message}
-            onChange={(e) => setField({ ...field, message: e.target.value })}
-          />
-          <StyledButton style={{ width: "100%", maxWidth: "100%" }}>
-            Submit
-          </StyledButton>
-        </section>
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLScK7TEjvIiq_Ly62scM52jt2XsouAdIeTTb227Hex1RbCfDQw/viewform?embedded=true"
+          width="600"
+          height="400"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          Loading…
+        </iframe>
+
         <section className={classes.faqWrapper}>
           {faqs.map((faq) => (
-            <FAQContainer answer={faq.answer} question={faq.question} />
+            <FAQContainer
+              answer={faq.answer}
+              question={faq.question}
+              isLinked={faq.isLinked}
+            />
           ))}
         </section>
       </Container>
@@ -194,28 +168,6 @@ const rootPageStyles = makeStyles((theme) => ({
       justifyContent: "center",
       height: "max-content",
       width: "100%",
-    },
-  },
-  formWrapper: {
-    maxWidth: 600,
-    width: "50%",
-    display: "flex",
-    flexDirection: "column",
-    backgroundColor: colors.white,
-    padding: theme.spacing(2),
-    boxSizing: "border-box",
-    gap: 10,
-    boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
-    [theme.breakpoints.down("sm")]: {
-      maxWidth: "100%",
-      width: "100%",
-    },
-  },
-  nameFieldWrapper: {
-    display: "flex",
-    gap: 10,
-    [theme.breakpoints.down("sm")]: {
-      flexDirection: "column",
     },
   },
   faqWrapper: {
