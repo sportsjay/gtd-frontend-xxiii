@@ -7,7 +7,7 @@ import { Text } from "../components/common/typography";
 
 // import styles
 import { colorPalette } from "../components/common/color-palette";
-import { Link } from "@material-ui/icons";
+import { StyledButton } from "../components/common/button";
 
 const colors = new colorPalette();
 
@@ -98,6 +98,9 @@ ModalContent.defaultProps = {
 export default function HomePage() {
   const classes = useStyles();
 
+  function linkToGame() {
+    alert("Coming Soon!");
+  }
   return (
     <div className={classes.root}>
       <div className={classes.header}>
@@ -111,7 +114,25 @@ export default function HomePage() {
       </div>
       <div className={classes.houseLeaderContainer}>
         <StyledBox
-          modalContent={<ModalContent />}
+          modalContent={
+            <React.Fragment>
+              <StyledButton
+                onClick={linkToGame}
+                style={{
+                  marginTop: 10,
+                  backgroundColor: "green",
+                  fontSize: "14pt",
+                  alignSelf: "flex-end",
+                }}
+              >
+                Visit Leaderboard
+              </StyledButton>
+              <ModalContent
+                title="Artemis"
+                description="She resides in the forest of humanity's home planet, the Earth. Hiding within the midst of the vast greeneries. Powered by the might of woodland warriors and druids. Does she and her kingdom got what it takes to win over Pandora's Box?"
+              />
+            </React.Fragment>
+          }
           style={{
             background: 'url("/house_leaders/ely.png")',
             backgroundRepeat: "no-repeat",
@@ -129,7 +150,25 @@ export default function HomePage() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          modalContent={<ModalContent />}
+          modalContent={
+            <React.Fragment>
+              <StyledButton
+                onClick={linkToGame}
+                style={{
+                  marginTop: 10,
+                  backgroundColor: "#4682B4",
+                  fontSize: "14pt",
+                  alignSelf: "flex-end",
+                }}
+              >
+                Visit Leaderboard
+              </StyledButton>
+              <ModalContent
+                title="Poseidon"
+                description="Among the seven seas, Poseidon leads the mighty mariners, slithereens and aquatic creatures. His kingdom may be strong under water, but will he thrive the challenges brought by the other elements? Can Atlantis bring Pandora's Box power to restore peace?"
+              />
+            </React.Fragment>
+          }
           title="Poseidon"
           description="Father of the seas, god of oceans"
         ></StyledBox>
@@ -140,9 +179,27 @@ export default function HomePage() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          modalContent={<ModalContent />}
+          modalContent={
+            <React.Fragment>
+              <StyledButton
+                onClick={linkToGame}
+                style={{
+                  marginTop: 10,
+                  backgroundColor: "#A93226",
+                  fontSize: "14pt",
+                  alignSelf: "flex-end",
+                }}
+              >
+                Visit Leaderboard
+              </StyledButton>
+              <ModalContent
+                title="Persephone"
+                description="She may be the master of the underworld, where death resides in every corner. But will she conquer Pandora's Box with Hades' army or will she claim more souls for her own kingdom?"
+              />
+            </React.Fragment>
+          }
           title="Persephone"
-          description="Queen of the underworld"
+          description="Queen of the underworld, death's mistress"
         ></StyledBox>
         <StyledBox
           right={true}
@@ -152,7 +209,25 @@ export default function HomePage() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          modalContent={<ModalContent />}
+          modalContent={
+            <React.Fragment>
+              <StyledButton
+                onClick={linkToGame}
+                style={{
+                  marginTop: 10,
+                  backgroundColor: "#D4AC0D",
+                  fontSize: "14pt",
+                  alignSelf: "flex-end",
+                }}
+              >
+                Visit Leaderboard
+              </StyledButton>
+              <ModalContent
+                title="Zeus"
+                description="The almighty Zeus, great leader, father of gods, and ruler of Olympus. Will he be able to capture Pandora's Box before the other gods do?"
+              />
+            </React.Fragment>
+          }
           title="Zeus"
           description="God of thunder, father of all gods and humans"
         ></StyledBox>
@@ -410,7 +485,7 @@ const modalStyles = makeStyles((theme) => ({
     borderRadius: 0,
   },
   content: {
-    height: "20%",
+    height: "min-content",
     width: "100%",
   },
 }));

@@ -10,29 +10,37 @@ const colors = new colorPalette();
 
 const sampleData = [
   {
-    title: "GTD XXIII",
-    subtitle:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
+    title: "GTD XX Exodia",
+    subtitle: `Exodia is a paradise.\n
+      A prosperous and peaceful land for centuries, where the four legendary weapons (Hammer, Daggers, Shield and Arrow) reside. These weapons originally belonged to four legendary warriors, who established the golden age of this kingdom.\n
+      However, this is not everlasting.\n
+      The slightest crack in trust, threatens the peace of this ever so wonderful kingdom.\n
+      Can Exodia bring back the beauty it once held before?`,
+    pictures: [
+      "gtd_xx-min.jpg",
+      "gtd_xx1-min.jpg",
+      "gtd_xx2-min.jpg",
+      "gtd_xx3-min.jpg",
+    ],
   },
   {
-    title: "GTD XXIII",
-    subtitle:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
+    title: "GTD XXI Inxxignia",
+    subtitle: `After the seemingly everlasting territorial disputes and manslaughters came to an end, the Godfather subdivided the newly established nation into four specialized semi-autonomous districts each ruled by a district leader chosen from those of the upper echelons. \n
+      Alas, it seems that recently, our nation has yet been plagued with turmoil. It all began when a series of misfortunes struck each of the four districts, at too perfect timing for us to regard them as coincidental. \n
+      Recruits, we need you to safeguard our hard-earned peace. . .`,
+    pictures: [
+      "gtd_xxi-min.jpg",
+      "gtdxxi1-min.jpg",
+      "gtdxxi2-min.jpg",
+      "gtdxxi3-min.jpg",
+      "gtdxxi4-min.jpg",
+    ],
   },
   {
-    title: "GTD XXIII",
+    title: "GTD XXII Insurgio",
     subtitle:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
-  },
-  {
-    title: "GTD XXIII",
-    subtitle:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
-  },
-  {
-    title: "GTD XXIII",
-    subtitle:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam aspernatur tempore voluptatum, facere ex tenetur vero! Amet, sit neque eos similique illo recusandae a tempore perferendis explicabo architecto soluta dolorum.",
+      "Fun-filled weekend with seniors from NTU and a chance to get to know other freshies!",
+    pictures: ["gtd_xxii.png"],
   },
 ];
 
@@ -182,29 +190,7 @@ export default function EventsPage() {
   function Content(props) {
     // image-text orientation, default = row, else = row-reverse
     const orientation = props.index % 2 !== 0 ? "row-reverse" : "row";
-    const pictures = props.pictures || [
-      <img
-        className={classes.image}
-        src="../images/gtd-dummy.jpg"
-        alt="../images/gtd.jpg"
-        width="100%"
-        height="auto"
-      />,
-      <img
-        className={classes.image}
-        src="../images/gtd-dummy.jpg"
-        alt="../images/gtd.jpg"
-        width="100%"
-        height="auto"
-      />,
-      <img
-        className={classes.image}
-        src="../images/gtd-dummy.jpg"
-        alt="../images/gtd.jpg"
-        width="100%"
-        height="auto"
-      />,
-    ];
+    const pictures = props.pictures || ["../images/gtd-dummy.jpg-min"];
     const title = props.title || "No Title";
     const subtitle = props.subtitle || "No subtitle";
     return (
@@ -215,7 +201,24 @@ export default function EventsPage() {
         style={{ flexDirection: orientation }}
       >
         <Grid item xs={12} md={6} className={classes.displayImage}>
-          <Carousel content={pictures} />
+          <Carousel
+            content={pictures.map((picture) => (
+              <div
+                style={{
+                  height: "100%",
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  className={classes.image}
+                  src={picture}
+                  alt="../images/gtd.jpg"
+                />
+              </div>
+            ))}
+          />
         </Grid>
         <Grid item xs={12} md={6} className={classes.displayText}>
           <Text className={classes.title}>{title}</Text>
@@ -249,6 +252,7 @@ export default function EventsPage() {
             <Content
               title={data.title}
               subtitle={data.subtitle}
+              pictures={data.pictures}
               index={index}
               key={index}
             />
@@ -258,6 +262,7 @@ export default function EventsPage() {
             <Content
               title={data.title}
               subtitle={data.subtitle}
+              pictures={data.pictures}
               index={index}
               key={index}
             />
@@ -311,8 +316,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   image: {
-    width: "100%",
-    background: "#F8F2E5",
+    width: "70%",
+    minWidth: 200,
+    maxWidth: 400,
+    alignSelf: "center",
+    background: colors.black,
     borderRadius: "20px",
   },
 

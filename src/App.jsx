@@ -28,9 +28,6 @@ export default function App() {
           <Route path="/events">
             <Redirect to="coming-soon" />
           </Route>
-          <Route path="/archive">
-            <Redirect to="coming-soon" />
-          </Route>
           <Route path="/coming-soon">
             <ComingSoonPage />
           </Route>
