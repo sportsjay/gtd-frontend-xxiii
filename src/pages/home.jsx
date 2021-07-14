@@ -142,7 +142,7 @@ export default function HomePage() {
           }}
           modalContent={<ModalContent />}
           title="Persephone"
-          description="Queen of the underworld, Dishwasher"
+          description="Queen of the underworld"
         ></StyledBox>
         <StyledBox
           right={true}

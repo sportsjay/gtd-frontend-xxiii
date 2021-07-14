@@ -13,7 +13,7 @@ const faqs = [
   {
     question: "Kapan GTD XXIII ini diadakan?",
     answer:
-      "GTD XXIII akan diakan pada tanggal 7 sampai 8 Agustus 2021, tepat sebelum mahasiswa baru memulai minggu pertamanya berkuliah di NTU.\n Namun pada tanggal 18 Juli 2021, Komite GTD XXIII telah mempersiapkan acara 'pemanasan' untuk bekenalan dengan senior dan juga sesama mahasiswa baru.",
+      "GTD XXIII akan diakan pada tanggal 7 sampai 9 Agustus 2021, tepat sebelum mahasiswa baru memulai minggu pertamanya berkuliah di NTU.\n Namun pada tanggal 18 Juli 2021, Komite GTD XXIII telah mempersiapkan acara 'pemanasan' untuk bekenalan dengan senior dan juga sesama mahasiswa baru.",
   },
   {
     question:
