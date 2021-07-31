@@ -1,7 +1,7 @@
 // Import Pages
 import HomePage from "./pages/home";
 import AboutUsPage from "./pages/aboutus";
-import ArchivePage from "./pages/archive";
+import ArchivePage from "./pages/archives";
 import EventsPage from "./pages/events";
 import FAQPage from "./pages/faq";
 
@@ -27,8 +27,8 @@ export const routes = [
   {
     id: 3,
     body: ArchivePage,
-    name: "archive",
-    path: "/archive",
+    name: "archives",
+    path: "/archives",
   },
   {
     id: 4,

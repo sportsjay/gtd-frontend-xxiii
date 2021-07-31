@@ -1,0 +1,7 @@
+/* File: font.css */
+
+@font-face {
+  font-family: "Neothic";
+  src: local("Neothic"), url("./fonts/Neothic.ttf") format("ttf"),
+    url("./fonts/Neothic.ttf") format("ttf");
+}

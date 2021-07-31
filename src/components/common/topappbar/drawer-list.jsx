@@ -33,7 +33,7 @@ function iconSwitch(key) {
     case "events": {
       return <EventRounded />;
     }
-    case "archive": {
+    case "archives": {
       return <HistoryRounded />;
     }
     case "FAQ": {
@@ -79,7 +79,7 @@ export default function DrawerList(props) {
                   maxWidth: 200,
                   height: 4,
                   borderRadius: 2,
-                  backgroundColor: colors.black,
+                  backgroundColor: colors.black2,
                   opacity: 0.4,
                   transition: "width 0.5s ease-out",
                 }}

@@ -22,9 +22,7 @@ export default function Footer() {
 
   return (
     <div className={classes.root}>
-      <Text
-        style={{ fontWeight: "600", fontSize: fontSize, textAlign: "center" }}
-      >
+      <Text className={classes.text}>
         Copyright © 2021 PINTU & GTD. All Rights Reserved.
       </Text>
       <div className={classes.socialMedia}>
@@ -53,7 +51,7 @@ export default function Footer() {
           </IconButton>
         </div>
       </div>
-      <Text style={{ fontSize: fontSize, fontWeight: "600" }}>
+      <Text className={classes.text}>
         Special thanks to the developer team:{" "}
         <span
           style={{
@@ -80,9 +78,10 @@ const footerStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    height: 80,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      gap: 20,
+      height: 120,
     },
   },
   socialMedia: {
@@ -90,5 +89,13 @@ const footerStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+  },
+  text: {
+    fontWeight: "600",
+    fontSize: "11pt",
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "9pt",
+    },
   },
 }));

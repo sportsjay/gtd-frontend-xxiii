@@ -37,7 +37,7 @@ export default function LinkContainer(props) {
                 height: "10%",
                 maxHeight: 20,
                 borderRadius: 20,
-                backgroundColor: colors.black,
+                backgroundColor: colors.black2,
                 opacity: 0.4,
                 transition: "width 0.2s ease-out",
               }}

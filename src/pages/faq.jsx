@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { makeStyles, Container, IconButton } from "@material-ui/core";
-
 // import components
 import { Text } from "../components/common/typography";
+import ContactUsForm from "../components/faq";
 
 // import colors
 import { colorPalette } from "../components/common/color-palette";
@@ -33,9 +33,7 @@ const faqs = [
       <Text>
         Betul! Tapi, kalian tenang saja! GTD XXIII tidak memungut biaya
         sepeser-pun alias GRATIS!!! Yang diperlukan hanyalah semangat kalian
-        selama acara berlangsung.{`\n`} Cara daftarnya cukup click{" "}
-        <a href="https://tinyurl.com/DaftarGTDYuk">tinyurl.com/DaftarGTDYuk</a>.
-        Periode pendaftaran dibuka dari tanggal 10 hingga 15 Juli 2021.
+        selama acara berlangsung.{`\n`}
       </Text>
     ),
   },
@@ -57,18 +55,25 @@ function FAQContainer(props) {
   }
 
   return (
-    <div className={classes.root}>
-      <div className={classes.question} onClick={toggleDropDown}>
-        <Text style={{ textOverflow: "ellipsis" }}>
+    <div className={classes.root} onClick={toggleDropDown}>
+      <div className={classes.question}>
+        <Text style={{ textOverflow: "ellipsis", color: colors.white }}>
           <b>Question:</b> <br />
           {question}
         </Text>
         <IconButton onClick={toggleDropDown}>
-          {!dropDown ? <ExpandMore /> : <ExpandLess />}
+          {!dropDown ? (
+            <ExpandMore style={{ color: colors.white }} />
+          ) : (
+            <ExpandLess style={{ color: colors.white }} />
+          )}
         </IconButton>
       </div>
       {dropDown ? (
-        <Text className={classes.answer} style={{ textOverflow: "ellipsis" }}>
+        <Text
+          className={classes.answer}
+          style={{ textOverflow: "ellipsis", color: colors.white }}
+        >
           <b>Answer:</b> <br />
           {answer}
         </Text>
@@ -90,17 +95,7 @@ export default function FAQPage() {
   return (
     <div className={classes.root}>
       <Container className={classes.body}>
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLScK7TEjvIiq_Ly62scM52jt2XsouAdIeTTb227Hex1RbCfDQw/viewform?embedded=true"
-          width="600"
-          height="400"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-        >
-          Loading…
-        </iframe>
-
+        <ContactUsForm />
         <section className={classes.faqWrapper}>
           {faqs.map((faq) => (
             <FAQContainer
@@ -118,13 +113,17 @@ export default function FAQPage() {
 const faqContainerStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+    borderRadius: 10,
     boxSizing: "border-box",
     paddingLeft: theme.spacing(4),
     borderLeft: `6px solid ${colors.red}`,
-    backgroundColor: colors.gray,
+    backgroundColor: colors.black2,
     transition: "ease-out 0.2s",
+    cursor: "pointer",
+    boxShadow:
+      "rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px",
     "&:hover": {
-      transform: "scale(1.02)",
+      transform: "scale(1.014)",
     },
   },
   question: {
@@ -148,7 +147,7 @@ const rootPageStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     width: "100%",
     minHeight: "calc(100vh - 32px)",
-    backgroundColor: colors.black,
+    backgroundColor: colors.black2,
     boxSizing: "border-box",
     display: "flex",
     alignItems: "center",

@@ -38,10 +38,19 @@ function StyledBox(props) {
           className={classes.houseLeaderBody}
           style={{ alignItems: right ? "flex-end" : "flex-start" }}
         >
-          <Text variant="h4" style={{ fontWeight: "700", color: colors.white }}>
+          <Text
+            variant="h4"
+            style={{
+              fontWeight: "700",
+              color: colors.white,
+              fontFamily: "Neothic",
+            }}
+          >
             {title}
           </Text>
-          <Text style={{ color: colors.gray }}>{description}</Text>
+          <Text style={{ color: colors.gray, fontFamily: "Neothic" }}>
+            {description}
+          </Text>
         </div>
         <div className={classes.houseLeaderBackdrop} />
         <div className={classes.houseLeaderFooterBackdrop} />
@@ -81,12 +90,26 @@ function ModalContent(props) {
   const description = props.description;
   return (
     <div className={modalClasses.content}>
+      <img
+        src={props.logo}
+        alt="no logo available"
+        height="200px"
+        width="200px"
+      />
       <Text
-        style={{ color: colors.white, fontSize: "32pt", fontWeight: "600" }}
+        style={{
+          color: colors.white,
+          fontSize: "32pt",
+          fontWeight: "600",
+          width: "100%",
+          fontFamily: "Neothic",
+        }}
       >
         {title}
       </Text>
-      <Text style={{ color: colors.gray }}>{description}</Text>
+      <Text style={{ color: colors.gray, fontFamily: "Neothic" }}>
+        {description}
+      </Text>
     </div>
   );
 }
@@ -104,11 +127,7 @@ export default function HomePage() {
   return (
     <div className={classes.root}>
       <div className={classes.header}>
-        <a
-          href="https://tinyurl.com/DaftarGTDYuk"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="/" target="_blank" rel="noreferrer">
           <Box className={classes.headerLink} />
         </a>
       </div>
@@ -128,8 +147,9 @@ export default function HomePage() {
                 Visit Leaderboard
               </StyledButton>
               <ModalContent
-                title="Artemis"
-                description="She resides in the forest of humanity's home planet, the Earth. Hiding within the midst of the vast greeneries. Powered by the might of woodland warriors and druids. Does she and her kingdom got what it takes to win over Pandora's Box?"
+                logo="images/logo_artemis.png"
+                title="House of Gaia"
+                description="She resides in the forests of Earth, reigning over the world's vast greeneries. She commands the might of Gaia's woodland warriors and druid armies. Has she got what it takes to win over Pandora's Box?"
               />
             </React.Fragment>
           }
@@ -164,8 +184,9 @@ export default function HomePage() {
                 Visit Leaderboard
               </StyledButton>
               <ModalContent
-                title="Poseidon"
-                description="Among the seven seas, Poseidon leads the mighty mariners, slithereens and aquatic creatures. His kingdom may be strong under water, but will he thrive the challenges brought by the other elements? Can Atlantis bring Pandora's Box power to restore peace?"
+                logo="images/logo_poseidon.png"
+                title="House of Atlantis"
+                description="He is king of all the 7 seas, where he rules over all sea life. Will Atlantis' armies and marines triumph over all the other realms under his command? Can he claim the sacred Box's power to restore peace upon the world?"
               />
             </React.Fragment>
           }
@@ -193,8 +214,9 @@ export default function HomePage() {
                 Visit Leaderboard
               </StyledButton>
               <ModalContent
-                title="Persephone"
-                description="She may be the master of the underworld, where death resides in every corner. But will she conquer Pandora's Box with Hades' army or will she claim more souls for her own kingdom?"
+                logo="images/logo_persephone.png"
+                title="House of Tartarus"
+                description="She may be the Queen of Tartarus, the ultimate resting place for all souls, but will her dominion over death be enough to conquer sacred Box's power? Will she be able to prevail over the other kingdoms with her underworld legions?"
               />
             </React.Fragment>
           }
@@ -223,8 +245,9 @@ export default function HomePage() {
                 Visit Leaderboard
               </StyledButton>
               <ModalContent
-                title="Zeus"
-                description="The almighty Zeus, great leader, father of gods, and ruler of Olympus. Will he be able to capture Pandora's Box before the other gods do?"
+                logo="images/logo_zeus.png"
+                title="House of Olympus"
+                description="He is the almighty Zeus, a great leader, father of gods, and ruler of the skies and the peaks of Olympus. Will he be able to use the power of his thunder to remain ascendant in his quest for the Pandora's Box?"
               />
             </React.Fragment>
           }
@@ -241,7 +264,10 @@ export default function HomePage() {
           >
             Verse
           </Text>
-          <Text className={classes.themeSongVerse}>
+          <Text
+            className={classes.themeSongVerse}
+            style={{ fontWeight: "500" }}
+          >
             From different places, different times <br />
             With a common goal in our minds <br />
             We want to enjoy this moment while it lasts <br />
@@ -257,7 +283,10 @@ export default function HomePage() {
           >
             Chorus
           </Text>
-          <Text className={classes.themeSongVerse} style={{ marginBottom: 20 }}>
+          <Text
+            className={classes.themeSongVerse}
+            style={{ marginBottom: 20, fontWeight: "500" }}
+          >
             I know now what the answer is <br />
             I'm sure I'm gonna miss <br />
             This special day when we get together <br />
@@ -370,7 +399,7 @@ const useStyles = makeStyles((theme) => ({
   },
   houseLeaderContent: {
     position: "relative",
-    height: "100vh",
+    height: "48vw",
     minWidth: "50%",
     boxSizing: "border-box",
     background: "#C4C4C41A",
@@ -385,6 +414,7 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       width: "100%",
+      height: "50vh",
     },
   },
   houseLeaderBody: {
@@ -461,7 +491,7 @@ const modalStyles = makeStyles((theme) => ({
     height: 500,
     width: "50%",
     borderRadius: 0,
-    backgroundColor: colors.black,
+    backgroundColor: colors.black2,
     boxShadow: theme.shadows[5],
     transition: "ease-out 0.2s",
     boxSizing: "border-box",
@@ -473,7 +503,7 @@ const modalStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("xs")]: {
       width: "100%",
-      height: 400,
+      height: "max-content",
     },
   },
   exitButton: {
@@ -487,5 +517,8 @@ const modalStyles = makeStyles((theme) => ({
   content: {
     height: "min-content",
     width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
   },
 }));

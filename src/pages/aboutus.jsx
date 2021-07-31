@@ -14,149 +14,149 @@ const portfolios = [
     maincommittee: [
       {
         name: "Elysia",
-        position: "PO",
-        URL: "portfolio/MC/Elysia-min.jpg",
+        position: "PO Main Committee",
+        URL: "portfolio/MC/Elysia.jpg",
         major: "MSE/Year 3",
       },
       {
         name: "Hendrick Sebastian",
-        position: "PO",
-        URL: "portfolio/MC/Hendrick Sebastian-min.jpg",
+        position: "PO Main Committee",
+        URL: "portfolio/MC/Hendrick Sebastian.jpg",
         major: "EEE/Year 3",
       },
       {
         name: "Violin Yapputri",
-        position: "PO",
-        URL: "portfolio/MC/Violin Yapputri-min.jpg",
+        position: "PO Main Committee",
+        URL: "portfolio/MC/Violin Yapputri.jpg",
         major: "IEM/Year 3",
       },
       {
         name: "Nicolas Erlando Edisanto",
-        position: "PO",
-        URL: "portfolio/MC/Nicolas Erlando Edisanto-min.jpg",
+        position: "PO Main Committee",
+        URL: "portfolio/MC/Nicolas Erlando Edisanto.jpg",
         major: "EEE/Year 3",
       },
       {
         name: "Andrew Wiraatmaja",
-        position: "PO",
-        URL: "portfolio/MC/Andrew Wiraatmaja-min.jpg",
+        position: "PO Main Committee",
+        URL: "portfolio/MC/Andrew Wiraatmaja.jpg",
         major: "DSAI/Year 3",
       },
       {
         name: "Adeline Yee",
-        position: "PO",
-        URL: "portfolio/MC/Adeline Yee-min.jpg",
+        position: "PO Main Committee",
+        URL: "portfolio/MC/Adeline Yee.jpg",
         major: "CS-MAS/Year 3",
       },
     ],
     subcommittee: [
       {
         name: "Aaron Valencio Kristanto",
-        position: "PO",
+        position: "Project Officer",
         major: "PAS/2",
-        URL: "portfolio/PO/Aaron Valencio Kristanto-min.jpg",
+        URL: "portfolio/PO/Aaron Valencio Kristanto.jpg",
       },
       {
         name: "Bryan Mardono",
-        position: "PO",
+        position: "Project Officer",
         major: "CBE/2",
-        URL: "portfolio/PO/Bryan Mardono-min.jpg",
+        URL: "portfolio/PO/Bryan Mardono.jpg",
       },
       {
         name: "Jonathan Kelvin Santoso",
-        position: "PO",
+        position: "Project Officer",
         major: "EEE/2",
-        URL: "portfolio/PO/Jonathan Kelvin Santoso-min.jpg",
+        URL: "portfolio/PO/Jonathan Kelvin Santoso.jpg",
       },
       {
         name: "Jonathan Nicholas Yap",
-        position: "PO",
+        position: "Project Officer",
         major: "CEE/2",
-        URL: "portfolio/PO/Jonathan Nicholas Yap-min.jpg",
+        URL: "portfolio/PO/Jonathan Nicholas Yap.jpg",
       },
       {
         name: "Kenrick Owen",
-        position: "PO",
+        position: "Project Officer",
         major: "MSE/2",
-        URL: "portfolio/PO/Kenrick Owen-min.jpg",
+        URL: "portfolio/PO/Kenrick Owen.jpg",
       },
       {
         name: "Matthew Yasuo",
-        position: "PO",
+        position: "Project Officer",
         major: "CBE/2",
-        URL: "portfolio/PO/Matthew Yasuo-min.jpg",
+        URL: "portfolio/PO/Matthew Yasuo.jpg",
       },
       {
         name: "Muhammad Rifqi Aulia",
-        position: "PO",
+        position: "Project Officer",
         major: "CBE/2",
         URL: null,
       },
       {
         name: "Niko Kristanto",
-        position: "PO",
+        position: "Project Officer",
         major: "IEM/2",
-        URL: "portfolio/PO/Niko Kristanto-min.jpg",
+        URL: "portfolio/PO/Niko Kristanto.jpg",
       },
       {
         name: "Renardi Muliawan",
-        position: "PO",
+        position: "Project Officer",
         major: "CEE/2",
-        URL: "portfolio/PO/Renardi Muliawan-min.jpg",
+        URL: "portfolio/PO/Renardi Muliawan.jpg",
       },
       {
         name: "Jason Nicholas",
-        position: "PO",
+        position: "Project Officer",
         major: "CBE/2",
-        URL: "portfolio/PO/Jason Nicholas-min.jpg",
+        URL: "portfolio/PO/Jason Nicholas.jpg",
       },
       {
         name: "Vanessa Christy Chandra",
-        position: "PO",
+        position: "Project Officer",
         major: "IEM/2",
-        URL: "portfolio/PO/Vanessa Christy Chandra-min.jpg",
+        URL: "portfolio/PO/Vanessa Christy Chandra.jpg",
       },
       {
         name: "Wesley Susanto",
-        position: "PO",
+        position: "Project Officer",
         major: "IEM/2",
-        URL: "portfolio/PO/Wesley Susanto-min.jpg",
+        URL: "portfolio/PO/Wesley Susanto.jpg",
       },
       {
         name: "Kevin Pranoto",
-        position: "PO",
+        position: "Project Officer",
         major: "MSE/3",
-        URL: "portfolio/PO/Kevin Pranoto-min.jpg",
+        URL: "portfolio/PO/Kevin Pranoto.jpg",
       },
       {
         name: "Leonardo Sutanto",
-        position: "PO",
+        position: "Project Officer",
         major: "MSE/3",
-        URL: "portfolio/PO/Leonardo Sutanto-min.jpg",
+        URL: "portfolio/PO/Leonardo Sutanto.jpg",
       },
       {
         name: "Michelle Andrea Budiarto",
-        position: "PO",
+        position: "Project Officer",
         major: "EEE/3",
-        URL: "portfolio/PO/Michelle Andrea Budiarto-min.jpg",
+        URL: "portfolio/PO/Michelle Andrea Budiarto.jpg",
       },
       {
         name: "Timothy Ellison Janong",
-        position: "PO",
+        position: "Project Officer",
         major: "CBE/3",
-        URL: "portfolio/PO/Timothy Ellison Janong-min.jpg",
+        URL: "portfolio/PO/Timothy Ellison Janong.jpg",
       },
       {
         name: "Marcella Mia Marcia",
-        position: "PO",
+        position: "Project Officer",
         major: "CBE/4",
-        URL: "portfolio/PO/Marcella Mia Marcia-min.jpg",
+        URL: "portfolio/PO/Marcella Mia Marcia.jpg",
       },
       {
         name: "Vincentius Dennis Herell",
-        position: "PO",
+        position: "Project Officer",
         major: "EEE/4",
-        URL: "portfolio/PO/Vincentius Dennis Herell-min.jpg",
+        URL: "portfolio/PO/Vincentius Dennis Herell.jpg",
       },
     ],
   },
@@ -165,119 +165,119 @@ const portfolios = [
     maincommittee: [
       {
         name: "Danendra Lohanata",
-        position: "Logistics",
-        URL: "portfolio/MC/Danendra Lohanata-min.jpg",
+        position: "Logistics Main Committee",
+        URL: "portfolio/MC/Danendra Lohanata.jpg",
         major: "MAS/Year 3",
       },
       {
         name: "Ahmad Aufar Thoriq",
-        position: "Logistics",
-        URL: "portfolio/MC/Ahmad Aufar Thoriq-min.jpg",
+        position: "Logistics Main Committee",
+        URL: "portfolio/MC/Ahmad Aufar Thoriq.jpg",
         major: "EEE/Year 3",
       },
       {
         name: "Bhara Sina Murtadla",
-        position: "Logistics",
-        URL: "portfolio/MC/Bhara Sina Murtadla-min.jpg",
+        position: "Logistics Main Committee",
+        URL: "portfolio/MC/Bhara Sina Murtadla.jpg",
         major: "EEE/Year 3",
       },
     ],
     subcommittee: [
       {
         name: "Anastasia Audrey Widjaja",
-        position: "LOGS",
+        position: "Logistics",
         major: "BIE/2",
-        URL: "portfolio/LOGS/Anastasia Audrey Widjaja-min.jpg",
+        URL: "portfolio/LOGS/Anastasia Audrey Widjaja.jpg",
       },
       {
         name: "Andrew Tatang",
-        position: "LOGS",
+        position: "Logistics",
         major: "EEE/2",
-        URL: "portfolio/LOGS/Andrew Tatang-min.jpg",
+        URL: "portfolio/LOGS/Andrew Tatang.jpg",
       },
       {
         name: "Bryan Christopher",
-        position: "LOGS",
+        position: "Logistics",
         major: "MAS/2",
-        URL: "portfolio/LOGS/Bryan Christopher-min.jpg",
+        URL: "portfolio/LOGS/Bryan Christopher.jpg",
       },
       {
         name: "Daniel Rahmatcipta",
-        position: "LOGS",
+        position: "Logistics",
         major: "CEE/2",
-        URL: "portfolio/LOGS/Daniel Rahmatcipta-min.jpg",
+        URL: "portfolio/LOGS/Daniel Rahmatcipta.jpg",
       },
       {
         name: "Enrian Wicaksana",
-        position: "LOGS",
+        position: "Logistics",
         major: "CEE/2",
-        URL: "portfolio/LOGS/Enrian Wicaksana-min.jpg",
+        URL: "portfolio/LOGS/Enrian Wicaksana.jpg",
       },
       {
         name: "Hartawan Surya Santoso",
-        position: "LOGS",
+        position: "Logistics",
         major: "CEE/2",
-        URL: "portfolio/LOGS/Hartawan Surya Santoso-min.jpg",
+        URL: "portfolio/LOGS/Hartawan Surya Santoso.jpg",
       },
       {
         name: "Rajendra Muhammad Alfarrel",
-        position: "LOGS",
+        position: "Logistics",
         major: "CEE/2",
-        URL: "portfolio/LOGS/Rajendra Muhammad Alfarrel-min.jpg",
+        URL: "portfolio/LOGS/Rajendra Muhammad Alfarrel.jpg",
       },
       {
         name: "Vania Calista",
-        position: "LOGS",
+        position: "Logistics",
         major: "MSE/2",
-        URL: "portfolio/LOGS/Vania Calista-min.jpg",
+        URL: "portfolio/LOGS/Vania Calista.jpg",
       },
       {
         name: "Abraham Osmond Edmundo",
-        position: "LOGS",
+        position: "Logistics",
         major: "MAS/3",
-        URL: "portfolio/LOGS/Abraham Osmond Edmundo-min.jpg",
+        URL: "portfolio/LOGS/Abraham Osmond Edmundo.jpg",
       },
       {
         name: "Alexander Giovanni",
-        position: "LOGS",
+        position: "Logistics",
         major: "BIE/3",
-        URL: "portfolio/LOGS/Alexander Giovanni-min.jpg",
+        URL: "portfolio/LOGS/Alexander Giovanni.jpg",
       },
       {
         name: "Mikael Ndaru Ajiwidodo",
-        position: "LOGS",
+        position: "Logistics",
         major: "EEE/3",
-        URL: "portfolio/LOGS/Mikael Ndaru Ajiwidodo-min.jpg",
+        URL: "portfolio/LOGS/Mikael Ndaru Ajiwidodo.jpg",
       },
       {
         name: "Ryan Gabriel",
-        position: "LOGS",
+        position: "Logistics",
         major: "CEE/3",
-        URL: "portfolio/LOGS/Ryan Gabriel-min.jpg",
+        URL: "portfolio/LOGS/Ryan Gabriel.jpg",
       },
       {
         name: "Andhika Satriya Bhayangkara",
-        position: "LOGS",
+        position: "Logistics",
         major: "MAE/4",
-        URL: "portfolio/LOGS/Andhika Satriya Bhayangkara-min.jpg",
+        URL: "portfolio/LOGS/Andhika Satriya Bhayangkara.jpg",
       },
       {
         name: "Eliora Violain Buyamin",
-        position: "LOGS",
+        position: "Logistics",
         major: "BIE/4",
-        URL: "portfolio/LOGS/Eliora Violain Buyamin-min.jpg",
+        URL: "portfolio/LOGS/Eliora Violain Buyamin.jpg",
       },
       {
         name: "Francisco Bryant",
-        position: "LOGS",
+        position: "Logistics",
         major: "EEE/4",
-        URL: "portfolio/LOGS/Francisco Bryant-min.jpg",
+        URL: "portfolio/LOGS/Francisco Bryant.jpg",
       },
       {
         name: "Kezia Janet",
-        position: "LOGS",
+        position: "Logistics",
         major: "MSE/4",
-        URL: "portfolio/LOGS/Kezia Janet-min.jpg",
+        URL: "portfolio/LOGS/Kezia Janet.jpg",
       },
     ],
   },
@@ -287,25 +287,25 @@ const portfolios = [
       {
         name: "Christopher Denny",
         position: "Publication & Publicity",
-        URL: "portfolio/MC/Christopher Denny Prihadi-min.jpg",
+        URL: "portfolio/MC/Christopher Denny Prihadi.jpg",
         major: "EEE/Year 4",
       },
       {
         name: "Hans Aldi Christian",
         position: "Publication & Publicity",
-        URL: "portfolio/MC/Hans Aldi Christian-min.jpg",
+        URL: "portfolio/MC/Hans Aldi Christian.jpg",
         major: "EEE/Year 3",
       },
       {
         name: "Valencia Sendytio",
         position: "Publication & Publicity",
-        URL: "portfolio/MC/Valencia Sendytio-min.jpg",
+        URL: "portfolio/MC/Valencia Sendytio.jpg",
         major: "WKW/Year 4",
       },
       {
         name: "Jason Nathaniel",
         position: "Information Technology",
-        URL: "portfolio/MC/Jason Nathaniel-min.jpg",
+        URL: "portfolio/MC/Jason Nathaniel.jpg",
         major: "EEE/Year 4",
       },
     ],
@@ -314,109 +314,109 @@ const portfolios = [
         name: "Daren Nathaniel Janto",
         position: "PPIT",
         major: "CS/2",
-        URL: "portfolio/PPIT/Daren Nathaniel Janto-min.jpg",
+        URL: "portfolio/PPIT/Daren Nathaniel Janto.jpg",
       },
       {
         name: "Edward Steven Wongso",
         position: "PPIT",
         major: "EEE/2",
-        URL: "portfolio/PPIT/Edward Steven Wongso-min.jpg",
+        URL: "portfolio/PPIT/Edward Steven Wongso.jpg",
       },
       {
         name: "Hansen Lienardi",
         position: "PPIT",
         major: "EEE/2",
-        URL: "portfolio/PPIT/Hansen Lienardi-min.jpg",
+        URL: "portfolio/PPIT/Hansen Lienardi.jpg",
       },
       {
         name: "Juan Samuel Sugianto",
         position: "PPIT",
         major: "CS/2",
-        URL: "portfolio/PPIT/Juan Samuel Sugianto-min.jpg",
+        URL: "portfolio/PPIT/Juan Samuel Sugianto.jpg",
       },
       {
         name: "Justin Ferdinand Pradinatay",
         position: "PPIT",
         major: "MAE/3",
-        URL: "portfolio/PPIT/Justin Ferdinand Pradinatay-min.jpg",
+        URL: "portfolio/PPIT/Justin Ferdinand Pradinatay.jpg",
       },
       {
         name: "Rivaldo Billy Sebastian",
         position: "PPIT",
         major: "MAS/2",
-        URL: "portfolio/PPIT/Rivaldo Billy Sebastian-min.jpg",
+        URL: "portfolio/PPIT/Rivaldo Billy Sebastian.jpg",
       },
       {
         name: "Theo Felix Kurniawan",
         position: "PPIT",
         major: "CBE/2",
-        URL: "portfolio/PPIT/Theo Felix Kurniawan-min.jpg",
+        URL: "portfolio/PPIT/Theo Felix Kurniawan.jpg",
       },
       {
         name: "Sylvia Deborah",
         position: "PPIT",
         major: "EEE/2",
-        URL: "portfolio/PPIT/Sylvia Deborah-min.jpg",
+        URL: "portfolio/PPIT/Sylvia Deborah.jpg",
       },
       {
         name: "Victor Lim",
         position: "PPIT",
         major: "EEE/2",
-        URL: "portfolio/PPIT/Victor Lim-min.jpg",
+        URL: "portfolio/PPIT/Victor Lim.jpg",
       },
       {
         name: "Abhirama Radhitya Santoso",
         position: "PPIT",
         major: "CEE/3",
-        URL: "portfolio/PPIT/Abhirama Radhitya Santoso-min.jpg",
+        URL: "portfolio/PPIT/Abhirama Radhitya Santoso.jpg",
       },
       {
         name: "Alvon Gunawan",
         position: "PPIT",
         major: "EEE/3",
-        URL: "portfolio/PPIT/Alvon Gunawan-min.jpg",
+        URL: "portfolio/PPIT/Alvon Gunawan.jpg",
       },
       {
         name: "Ferlita Halim",
         position: "PPIT",
         major: "CS/3",
-        URL: "portfolio/PPIT/Ferlita Halim-min.jpg",
+        URL: "portfolio/PPIT/Ferlita Halim.jpg",
       },
       {
         name: "Jessika Nadia Hartanto",
         position: "PPIT",
         major: "ADM/3",
-        URL: "portfolio/PPIT/Jessika Nadia Hartanto-min.jpg",
+        URL: "portfolio/PPIT/Jessika Nadia Hartanto.jpg",
       },
       {
         name: "Wilhelmus Adi Prawira Pangestu",
         position: "PPIT",
         major: "MSE/3",
-        URL: "portfolio/PPIT/Wilhelmus Adi Prawira Pangestu-min.jpg",
+        URL: "portfolio/PPIT/Wilhelmus Adi Prawira Pangestu.jpg",
       },
       {
         name: "Gabrian Christopher",
         position: "PPIT",
         major: "EEE/4",
-        URL: "portfolio/PPIT/Gabrian Christopher-min.jpg",
+        URL: "portfolio/PPIT/Gabrian Christopher.jpg",
       },
       {
         name: "Jessica Widjaja",
         position: "PPIT",
         major: "CBE/4",
-        URL: "portfolio/PPIT/Jessica Widjaja-min.jpg",
+        URL: "portfolio/PPIT/Jessica Widjaja.jpg",
       },
       {
         name: "Justin Trisno",
         position: "PPIT",
         major: "EEE/4",
-        URL: "portfolio/PPIT/Justin Trisno-min.jpg",
+        URL: "portfolio/PPIT/Justin Trisno.jpg",
       },
       {
         name: "Noah Winston",
         position: "PPIT",
         major: "EEE/4",
-        URL: "portfolio/PPIT/Noah Winston-min.jpg",
+        URL: "portfolio/PPIT/Noah Winston.jpg",
       },
     ],
   },
@@ -425,125 +425,125 @@ const portfolios = [
     maincommittee: [
       {
         name: "Michael Hans",
-        position: "Welfare",
-        URL: "portfolio/MC/Michael Hans-min.jpg",
+        position: "Welfare Main Committee",
+        URL: "portfolio/MC/Michael Hans.jpg",
         major: "EEE/Year 3",
       },
       {
         name: "Dzakiy Farid Fadhila",
-        position: "Welfare",
-        URL: "portfolio/MC/Dzakiy Farid Fadhila-min.jpg",
+        position: "Welfare Main Committee",
+        URL: "portfolio/MC/Dzakiy Farid Fadhila.jpg",
         major: "MAE/Year 3",
       },
       {
         name: "Janet Widianto",
-        position: "Welfare",
-        URL: "portfolio/MC/Janet Widianto-min.jpg",
+        position: "Welfare Main Committee",
+        URL: "portfolio/MC/Janet Widianto.jpg",
         major: "MSE/Year 3",
       },
     ],
     subcommittee: [
       {
         name: "Immanuel Yehuda",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "NBS/3",
-        URL: "portfolio/Welfare/Immanuel Yehuda-min.jpg",
+        URL: "portfolio/Welfare/Immanuel Yehuda.jpg",
       },
       {
         name: "Fernando",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "EESS/2",
-        URL: "portfolio/Welfare/Fernando-min.jpg",
+        URL: "portfolio/Welfare/Fernando.jpg",
       },
       {
-        name: "Hou Lixuan",
-        position: "Welfare",
-        major: "ACC/3",
-        URL: null,
+        name: "Jessica Vania Gospel",
+        position: "Welfare Main Committee",
+        major: "CEE/2",
+        URL: "portfolio/Welfare/Jessica Vania Gospel.jpg",
       },
       {
         name: "Kathy Sophia Kristianty",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "BIE/2",
-        URL: "portfolio/Welfare/Kathy Sophia Kristianty-min.jpg",
+        URL: "portfolio/Welfare/Kathy Sophia Kristianty.jpg",
       },
       {
         name: "Jessica Chandra",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "CEE/2",
-        URL: "portfolio/Welfare/Jessica Chandra-min.jpg",
+        URL: "portfolio/Welfare/Jessica Chandra.jpg",
       },
       {
         name: "Jimmy Rivallo",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "CBE/2",
-        URL: "portfolio/Welfare/Jimmy Rivallo-min.jpg",
+        URL: "portfolio/Welfare/Jimmy Rivallo.jpg",
       },
       {
         name: "Richardson",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "IEM/4",
-        URL: "portfolio/Welfare/Richardson-min.jpg",
+        URL: "portfolio/Welfare/Richardson.jpg",
       },
       {
         name: "Hugo Sebastian Gouw",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "EEE/2",
-        URL: "portfolio/Welfare/Hugo Sebastian Gouw-min.jpg",
+        URL: "portfolio/Welfare/Hugo Sebastian Gouw.jpg",
       },
       {
         name: "Naufal Ragitya Daniswara",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "MSE/2",
-        URL: "portfolio/Welfare/Naufal Ragitya Daniswara-min.jpg",
+        URL: "portfolio/Welfare/Naufal Ragitya Daniswara.jpg",
       },
       {
         name: "Celine Prawiro",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "MSE/4",
-        URL: "portfolio/Welfare/Celine Prawiro-min.jpg",
+        URL: "portfolio/Welfare/Celine Prawiro.jpg",
       },
       {
         name: "Dihan Jannatan Mutaalim",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "MAE/2",
-        URL: "portfolio/Welfare/Dihan Jannatan Mutaalim-min.jpg",
+        URL: "portfolio/Welfare/Dihan Jannatan Mutaalim.jpg",
       },
       {
         name: "Andrew Imanuel",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "NBS/3",
-        URL: "portfolio/Welfare/Andrew Imanuel-min.jpg",
+        URL: "portfolio/Welfare/Andrew Imanuel.jpg",
       },
       {
         name: "Hagata Raguel Jehoshua",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "MSE/3",
-        URL: "portfolio/Welfare/Hagata Raguel Jehoshua-min.jpg",
+        URL: "portfolio/Welfare/Hagata Raguel Jehoshua.jpg",
       },
       {
         name: "Melina Novalia Jontera Lius",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "MSE/3",
-        URL: "portfolio/Welfare/Melina Novalia Jontera Lius-min.jpg",
+        URL: "portfolio/Welfare/Melina Novalia Jontera Lius.jpg",
       },
       {
         name: "Jason Jovi Brata",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "MSE/4",
-        URL: "portfolio/Welfare/Jason Jovi Brata-min.jpg",
+        URL: "portfolio/Welfare/Jason Jovi Brata.jpg",
       },
       {
         name: "David Alexander Yosal",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "NBS/2",
-        URL: "portfolio/Welfare/David Alexander Yosal-min.jpg",
+        URL: "portfolio/Welfare/David Alexander Yosal.jpg",
       },
       {
         name: "Sharon Gautama",
-        position: "Welfare",
+        position: "Welfare Main Committee",
         major: "CBE/4",
-        URL: "portfolio/Welfare/Sharon Gautama-min.jpg",
+        URL: "portfolio/Welfare/Sharon Gautama.jpg",
       },
     ],
   },
@@ -552,89 +552,89 @@ const portfolios = [
     maincommittee: [
       {
         name: "Theodora Lynn",
-        position: "CGL",
-        URL: "portfolio/MC/Theodora Lynn-min.jpg",
+        position: "Chief Group Leader",
+        URL: "portfolio/MC/Theodora Lynn.jpg",
         major: "MSE/Year 3",
       },
       {
         name: "Kenny Lo",
-        position: "CGL",
-        URL: "portfolio/MC/Kenny Lo-min.jpg",
+        position: "Chief Group Leader",
+        URL: "portfolio/MC/Kenny Lo.jpg",
         major: "MSE/Year 3",
       },
     ],
     subcommittee: [
       {
         name: "Irfan Enkisra",
-        position: "GL",
+        position: "Group Leader",
         major: "CEE/3",
-        URL: "portfolio/GL/Irfan Enkisra-min.jpg",
+        URL: "portfolio/GL/Irfan Enkisra.jpg",
       },
       {
         name: "Kennard Hans Widjaja",
-        position: "GL",
+        position: "Group Leader",
         major: "EEE/2",
-        URL: "portfolio/GL/Kennard Hans Widjaja-min.jpg",
+        URL: "portfolio/GL/Kennard Hans Widjaja.jpg",
       },
       {
         name: "Felicia Angelina Halim",
-        position: "GL",
+        position: "Group Leader",
         major: "NBS/2",
-        URL: "portfolio/GL/Felicia Angelina Halim-min.jpg",
+        URL: "portfolio/GL/Felicia Angelina Halim.jpg",
       },
       {
         name: "Gabriella Angelina Lim",
-        position: "GL",
+        position: "Group Leader",
         major: "NBS/2",
-        URL: "portfolio/GL/Gabriella Angelina Lim-min.jpg",
+        URL: "portfolio/GL/Gabriella Angelina Lim.jpg",
       },
       {
         name: "John Nicholas Suharjono",
-        position: "GL",
+        position: "Group Leader",
         major: "EEE/2",
-        URL: "portfolio/GL/John Nicholas Suharjono-min.jpg",
+        URL: "portfolio/GL/John Nicholas Suharjono.jpg",
       },
       {
         name: "Kenzhi Iskandar Wong",
-        position: "GL",
+        position: "Group Leader",
         major: "MAE/2",
-        URL: "portfolio/GL/Kenzhi Iskandar Wong-min.jpg",
+        URL: "portfolio/GL/Kenzhi Iskandar Wong.jpg",
       },
       {
         name: "Jocelyn Valencia Yoswara",
-        position: "GL",
+        position: "Group Leader",
         major: "IEM/2",
-        URL: "portfolio/GL/Jocelyn Valencia Yoswara-min.jpg",
+        URL: "portfolio/GL/Jocelyn Valencia Yoswara.jpg",
       },
       {
         name: "Valencia Lie",
-        position: "GL",
+        position: "Group Leader",
         major: "DSAI/2",
-        URL: "portfolio/GL/Valencia Lie-min.jpg",
+        URL: "portfolio/GL/Valencia Lie.jpg",
       },
       {
         name: "Arvin Jaya",
-        position: "GL",
+        position: "Group Leader",
         major: "CEE/2",
-        URL: "portfolio/GL/Arvin Jaya-min.jpg",
+        URL: "portfolio/GL/Arvin Jaya.jpg",
       },
       {
         name: "Alvin Putera Budiman",
-        position: "GL",
+        position: "Group Leader",
         major: "EEE/2",
-        URL: "portfolio/GL/Alvin Putera Budiman-min.jpg",
+        URL: "portfolio/GL/Alvin Putera Budiman.jpg",
       },
       {
         name: "Vivian Widjaja",
-        position: "GL",
+        position: "Group Leader",
         major: "IEM/3",
-        URL: "portfolio/GL/Vivian Widjaja-min.jpg",
+        URL: "portfolio/GL/Vivian Widjaja.jpg",
       },
       {
         name: "Christopher Arif Setiadharma",
-        position: "GL",
+        position: "Group Leader",
         major: "CE/2",
-        URL: "portfolio/GL/Christopher Arif Setiadharma-min.jpg",
+        URL: "portfolio/GL/Christopher Arif Setiadharma.jpg",
       },
     ],
   },
@@ -643,26 +643,26 @@ const portfolios = [
     maincommittee: [
       {
         name: "Shellia Oktavina",
-        position: "BFM",
-        URL: "portfolio/MC/Shellia Oktavina-min.jpg",
+        position: "BFM Main Committee",
+        URL: "portfolio/MC/Shellia Oktavina.jpg",
         major: "SBS/Year 3",
       },
       {
         name: "Hagan Hototo Barus",
-        position: "BFM",
-        URL: "portfolio/MC/Hagan Hototo Barus-min.jpg",
+        position: "BFM Main Committee",
+        URL: "portfolio/MC/Hagan Hototo Barus.jpg",
         major: "NBS/Year 2",
       },
       {
         name: "Winnie Faustinelie",
-        position: "BFM",
-        URL: "portfolio/MC/Winnie Faustinelie-min.jpg",
+        position: "BFM Main Committee",
+        URL: "portfolio/MC/Winnie Faustinelie.jpg",
         major: "CBE/Year 4",
       },
       {
         name: "Timothy William Delin",
-        position: "BFM",
-        URL: "portfolio/MC/Timothy William Delin-min.jpg",
+        position: "BFM Main Committee",
+        URL: "portfolio/MC/Timothy William Delin.jpg",
         major: "MSE/Year 3",
       },
     ],
@@ -671,19 +671,19 @@ const portfolios = [
         name: "Kevin Lius",
         position: "BFM",
         major: "CEE/3",
-        URL: "portfolio/BFM/Kevin Lius-min.jpg",
+        URL: "portfolio/BFM/Kevin Lius.jpg",
       },
       {
         name: "Ryan Kent Tanadi",
         position: "BFM",
         major: "CS/2",
-        URL: "portfolio/BFM/Ryan Kent Tanadi-min.jpg",
+        URL: "portfolio/BFM/Ryan Kent Tanadi.jpg",
       },
       {
         name: "Leonard Darmawan",
         position: "BFM",
         major: "CBE/2",
-        URL: "portfolio/BFM/Leonard Darmawan-min.jpg",
+        URL: "portfolio/BFM/Leonard Darmawan.jpg",
       },
       {
         name: "Juan Steven",
@@ -695,61 +695,61 @@ const portfolios = [
         name: "Karen Prasetio",
         position: "BFM",
         major: "CBC/4",
-        URL: "portfolio/BFM/Karen Prasetio-min.jpg",
+        URL: "portfolio/BFM/Karen Prasetio.jpg",
       },
       {
         name: "Devin Edward",
         position: "BFM",
         major: "CBC/4",
-        URL: "portfolio/BFM/Devin Edward-min.jpg",
+        URL: "portfolio/BFM/Devin Edward.jpg",
       },
       {
         name: "Julius Daniel Sarwono",
         position: "BFM",
         major: "NBS/3",
-        URL: "portfolio/BFM/Julius Daniel Sarwono-min.jpg",
+        URL: "portfolio/BFM/Julius Daniel Sarwono.jpg",
       },
       {
         name: "Agnes Melia",
         position: "BFM",
         major: "MAS/4",
-        URL: "portfolio/BFM/Agnes Melia-min.jpg",
+        URL: "portfolio/BFM/Agnes Melia.jpg",
       },
       {
         name: "Darrens Sanders Tanuwidjaja",
         position: "BFM",
         major: "MAE/2",
-        URL: "portfolio/BFM/Darrens Sanders Tanuwidjaja-min.jpg",
+        URL: "portfolio/BFM/Darrens Sanders Tanuwidjaja.jpg",
       },
       {
         name: "Hans Farrell Soegeng",
         position: "BFM",
         major: "MAS/2",
-        URL: "portfolio/BFM/Hans Farrell Soegeng-min.jpg",
+        URL: "portfolio/BFM/Hans Farrell Soegeng.jpg",
       },
       {
         name: "Marvin Winson",
         position: "BFM",
         major: "CE/4",
-        URL: "portfolio/BFM/Marvin Winson-min.jpg",
+        URL: "portfolio/BFM/Marvin Winson.jpg",
       },
       {
         name: "Rachel Emmanuelle Raphael",
         position: "BFM",
         major: "MSE/2",
-        URL: "portfolio/BFM/Rachel Emmanuelle Raphael-min.jpg",
+        URL: "portfolio/BFM/Rachel Emmanuelle Raphael.jpg",
       },
       {
         name: "Ruby Clarissa Sutopo",
         position: "BFM",
         major: "BS/2",
-        URL: "portfolio/BFM/Ruby Clarissa Sutopo-min.jpg",
+        URL: "portfolio/BFM/Ruby Clarissa Sutopo.jpg",
       },
       {
         name: "Vincent",
         position: "BFM",
         major: "MSE/4",
-        URL: "portfolio/BFM/Vincent-min.jpg",
+        URL: "portfolio/BFM/Vincent.jpg",
       },
     ],
   },
@@ -815,27 +815,44 @@ export default function AboutUsPage() {
   return (
     <div className={classes.root}>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Container className={classes.container}>
+        <Container
+          className={classes.container}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            // justifyContent: "center",
+            alignItems: "center",
+            minHeight: "80vh",
+          }}
+        >
           <Text component="div" className={classes.GTD}>
-            GTD XXIII
+            GTD XXIII: RESURGENCE
           </Text>
-          <Text component="div" className={classes.content}>
-            Welcome to GTD XXIII. Here we bring you to all our personnels coming
-            from each respective porfolios.
-          </Text>
+          <div className={classes.logo} />
         </Container>
       </div>
-      <div item xs={12}>
+      <div id="portfolio" />
+      <div className={classes.headerWrapper} style={{ marginTop: 120 }}>
+        <div
+          style={{ backgroundColor: colors.cream, width: "100%", height: 2 }}
+        />
         <Text component="div" className={classes.headerTitle}>
           Top Management
         </Text>
+        <div
+          style={{
+            backgroundColor: colors.cream,
+            width: "100%",
+            height: 2,
+          }}
+        />
       </div>
-      <div item xs={12} style={{ display: "flex", justifyContent: "center" }}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <InfoCard
           name="Kelvin Leo"
           position="President"
           major="MSE/Year 4"
-          URL="portfolio/MC/Kelvin Leo-min.jpg"
+          URL="portfolio/MC/Kelvin Leo.jpg"
         />
       </div>
       <div
@@ -849,23 +866,23 @@ export default function AboutUsPage() {
           name="Nicholas Eric Geraldo"
           position="VP PO-LOGS"
           major="EEE/Year 4"
-          URL="portfolio/MC/Nicholas Eric Geraldo-min.jpg"
+          URL="portfolio/MC/Nicholas Eric Geraldo.jpg"
         />
         <InfoCard
           name="Matthew Stanley"
           position="VP PPIT-Welfare"
           major="EEE/Year 4"
-          URL="portfolio/MC/Stanley Qiu-min.jpg"
+          URL="portfolio/MC/Stanley Qiu.jpg"
         />
         <InfoCard
           name="Edward Siman"
           position="VP GL-BFM"
           major="CBE/Year 4"
-          URL="portfolio/MC/Edward Siman-min.jpg"
+          URL="portfolio/MC/Edward Siman.jpg"
         />
       </div>
       {/* portfolio section */}
-      <div id="portfolio" />
+
       <div className={classes.portfolioSelect} style={{ marginTop: 90 }}>
         <Text className={classes.porfolioText}>
           {portfolios[page].portfolio}
@@ -873,17 +890,11 @@ export default function AboutUsPage() {
       </div>
       <header className={classes.headerWrapper}>
         <div
-          style={{ backgroundColor: colors.cream, width: "32%", height: 2 }}
+          style={{ backgroundColor: colors.cream, width: "100%", height: 2 }}
         />
-        <Text
-          component="div"
-          className={classes.headerTitle}
-          style={{ minWidth: "max-content" }}
-        >
-          Main Committee
-        </Text>
+        <Text className={classes.headerTitle}>Main Committee</Text>
         <div
-          style={{ backgroundColor: colors.cream, width: "32%", height: 2 }}
+          style={{ backgroundColor: colors.cream, width: "100%", height: 2 }}
         />
       </header>
       <div
@@ -898,15 +909,15 @@ export default function AboutUsPage() {
           <InfoCard key={idx} {...committee} />
         ))}
       </div>
-      <header className={classes.headerWrapper}>
+      <header className={classes.headerWrapper} style={{ marginTop: 120 }}>
         <div
-          style={{ backgroundColor: colors.cream, width: "34%", height: 2 }}
+          style={{ backgroundColor: colors.cream, width: "100%", height: 2 }}
         />
         <Text component="div" className={classes.headerTitle}>
           Subcommittee
         </Text>
         <div
-          style={{ backgroundColor: colors.cream, width: "34%", height: 2 }}
+          style={{ backgroundColor: colors.cream, width: "100%", height: 2 }}
         />
       </header>
       <div
@@ -955,11 +966,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     height: "100%",
-    backgroundColor: colors.black,
+    backgroundColor: colors.black2,
     boxSizing: "border-box",
   },
   headerWrapper: {
     display: "flex",
+    flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     gap: theme.spacing(2),
@@ -969,19 +981,20 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 60,
   },
   headerTitle: {
-    backgroundColor: colors.black,
+    backgroundColor: colors.black2,
     fontSize: 48,
+    minWidth: "max-content",
     fontWeight: "700",
     textAlign: "center",
     paddingTop: 30,
     color: colors.white,
     paddingBottom: 30,
     [theme.breakpoints.down("sm")]: {
-      fontSize: 36,
+      fontSize: 30,
     },
   },
   porfolioText: {
-    fontSize: 60,
+    fontSize: 66,
     fontWeight: "700",
     textAlign: "center",
     color: "white",
@@ -990,7 +1003,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   content: {
-    backgroundColor: colors.black,
+    backgroundColor: colors.black2,
     fontSize: "20pt",
     color: colors.gray,
     paddingTop: "10px",
@@ -1002,8 +1015,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   GTD: {
-    backgroundColor: colors.black,
-    fontSize: 72,
+    backgroundColor: colors.black2,
+    fontSize: 66,
     fontWeight: "700",
     textAlign: "center",
     marginTop: "10px",
@@ -1087,14 +1100,15 @@ const useStyles = makeStyles((theme) => ({
   portfolioSelect: {
     display: "flex",
     alignItems: "center",
-    paddingLeft: "10%",
-    paddingRight: "10%",
+    padding: "10%",
+    paddingTop: 40,
+    paddingBottom: 40,
     boxSizing: "border-box",
     justifyContent: "center",
     width: "100%",
     gap: theme.spacing(10),
     [theme.breakpoints.down("sm")]: {
-      padding: 0,
+      padding: 40,
       justifyContent: "center",
       gap: theme.spacing(4),
     },
@@ -1105,6 +1119,24 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: colors.gray,
     borderRadius: 5,
     filter: "brightness(0.6)",
+  },
+  logo: {
+    marginTop: 40,
+    width: "25vw",
+    height: "25vw",
+    minWidth: 200,
+    minHeight: 200,
+    borderRadius: "50%",
+    background: 'url("logo.png")',
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    boxShadow: `${colors.gray} 0px 10px 20px -5px, ${colors.gray} 0px 8px 16px -8px`,
+    transition: "ease-out 0.2s",
+    cursor: "pointer",
+    "&:hover": {
+      transform: "scale(1.01)",
+    },
   },
 }));
 
