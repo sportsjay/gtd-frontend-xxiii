@@ -124,6 +124,7 @@ export default function HomePage() {
   function linkToGame() {
     alert("Coming Soon!");
   }
+
   return (
     <div className={classes.root}>
       <div className={classes.header}>
@@ -149,7 +150,7 @@ export default function HomePage() {
               <ModalContent
                 logo="images/logo_artemis.png"
                 title="House of Gaia"
-                description="She resides in the forests of Earth, reigning over the world's vast greeneries. She commands the might of Gaia's woodland warriors and druid armies. Has she got what it takes to win over Pandora's Box?"
+                description="Deep in the forests of Gaia, stands the provinces of James Bondsai and Herby Potter, led by the Almighty Queen Goddess Artemis. The 2 provinces thrive and prosper as they produce seeds for agriculture through defecation. However, due to the conflict between the realms of the Earth, they now live under stress that hinders their ability to defecate seeds. This crucial and delicate supply chain of seed defecation has come to a screeching halt, and they are now in danger of famine and pestilence. In the midst of all this chaos, queen Goddess Artemis sets out on an epic adventure in search of the omnipotent Pandora's Box, in the hopes of using it to heal and free the colony away from stress. This is done in hopes that it will in turn restore the fertility of the whole realm. But this poses an almost insurmountable challenge, as the box itself is the subject of the currently broiling interrealm war. As the race for Pandora’s box intensifies, can the Almighty queen Goddess Artemis successfully retrieve the grand prize?"
               />
             </React.Fragment>
           }
@@ -186,7 +187,7 @@ export default function HomePage() {
               <ModalContent
                 logo="images/logo_poseidon.png"
                 title="House of Atlantis"
-                description="He is king of all the 7 seas, where he rules over all sea life. Will Atlantis' armies and marines triumph over all the other realms under his command? Can he claim the sacred Box's power to restore peace upon the world?"
+                description="Once home to the most advanced civilization on Earth, the Kingdom of Atlantis is now an underwater kingdom ruled by the wise King Poseidon Hototo Barus LXIX. The king had ruled an era of peace and brought the kingdom greater prosperity and wealth, but things changed when Kronos, the Father of the Gods, was assassinated. The Pandora’s Box went missing, prompting the three other kingdoms, Filled with greed and avarice, to search high and low for the Pandora’s Box. When they ransacked the ocean in hopes of finding it, King Poseidon grew livid. They had planted mines and dropped weapons in the once beautiful and spotless ocean he called home. Motivated by revenge for his sullied domain, the king, cloaked in his green coat, light green underwear, and lime green miniskirt, summoned his neighbour, the Mighty General of the Southern Ocean: Nyi Loro Kidul. After listening to the king’s plight, Nyi Loro Kidul agreed to clone herself to thousands of Kiduls. In the end, the Kiduls and the Atlantis army joined forces, vowing to defeat the other kingdoms in their race to search for the Pandora’s Box. Armed with his almighty trident and mystical Southern sorcerers, it’s just a matter of time before he unleashes his wrath to those who have destroyed his beloved home. Will King Hagan succeed in his quest? "
               />
             </React.Fragment>
           }
@@ -216,7 +217,13 @@ export default function HomePage() {
               <ModalContent
                 logo="images/logo_persephone.png"
                 title="House of Tartarus"
-                description="She may be the Queen of Tartarus, the ultimate resting place for all souls, but will her dominion over death be enough to conquer sacred Box's power? Will she be able to prevail over the other kingdoms with her underworld legions?"
+                description="Queen Persevio, the proprietor of the underworld, believes that she should have the Pandora’s box and rule over the other Gods, as she is the most beautiful amongst the four. She knows that the key to a person's beauty is their heart followed by their hair and body. 
+
+                As the benevolent and kind-hearted ruler that she is, she doesn’t intend to hurt the other Gods and their subjects, even when waging war with them. She opts to destroy their morale instead, by destroying all of her opponents hair. Her rationale is that they would look less respectable and presentable, so as to be less charismatic than her. These low self-esteemed people in turn, would be more easily subjugated by her and her subjects.
+                
+                She gathered her Kingdom’s strongest men and wisest women in order to develop the hair-killing products necessary in this bio-psychological warfare in the making. After research and trials, the 2 most prominent underworld research labs from Tartarus each came up with a product. One named as DEATHtol which will let anyone who uses this shampoo have extremely horrible hair fall and the other called PAINtene which will cause them pain everytime they touch their hair. This would mean they either have no hair or bad hair, as it'll be too painful for them to comb or even style them. Will this diabolical hair-terrorism come to fruition? Will Queen Persevio be able to claim the all-powerful box?
+                
+                "
               />
             </React.Fragment>
           }
@@ -247,7 +254,7 @@ export default function HomePage() {
               <ModalContent
                 logo="images/logo_zeus.png"
                 title="House of Olympus"
-                description="He is the almighty Zeus, a great leader, father of gods, and ruler of the skies and the peaks of Olympus. Will he be able to use the power of his thunder to remain ascendant in his quest for the Pandora's Box?"
+                description="Living across the earth, the people of Olympus are well known for their power and strength. The people live in peace and prosperity, and this could only happen because of the great leadership of the mighty God, Zeus. However, the death of Cronus has changed Olympus and its denizens. The people live with fear from continuous war over the pandora box between itself and the 3 other realms: Gaia, Tartarus, and Atlantis. Zeus believes that he, as the self proclaimed most powerful God, and his people deserve the Pandora’s Box. In his journey to conquer the box, he met Tony Star and Captain Amerisky who later became his trusted servants. Together, with the power of Zeus, the witty Tony Star and the fearless Captain Amerisky, they are ready to claim the box once and for all. Olympus Assemble!"
               />
             </React.Fragment>
           }
@@ -488,7 +495,7 @@ const modalStyles = makeStyles((theme) => ({
   },
   root: {
     position: "relative",
-    height: 500,
+    minWidth: "max-height",
     width: "50%",
     borderRadius: 0,
     backgroundColor: colors.black2,
@@ -515,7 +522,7 @@ const modalStyles = makeStyles((theme) => ({
     borderRadius: 0,
   },
   content: {
-    height: "min-content",
+    height: "max-content",
     width: "100%",
     display: "flex",
     flexDirection: "column",
